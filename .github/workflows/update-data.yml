@@ -2,6 +2,12 @@ name: Update NFL Data
 
 on:
   workflow_dispatch:
+  push:
+    branches: ["main"]
+    paths:
+      - "scripts/**"
+      - "requirements.txt"
+      - ".github/workflows/update-data.yml"
   schedule:
     # nflverse current-season PBP updates around 09:00 UTC. This runs afterward.
     - cron: "30 10 * * *"
@@ -35,7 +41,7 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Build current matchup data
-        run: python scripts/build_matchups.py
+        run: python scripts/build_matchups_v2.py
 
       - name: Commit data changes
         run: |
