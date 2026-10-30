@@ -140,6 +140,7 @@ def build_injury_context(injuries: pd.DataFrame, rosters: pd.DataFrame, position
             "roster_status": roster_status,
             "availability": base.round_float(avail),
             "label": status_label(report, practice, roster_status),
+            "current_report": True,
         }
 
     for pid, roster in roster_map.items():
@@ -160,6 +161,7 @@ def build_injury_context(injuries: pd.DataFrame, rosters: pd.DataFrame, position
             "roster_status": status,
             "availability": 0.0,
             "label": status_label("", "", status),
+            "current_report": False,
         }
 
     for pid, injury in player_state.items():
@@ -181,11 +183,14 @@ def build_injury_context(injuries: pd.DataFrame, rosters: pd.DataFrame, position
             "primary_injury": injury.get("primary_injury", ""),
             "availability": base.round_float(avail),
         }
-        if pos in SKILL or pos in OFF_LINE:
+        current_report = bool(injury.get("current_report"))
+        if current_report and (pos in SKILL or pos in OFF_LINE):
             teams[team]["offense"].append(entry)
-        if pos in OFF_LINE:
+        if current_report and pos in OFF_LINE:
             teams[team]["offensive_line_penalty"] += 0.04 * severity
 
+        if not current_report:
+            continue
         adj = teams[team]["defense_adjustments"]
         if pos in SECONDARY:
             teams[team]["defense"].append(entry)
@@ -291,8 +296,8 @@ def main():
             "injury_week": injury_week,
             "generated_at": datetime.now(timezone.utc).isoformat(),
             "source": "nflverse / nflfastR play-by-play, weekly rosters, and injury/practice reports",
-            "model_version": "1.1.0",
-            "injury_note": "Statuses use the latest nflverse injury-report week available at build time.",
+            "model_version": "1.1.1",
+            "injury_note": "Current-week injury reports adjust matchup strength; reserve status prevents unavailable players from being recommended without double-counting long-term absences.",
         },
         "teams": teams,
     }
