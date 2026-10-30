@@ -59,9 +59,10 @@ function classifyWeaknesses(defense) {
     .map(([key, score]) => ({ key, score: Number(score) || 0 }))
     .sort((a, b) => b.score - a.score);
 
-  let major = ranked.filter(x => x.score >= 0.67).slice(0, 2);
-  let minor = ranked.filter(x => x.score >= 0.50 && !major.some(m => m.key === x.key)).slice(0, 2);
-  if (!major.length && ranked[0]) minor = ranked.slice(0, 2);
+  const major = ranked.filter(x => x.score >= 0.75).slice(0, 2);
+  const minor = ranked
+    .filter(x => x.score >= 0.60 && x.score < 0.75 && !major.some(m => m.key === x.key))
+    .slice(0, 2);
   return { major, minor };
 }
 
@@ -95,17 +96,20 @@ function playerAvailability(player) {
   return clamp(player?.injury?.availability ?? 1);
 }
 
-function playerFit(player, offense, defense) {
+function playerMatchupScore(player, defense) {
   const scores = defenseScores(defense);
-  let matchup = 0.5;
-  if (player.position === "QB") matchup = Number(scores.pass || 0.5);
-  if (player.position === "RB") matchup = Math.max(Number(scores.run || 0.5), Number(scores.rb || 0.5), Number(scores.red_zone || 0.5) * 0.85);
-  if (player.position === "WR") matchup = Math.max(Number(scores.pass || 0.5), Number(scores.wr || 0.5));
-  if (player.position === "TE") matchup = Math.max(Number(scores.pass || 0.5), Number(scores.te || 0.5));
+  if (player.position === "QB") return Number(scores.pass || 0.5);
+  if (player.position === "RB") return Math.max(Number(scores.run || 0.5), Number(scores.rb || 0.5), Number(scores.red_zone || 0.5) * 0.85);
+  if (player.position === "WR") return Math.max(Number(scores.pass || 0.5), Number(scores.wr || 0.5));
+  if (player.position === "TE") return Math.max(Number(scores.pass || 0.5), Number(scores.te || 0.5));
+  return 0.5;
+}
 
+function playerFit(player, offense, defense) {
+  const matchup = playerMatchupScore(player, defense);
   const roleScore = Number(player.effective_role_score ?? player.role_score) || 0;
   const role = Math.min(1, roleScore / 0.62);
-  let fit = 0.57 * role + 0.43 * matchup;
+  let fit = 0.45 * role + 0.55 * matchup;
   fit *= playerAvailability(player);
 
   const olPenalty = Number(offense?.injuries?.offensive_line_penalty || 0);
@@ -144,8 +148,8 @@ function playerReason(player, offense, defense) {
 
 function likelyPlayers(offense, defense) {
   return (offense?.players || [])
-    .map(p => ({ ...p, fit: playerFit(p, offense, defense) }))
-    .filter(p => playerAvailability(p) > 0.25 && p.fit >= 0.36)
+    .map(p => ({ ...p, matchup: playerMatchupScore(p, defense), fit: playerFit(p, offense, defense) }))
+    .filter(p => playerAvailability(p) > 0.25 && p.matchup >= 0.60 && p.fit >= 0.40)
     .sort((a, b) => b.fit - a.fit)
     .slice(0, 4);
 }
@@ -205,7 +209,7 @@ function directionCard(offenseAbbr, defenseAbbr) {
   const weaknessHtml = [
     ...weaknesses.major.map(x => renderWeakness(x, "major", defense)),
     ...weaknesses.minor.map(x => renderWeakness(x, "minor", defense)),
-  ].join("") || `<p class="empty">No clear defensive weakness is showing above league average right now.</p>`;
+  ].join("") || `<p class="empty">No clear defensive weakness is showing at the 60th percentile or higher right now.</p>`;
 
   const playersHtml = players.map(p => `<div class="player">
     <div class="player-top">
@@ -213,7 +217,7 @@ function directionCard(offenseAbbr, defenseAbbr) {
       <span class="confidence">${confidence(p.fit)}</span>
     </div>
     <p>${playerReason(p, offense, defense)}</p>
-  </div>`).join("") || `<p class="empty">No healthy player clears the recommendation threshold with the current matchup and injury information.</p>`;
+  </div>`).join("") || `<p class="empty">No healthy player clears both the usage and matchup thresholds with the current injury information.</p>`;
 
   return `<article class="direction">
     <div class="direction-head">
@@ -227,7 +231,7 @@ function directionCard(offenseAbbr, defenseAbbr) {
         <div class="weakness-list">${weaknessHtml}</div>
       </div>
       <div class="card">
-        <h3>Players most likely to be featured</h3>
+        <h3>Players most likely to exploit them</h3>
         <div class="player-list">${playersHtml}</div>
       </div>
     </div>
