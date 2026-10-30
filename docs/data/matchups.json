@@ -3,10 +3,10 @@
     "season": 2026,
     "through_week": 8,
     "injury_week": 8,
-    "generated_at": "2026-10-30T18:54:49.103327+00:00",
+    "generated_at": "2026-10-30T19:00:10.871984+00:00",
     "source": "nflverse / nflfastR play-by-play, weekly rosters, and injury/practice reports",
-    "model_version": "1.1.0",
-    "injury_note": "Statuses use the latest nflverse injury-report week available at build time."
+    "model_version": "1.1.1",
+    "injury_note": "Current-week injury reports adjust matchup strength; reserve status prevents unavailable players from being recommended without double-counting long-term absences."
   },
   "teams": {
     "ARI": {
@@ -36,20 +36,20 @@
           }
         },
         "injury_adjustments": {
-          "pass": 0.18,
-          "run": 0.116,
-          "red_zone": 0.091,
-          "wr": 0.176,
-          "te": 0.06,
-          "rb": 0.083
+          "pass": 0.021,
+          "run": 0.016,
+          "red_zone": 0.011,
+          "wr": 0.016,
+          "te": 0.01,
+          "rb": 0.013
         },
         "adjusted_scores": {
-          "pass": 1.0,
-          "run": 0.735,
-          "red_zone": 0.653,
-          "wr": 0.832,
-          "te": 0.779,
-          "rb": 0.708
+          "pass": 0.916,
+          "run": 0.635,
+          "red_zone": 0.573,
+          "wr": 0.672,
+          "te": 0.729,
+          "rb": 0.638
         }
       },
       "players": [
@@ -124,7 +124,8 @@
             "secondary_injury": "",
             "roster_status": "ACT",
             "availability": 0.9,
-            "label": "LIMITED PARTICIPATION IN PRACTICE"
+            "label": "LIMITED PARTICIPATION IN PRACTICE",
+            "current_report": true
           },
           "injury_role_boost": 0.015,
           "effective_role_score": 0.281
@@ -200,7 +201,8 @@
             "secondary_injury": "",
             "roster_status": "ACT",
             "availability": 0.9,
-            "label": "LIMITED PARTICIPATION IN PRACTICE"
+            "label": "LIMITED PARTICIPATION IN PRACTICE",
+            "current_report": true
           },
           "injury_role_boost": 0.012,
           "effective_role_score": 0.236
@@ -241,7 +243,8 @@
             "secondary_injury": "",
             "roster_status": "ACT",
             "availability": 0.9,
-            "label": "LIMITED PARTICIPATION IN PRACTICE"
+            "label": "LIMITED PARTICIPATION IN PRACTICE",
+            "current_report": true
           },
           "injury_role_boost": 0.039,
           "effective_role_score": 0.237
@@ -352,7 +355,8 @@
             "secondary_injury": "",
             "roster_status": "RES",
             "availability": 0.0,
-            "label": "IR/RESERVE"
+            "label": "IR/RESERVE",
+            "current_report": false
           },
           "injury_role_boost": 0.0,
           "effective_role_score": 0.0
@@ -432,86 +436,6 @@
         "week": 8,
         "offense": [
           {
-            "id": "00-0041468",
-            "name": "Chase Bisontis",
-            "position": "OL",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0039808",
-            "name": "Isaiah Adams",
-            "position": "OL",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0038540",
-            "name": "Paris Johnson Jr.",
-            "position": "OL",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0033553",
-            "name": "James Conner",
-            "position": "RB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0039921",
-            "name": "Trey Benson",
-            "position": "RB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0037004",
-            "name": "Hunter Long",
-            "position": "TE",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0039737",
-            "name": "Tip Reiman",
-            "position": "TE",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0038640",
-            "name": "Jalen Brooks",
-            "position": "WR",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
             "id": "00-0038571",
             "name": "Jon Gaines II",
             "position": "G",
@@ -574,46 +498,6 @@
         ],
         "defense": [
           {
-            "id": "00-0037141",
-            "name": "Joey Blount",
-            "position": "DB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0040751",
-            "name": "Will Johnson",
-            "position": "DB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0041555",
-            "name": "Kaleb Proctor",
-            "position": "DL",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0037804",
-            "name": "Zachary Carter",
-            "position": "DL",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
             "id": "00-0040706",
             "name": "Walter Nolen",
             "position": "DT",
@@ -654,14 +538,14 @@
             "availability": 0.9
           }
         ],
-        "offensive_line_penalty": 0.137,
+        "offensive_line_penalty": 0.017,
         "defense_adjustments": {
-          "pass": 0.18,
-          "run": 0.116,
-          "red_zone": 0.091,
-          "wr": 0.176,
-          "te": 0.06,
-          "rb": 0.083
+          "pass": 0.021,
+          "run": 0.016,
+          "red_zone": 0.011,
+          "wr": 0.016,
+          "te": 0.01,
+          "rb": 0.013
         }
       }
     },
@@ -692,20 +576,20 @@
           }
         },
         "injury_adjustments": {
-          "pass": 0.18,
-          "run": 0.18,
-          "red_zone": 0.18,
+          "pass": 0.044,
+          "run": 0.035,
+          "red_zone": 0.024,
           "wr": 0.032,
-          "te": 0.18,
-          "rb": 0.18
+          "te": 0.02,
+          "rb": 0.027
         },
         "adjusted_scores": {
-          "pass": 0.599,
-          "run": 0.535,
-          "red_zone": 0.68,
+          "pass": 0.463,
+          "run": 0.39,
+          "red_zone": 0.524,
           "wr": 0.751,
-          "te": 0.992,
-          "rb": 1.0
+          "te": 0.832,
+          "rb": 0.902
         }
       },
       "players": [
@@ -850,7 +734,8 @@
             "secondary_injury": "",
             "roster_status": "ACT",
             "availability": 0.78,
-            "label": "DID NOT PARTICIPATE IN PRACTICE"
+            "label": "DID NOT PARTICIPATE IN PRACTICE",
+            "current_report": true
           },
           "injury_role_boost": 0.006,
           "effective_role_score": 0.146
@@ -1066,7 +951,8 @@
             "secondary_injury": "",
             "roster_status": "ACT",
             "availability": 0.9,
-            "label": "LIMITED PARTICIPATION IN PRACTICE"
+            "label": "LIMITED PARTICIPATION IN PRACTICE",
+            "current_report": true
           },
           "injury_role_boost": 0.0,
           "effective_role_score": 0.042
@@ -1110,36 +996,6 @@
       "injuries": {
         "week": 8,
         "offense": [
-          {
-            "id": "00-0039842",
-            "name": "Michael Jerrell",
-            "position": "OL",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0033752",
-            "name": "Storm Norton",
-            "position": "OL",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0036984",
-            "name": "Trey Sermon",
-            "position": "RB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
           {
             "id": "00-0040687",
             "name": "Cameron Williams",
@@ -1192,76 +1048,6 @@
           }
         ],
         "defense": [
-          {
-            "id": "00-0041484",
-            "name": "Anterio Thompson",
-            "position": "DL",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0034371",
-            "name": "Da'Shawn Hand",
-            "position": "DL",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0037808",
-            "name": "DeAngelo Malone",
-            "position": "LB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0039370",
-            "name": "JD Bertrand",
-            "position": "LB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0040577",
-            "name": "Jalon Walker",
-            "position": "LB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0040578",
-            "name": "James Pearce Jr.",
-            "position": "LB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0038580",
-            "name": "Yasir Abdullah",
-            "position": "LB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
           {
             "id": "00-0036285",
             "name": "A.J. Terrell",
@@ -1373,14 +1159,14 @@
             "availability": 0.9
           }
         ],
-        "offensive_line_penalty": 0.124,
+        "offensive_line_penalty": 0.044,
         "defense_adjustments": {
-          "pass": 0.18,
-          "run": 0.18,
-          "red_zone": 0.18,
+          "pass": 0.044,
+          "run": 0.035,
+          "red_zone": 0.024,
           "wr": 0.032,
-          "te": 0.18,
-          "rb": 0.18
+          "te": 0.02,
+          "rb": 0.027
         }
       }
     },
@@ -1411,20 +1197,20 @@
           }
         },
         "injury_adjustments": {
-          "pass": 0.18,
-          "run": 0.055,
-          "red_zone": 0.099,
-          "wr": 0.18,
-          "te": 0.138,
-          "rb": 0.055
+          "pass": 0.094,
+          "run": 0.005,
+          "red_zone": 0.029,
+          "wr": 0.106,
+          "te": 0.038,
+          "rb": 0.005
         },
         "adjusted_scores": {
-          "pass": 0.746,
-          "run": 0.332,
-          "red_zone": 0.724,
-          "wr": 0.961,
-          "te": 0.576,
-          "rb": 0.211
+          "pass": 0.66,
+          "run": 0.282,
+          "red_zone": 0.654,
+          "wr": 0.887,
+          "te": 0.476,
+          "rb": 0.161
         }
       },
       "players": [
@@ -1534,7 +1320,8 @@
             "secondary_injury": "",
             "roster_status": "ACT",
             "availability": 1.0,
-            "label": "FULL PARTICIPATION IN PRACTICE"
+            "label": "FULL PARTICIPATION IN PRACTICE",
+            "current_report": true
           },
           "injury_role_boost": 0.0,
           "effective_role_score": 0.3
@@ -1610,7 +1397,8 @@
             "secondary_injury": "",
             "roster_status": "ACT",
             "availability": 1.0,
-            "label": "FULL PARTICIPATION IN PRACTICE"
+            "label": "FULL PARTICIPATION IN PRACTICE",
+            "current_report": true
           },
           "injury_role_boost": 0.0,
           "effective_role_score": 0.183
@@ -1795,46 +1583,6 @@
         "week": 8,
         "offense": [
           {
-            "id": "00-0036215",
-            "name": "Danny Pinter",
-            "position": "OL",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0033901",
-            "name": "Ethan Pocic",
-            "position": "OL",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0038629",
-            "name": "Jovaughn Gwyn",
-            "position": "OL",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0037327",
-            "name": "Skylar Thompson",
-            "position": "QB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
             "id": "00-0040888",
             "name": "Adam Randall",
             "position": "RB",
@@ -1842,16 +1590,6 @@
             "game_status": "",
             "practice_status": "Full Participation in Practice",
             "primary_injury": "Neck",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0034798",
-            "name": "Durham Smythe",
-            "position": "TE",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
             "availability": 0.0
           },
           {
@@ -1887,36 +1625,6 @@
             "availability": 0.0
           },
           {
-            "id": "00-0040073",
-            "name": "Bilhal Kone",
-            "position": "DB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0040988",
-            "name": "Jahquez Robinson",
-            "position": "DB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0038505",
-            "name": "Tavius Robinson",
-            "position": "LB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
             "id": "00-0036302",
             "name": "Jaylinn Hawkins",
             "position": "S",
@@ -1947,14 +1655,14 @@
             "availability": 0.9
           }
         ],
-        "offensive_line_penalty": 0.128,
+        "offensive_line_penalty": 0.008,
         "defense_adjustments": {
-          "pass": 0.18,
-          "run": 0.055,
-          "red_zone": 0.099,
-          "wr": 0.18,
-          "te": 0.138,
-          "rb": 0.055
+          "pass": 0.094,
+          "run": 0.005,
+          "red_zone": 0.029,
+          "wr": 0.106,
+          "te": 0.038,
+          "rb": 0.005
         }
       }
     },
@@ -1985,20 +1693,20 @@
           }
         },
         "injury_adjustments": {
-          "pass": 0.18,
-          "run": 0.115,
-          "red_zone": 0.123,
-          "wr": 0.18,
-          "te": 0.145,
-          "rb": 0.1
+          "pass": 0.021,
+          "run": 0.015,
+          "red_zone": 0.013,
+          "wr": 0.018,
+          "te": 0.02,
+          "rb": 0.015
         },
         "adjusted_scores": {
-          "pass": 1.0,
-          "run": 0.663,
-          "red_zone": 0.935,
+          "pass": 0.869,
+          "run": 0.563,
+          "red_zone": 0.825,
           "wr": 1.0,
-          "te": 0.801,
-          "rb": 1.0
+          "te": 0.676,
+          "rb": 0.921
         }
       },
       "players": [
@@ -2143,7 +1851,8 @@
             "secondary_injury": "",
             "roster_status": "ACT",
             "availability": 0.9,
-            "label": "LIMITED PARTICIPATION IN PRACTICE"
+            "label": "LIMITED PARTICIPATION IN PRACTICE",
+            "current_report": true
           },
           "injury_role_boost": 0.009,
           "effective_role_score": 0.191
@@ -2219,7 +1928,8 @@
             "secondary_injury": "",
             "roster_status": "ACT",
             "availability": 0.9,
-            "label": "LIMITED PARTICIPATION IN PRACTICE"
+            "label": "LIMITED PARTICIPATION IN PRACTICE",
+            "current_report": true
           },
           "injury_role_boost": 0.001,
           "effective_role_score": 0.074
@@ -2365,7 +2075,8 @@
             "secondary_injury": "",
             "roster_status": "ACT",
             "availability": 0.78,
-            "label": "DID NOT PARTICIPATE IN PRACTICE"
+            "label": "DID NOT PARTICIPATE IN PRACTICE",
+            "current_report": true
           },
           "injury_role_boost": 0.0,
           "effective_role_score": 0.021
@@ -2462,56 +2173,6 @@
         ],
         "defense": [
           {
-            "id": "00-0035253",
-            "name": "C.J. Gardner-Johnson",
-            "position": "DB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0040197",
-            "name": "Dorian Strong",
-            "position": "DB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0040192",
-            "name": "Jordan Hancock",
-            "position": "DB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0041091",
-            "name": "Zane Durant",
-            "position": "DL",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0035020",
-            "name": "Demetrius Flannigan-Fowles",
-            "position": "LB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
             "id": "00-0037034",
             "name": "Dee Alford",
             "position": "CB",
@@ -2554,12 +2215,12 @@
         ],
         "offensive_line_penalty": 0.009,
         "defense_adjustments": {
-          "pass": 0.18,
-          "run": 0.115,
-          "red_zone": 0.123,
-          "wr": 0.18,
-          "te": 0.145,
-          "rb": 0.1
+          "pass": 0.021,
+          "run": 0.015,
+          "red_zone": 0.013,
+          "wr": 0.018,
+          "te": 0.02,
+          "rb": 0.015
         }
       }
     },
@@ -2590,20 +2251,20 @@
           }
         },
         "injury_adjustments": {
-          "pass": 0.18,
-          "run": 0.18,
-          "red_zone": 0.176,
-          "wr": 0.18,
-          "te": 0.18,
-          "rb": 0.18
+          "pass": 0.098,
+          "run": 0.065,
+          "red_zone": 0.056,
+          "wr": 0.08,
+          "te": 0.075,
+          "rb": 0.061
         },
         "adjusted_scores": {
-          "pass": 0.586,
-          "run": 1.0,
-          "red_zone": 0.864,
-          "wr": 0.586,
-          "te": 0.774,
-          "rb": 1.0
+          "pass": 0.504,
+          "run": 0.904,
+          "red_zone": 0.744,
+          "wr": 0.486,
+          "te": 0.669,
+          "rb": 0.999
         }
       },
       "players": [
@@ -2643,7 +2304,8 @@
             "secondary_injury": "",
             "roster_status": "ACT",
             "availability": 1.0,
-            "label": "FULL PARTICIPATION IN PRACTICE"
+            "label": "FULL PARTICIPATION IN PRACTICE",
+            "current_report": true
           },
           "injury_role_boost": 0.0,
           "effective_role_score": 0.978
@@ -2754,7 +2416,8 @@
             "secondary_injury": "",
             "roster_status": "ACT",
             "availability": 1.0,
-            "label": "FULL PARTICIPATION IN PRACTICE"
+            "label": "FULL PARTICIPATION IN PRACTICE",
+            "current_report": true
           },
           "injury_role_boost": 0.0,
           "effective_role_score": 0.187
@@ -3005,7 +2668,8 @@
             "secondary_injury": "",
             "roster_status": "RES",
             "availability": 0.0,
-            "label": "IR/RESERVE"
+            "label": "IR/RESERVE",
+            "current_report": false
           },
           "injury_role_boost": 0.0,
           "effective_role_score": 0.0
@@ -3068,76 +2732,6 @@
             "practice_status": "Did Not Participate In Practice",
             "primary_injury": "Ankle",
             "availability": 0.0
-          },
-          {
-            "id": "00-0036968",
-            "name": "Brady Christensen",
-            "position": "OL",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0037229",
-            "name": "Ikem Ekwonu",
-            "position": "OL",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0039042",
-            "name": "Ryan Hayes",
-            "position": "OL",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0033284",
-            "name": "Taylor Moton",
-            "position": "OL",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0039344",
-            "name": "Jonathon Brooks",
-            "position": "RB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0041047",
-            "name": "Chris Brazzell II",
-            "position": "WR",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0039342",
-            "name": "Xavier Legette",
-            "position": "WR",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
           }
         ],
         "defense": [
@@ -3152,36 +2746,6 @@
             "availability": 0.0
           },
           {
-            "id": "00-0036944",
-            "name": "Jaycee Horn",
-            "position": "DB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0035277",
-            "name": "Mike Jackson",
-            "position": "DB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0040174",
-            "name": "Cam Jackson",
-            "position": "DL",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
             "id": "00-0036934",
             "name": "Jaelan Phillips",
             "position": "LB",
@@ -3189,26 +2753,6 @@
             "game_status": "Out",
             "practice_status": "Did Not Participate In Practice",
             "primary_injury": "Hamstring",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0040746",
-            "name": "Nic Scourton",
-            "position": "LB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0038791",
-            "name": "Thomas Incoom",
-            "position": "LB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
             "availability": 0.0
           },
           {
@@ -3222,14 +2766,14 @@
             "availability": 0.7
           }
         ],
-        "offensive_line_penalty": 0.14,
+        "offensive_line_penalty": 0.08,
         "defense_adjustments": {
-          "pass": 0.18,
-          "run": 0.18,
-          "red_zone": 0.176,
-          "wr": 0.18,
-          "te": 0.18,
-          "rb": 0.18
+          "pass": 0.098,
+          "run": 0.065,
+          "red_zone": 0.056,
+          "wr": 0.08,
+          "te": 0.075,
+          "rb": 0.061
         }
       }
     },
@@ -3260,20 +2804,20 @@
           }
         },
         "injury_adjustments": {
-          "pass": 0.18,
-          "run": 0.18,
-          "red_zone": 0.18,
-          "wr": 0.18,
-          "te": 0.18,
-          "rb": 0.18
+          "pass": 0.009,
+          "run": 0.005,
+          "red_zone": 0.005,
+          "wr": 0.008,
+          "te": 0.007,
+          "rb": 0.005
         },
         "adjusted_scores": {
-          "pass": 0.822,
-          "run": 0.857,
-          "red_zone": 0.899,
-          "wr": 0.524,
-          "te": 0.711,
-          "rb": 0.368
+          "pass": 0.651,
+          "run": 0.682,
+          "red_zone": 0.724,
+          "wr": 0.352,
+          "te": 0.538,
+          "rb": 0.193
         }
       },
       "players": [
@@ -3558,7 +3102,8 @@
             "secondary_injury": "Toe",
             "roster_status": "ACT",
             "availability": 0.78,
-            "label": "DID NOT PARTICIPATE IN PRACTICE"
+            "label": "DID NOT PARTICIPATE IN PRACTICE",
+            "current_report": true
           },
           "injury_role_boost": 0.004,
           "effective_role_score": 0.116
@@ -3669,7 +3214,8 @@
             "secondary_injury": "",
             "roster_status": "RES",
             "availability": 0.0,
-            "label": "IR/RESERVE"
+            "label": "IR/RESERVE",
+            "current_report": false
           },
           "injury_role_boost": 0.0,
           "effective_role_score": 0.0
@@ -3678,66 +3224,6 @@
       "injuries": {
         "week": 8,
         "offense": [
-          {
-            "id": "00-0037081",
-            "name": "Braxton Jones",
-            "position": "OL",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0037329",
-            "name": "Brittain Brown",
-            "position": "RB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0036290",
-            "name": "Cole Kmet",
-            "position": "TE",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0041170",
-            "name": "Hayden Large",
-            "position": "TE",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0037031",
-            "name": "Nikola Kalinic",
-            "position": "TE",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0034407",
-            "name": "Ray-Ray McCloud",
-            "position": "WR",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
           {
             "id": "00-0040236",
             "name": "Kyle Monangai",
@@ -3750,86 +3236,6 @@
           }
         ],
         "defense": [
-          {
-            "id": "00-0038136",
-            "name": "Coby Bryant",
-            "position": "DB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0037395",
-            "name": "Dallis Flowers",
-            "position": "DB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0040550",
-            "name": "Dontae Manning",
-            "position": "DB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0036480",
-            "name": "Dayo Odeyingbo",
-            "position": "DL",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0036239",
-            "name": "Jonathan Garvin",
-            "position": "LB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0037544",
-            "name": "Nephi Sewell",
-            "position": "LB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0040167",
-            "name": "Ruben Hyppolite II",
-            "position": "LB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0036634",
-            "name": "Tony Fields II",
-            "position": "LB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
           {
             "id": "00-0041060",
             "name": "Malik Muhammad",
@@ -3851,14 +3257,14 @@
             "availability": 0.9
           }
         ],
-        "offensive_line_penalty": 0.04,
+        "offensive_line_penalty": 0.0,
         "defense_adjustments": {
-          "pass": 0.18,
-          "run": 0.18,
-          "red_zone": 0.18,
-          "wr": 0.18,
-          "te": 0.18,
-          "rb": 0.18
+          "pass": 0.009,
+          "run": 0.005,
+          "red_zone": 0.005,
+          "wr": 0.008,
+          "te": 0.007,
+          "rb": 0.005
         }
       }
     },
@@ -3889,20 +3295,20 @@
           }
         },
         "injury_adjustments": {
-          "pass": 0.18,
-          "run": 0.071,
-          "red_zone": 0.087,
-          "wr": 0.18,
-          "te": 0.119,
-          "rb": 0.068
+          "pass": 0.032,
+          "run": 0.021,
+          "red_zone": 0.017,
+          "wr": 0.026,
+          "te": 0.019,
+          "rb": 0.018
         },
         "adjusted_scores": {
-          "pass": 0.528,
-          "run": 0.758,
-          "red_zone": 0.181,
-          "wr": 0.618,
-          "te": 0.807,
-          "rb": 0.193
+          "pass": 0.38,
+          "run": 0.708,
+          "red_zone": 0.111,
+          "wr": 0.464,
+          "te": 0.707,
+          "rb": 0.143
         }
       },
       "players": [
@@ -4047,7 +3453,8 @@
             "secondary_injury": "Ankle",
             "roster_status": "ACT",
             "availability": 1.0,
-            "label": "FULL PARTICIPATION IN PRACTICE"
+            "label": "FULL PARTICIPATION IN PRACTICE",
+            "current_report": true
           },
           "injury_role_boost": 0.0,
           "effective_role_score": 0.246
@@ -4193,7 +3600,8 @@
             "secondary_injury": "",
             "roster_status": "RES",
             "availability": 0.0,
-            "label": "IR/RESERVE"
+            "label": "IR/RESERVE",
+            "current_report": false
           },
           "injury_role_boost": 0.0,
           "effective_role_score": 0.0
@@ -4234,7 +3642,8 @@
             "secondary_injury": "",
             "roster_status": "RES",
             "availability": 0.0,
-            "label": "IR/RESERVE"
+            "label": "IR/RESERVE",
+            "current_report": false
           },
           "injury_role_boost": 0.0,
           "effective_role_score": 0.0
@@ -4312,79 +3721,8 @@
       ],
       "injuries": {
         "week": 8,
-        "offense": [
-          {
-            "id": "00-0041098",
-            "name": "Brian Parker II",
-            "position": "OL",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0039814",
-            "name": "Erick All",
-            "position": "TE",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0034613",
-            "name": "Tanner Hudson",
-            "position": "TE",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0038619",
-            "name": "Andrei Iosivas",
-            "position": "WR",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          }
-        ],
+        "offense": [],
         "defense": [
-          {
-            "id": "00-0037307",
-            "name": "Ja'Sir Taylor",
-            "position": "DB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0034446",
-            "name": "Jalen Davis",
-            "position": "DB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0039313",
-            "name": "Swayze Bozeman",
-            "position": "LB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
           {
             "id": "00-0035363",
             "name": "Joe Giles-Harris",
@@ -4436,14 +3774,14 @@
             "availability": 0.9
           }
         ],
-        "offensive_line_penalty": 0.04,
+        "offensive_line_penalty": 0.0,
         "defense_adjustments": {
-          "pass": 0.18,
-          "run": 0.071,
-          "red_zone": 0.087,
-          "wr": 0.18,
-          "te": 0.119,
-          "rb": 0.068
+          "pass": 0.032,
+          "run": 0.021,
+          "red_zone": 0.017,
+          "wr": 0.026,
+          "te": 0.019,
+          "rb": 0.018
         }
       }
     },
@@ -4474,20 +3812,20 @@
           }
         },
         "injury_adjustments": {
-          "pass": 0.18,
-          "run": 0.18,
-          "red_zone": 0.155,
-          "wr": 0.104,
-          "te": 0.138,
-          "rb": 0.18
+          "pass": 0.03,
+          "run": 0.02,
+          "red_zone": 0.015,
+          "wr": 0.024,
+          "te": 0.012,
+          "rb": 0.015
         },
         "adjusted_scores": {
-          "pass": 0.496,
-          "run": 0.805,
-          "red_zone": 0.343,
-          "wr": 0.698,
-          "te": 0.763,
-          "rb": 0.43
+          "pass": 0.346,
+          "run": 0.645,
+          "red_zone": 0.203,
+          "wr": 0.618,
+          "te": 0.637,
+          "rb": 0.265
         }
       },
       "players": [
@@ -4842,7 +4180,8 @@
             "secondary_injury": "",
             "roster_status": "RES",
             "availability": 0.0,
-            "label": "IR/RESERVE"
+            "label": "IR/RESERVE",
+            "current_report": false
           },
           "injury_role_boost": 0.0,
           "effective_role_score": 0.0
@@ -4883,7 +4222,8 @@
             "secondary_injury": "",
             "roster_status": "ACT",
             "availability": 1.0,
-            "label": "FULL PARTICIPATION IN PRACTICE"
+            "label": "FULL PARTICIPATION IN PRACTICE",
+            "current_report": true
           },
           "injury_role_boost": 0.002,
           "effective_role_score": 0.036
@@ -4892,36 +4232,6 @@
       "injuries": {
         "week": 8,
         "offense": [
-          {
-            "id": "00-0036953",
-            "name": "Teven Jenkins",
-            "position": "OL",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0040466",
-            "name": "Raheim Sanders",
-            "position": "RB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0041087",
-            "name": "Joe Royer",
-            "position": "TE",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
           {
             "id": "00-0035234",
             "name": "Tytus Howard",
@@ -4944,66 +4254,6 @@
           }
         ],
         "defense": [
-          {
-            "id": "00-0038105",
-            "name": "Damarri Mathis",
-            "position": "DB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0037251",
-            "name": "Alex Wright",
-            "position": "DL",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0039764",
-            "name": "Elijah Chatman",
-            "position": "DL",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0037832",
-            "name": "Kalia Davis",
-            "position": "DL",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0039878",
-            "name": "Edefuan Ulofoshio",
-            "position": "LB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0036915",
-            "name": "Jeremiah Owusu-Koramoah",
-            "position": "LB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
           {
             "id": "00-0039417",
             "name": "Myles Harden",
@@ -5075,14 +4325,14 @@
             "availability": 0.9
           }
         ],
-        "offensive_line_penalty": 0.053,
+        "offensive_line_penalty": 0.013,
         "defense_adjustments": {
-          "pass": 0.18,
-          "run": 0.18,
-          "red_zone": 0.155,
-          "wr": 0.104,
-          "te": 0.138,
-          "rb": 0.18
+          "pass": 0.03,
+          "run": 0.02,
+          "red_zone": 0.015,
+          "wr": 0.024,
+          "te": 0.012,
+          "rb": 0.015
         }
       }
     },
@@ -5113,20 +4363,20 @@
           }
         },
         "injury_adjustments": {
-          "pass": 0.18,
-          "run": 0.166,
-          "red_zone": 0.141,
-          "wr": 0.18,
-          "te": 0.139,
-          "rb": 0.135
+          "pass": 0.129,
+          "run": 0.116,
+          "red_zone": 0.081,
+          "wr": 0.088,
+          "te": 0.089,
+          "rb": 0.1
         },
         "adjusted_scores": {
           "pass": 1.0,
-          "run": 0.925,
-          "red_zone": 0.985,
-          "wr": 0.868,
-          "te": 0.608,
-          "rb": 0.916
+          "run": 0.875,
+          "red_zone": 0.925,
+          "wr": 0.776,
+          "te": 0.558,
+          "rb": 0.881
         }
       },
       "players": [
@@ -5271,7 +4521,8 @@
             "secondary_injury": "Hamstring",
             "roster_status": "ACT",
             "availability": 0.9,
-            "label": "LIMITED PARTICIPATION IN PRACTICE"
+            "label": "LIMITED PARTICIPATION IN PRACTICE",
+            "current_report": true
           },
           "injury_role_boost": 0.005,
           "effective_role_score": 0.193
@@ -5487,7 +4738,8 @@
             "secondary_injury": "",
             "roster_status": "ACT",
             "availability": 0.78,
-            "label": "DID NOT PARTICIPATE IN PRACTICE"
+            "label": "DID NOT PARTICIPATE IN PRACTICE",
+            "current_report": true
           },
           "injury_role_boost": 0.001,
           "effective_role_score": 0.022
@@ -5532,36 +4784,6 @@
         "week": 8,
         "offense": [
           {
-            "id": "00-0036295",
-            "name": "Matt Hennessy",
-            "position": "OL",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0037563",
-            "name": "Malik Davis",
-            "position": "RB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0038735",
-            "name": "Princeton Fant",
-            "position": "TE",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
             "id": "00-0038547",
             "name": "Luke Schoonmaker",
             "position": "TE",
@@ -5603,36 +4825,6 @@
           }
         ],
         "defense": [
-          {
-            "id": "00-0040875",
-            "name": "Devin Moore",
-            "position": "DB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0035705",
-            "name": "Jalen Thompson",
-            "position": "DB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0040933",
-            "name": "Kelvin Gilliam",
-            "position": "DL",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
           {
             "id": "00-0033093",
             "name": "Jonathan Bullard",
@@ -5694,14 +4886,14 @@
             "availability": 0.9
           }
         ],
-        "offensive_line_penalty": 0.044,
+        "offensive_line_penalty": 0.004,
         "defense_adjustments": {
-          "pass": 0.18,
-          "run": 0.166,
-          "red_zone": 0.141,
-          "wr": 0.18,
-          "te": 0.139,
-          "rb": 0.135
+          "pass": 0.129,
+          "run": 0.116,
+          "red_zone": 0.081,
+          "wr": 0.088,
+          "te": 0.089,
+          "rb": 0.1
         }
       }
     },
@@ -5732,20 +4924,20 @@
           }
         },
         "injury_adjustments": {
-          "pass": 0.09,
-          "run": 0.155,
-          "red_zone": 0.088,
+          "pass": 0.025,
+          "run": 0.005,
+          "red_zone": 0.008,
           "wr": 0.026,
-          "te": 0.108,
-          "rb": 0.139
+          "te": 0.008,
+          "rb": 0.003
         },
         "adjusted_scores": {
-          "pass": 0.263,
-          "run": 0.913,
-          "red_zone": 0.338,
+          "pass": 0.198,
+          "run": 0.763,
+          "red_zone": 0.258,
           "wr": 0.214,
-          "te": 0.858,
-          "rb": 0.858
+          "te": 0.758,
+          "rb": 0.722
         }
       },
       "players": [
@@ -5855,7 +5047,8 @@
             "secondary_injury": "",
             "roster_status": "ACT",
             "availability": 0.9,
-            "label": "LIMITED PARTICIPATION IN PRACTICE"
+            "label": "LIMITED PARTICIPATION IN PRACTICE",
+            "current_report": true
           },
           "injury_role_boost": 0.02,
           "effective_role_score": 0.226
@@ -5931,7 +5124,8 @@
             "secondary_injury": "",
             "roster_status": "ACT",
             "availability": 0.9,
-            "label": "LIMITED PARTICIPATION IN PRACTICE"
+            "label": "LIMITED PARTICIPATION IN PRACTICE",
+            "current_report": true
           },
           "injury_role_boost": 0.006,
           "effective_role_score": 0.121
@@ -6077,7 +5271,8 @@
             "secondary_injury": "",
             "roster_status": "ACT",
             "availability": 1.0,
-            "label": "FULL PARTICIPATION IN PRACTICE"
+            "label": "FULL PARTICIPATION IN PRACTICE",
+            "current_report": true
           },
           "injury_role_boost": 0.005,
           "effective_role_score": 0.064
@@ -6118,7 +5313,8 @@
             "secondary_injury": "",
             "roster_status": "RES",
             "availability": 0.0,
-            "label": "IR/RESERVE"
+            "label": "IR/RESERVE",
+            "current_report": false
           },
           "injury_role_boost": 0.0,
           "effective_role_score": 0.0
@@ -6194,7 +5390,8 @@
             "secondary_injury": "",
             "roster_status": "RES",
             "availability": 0.0,
-            "label": "IR/RESERVE"
+            "label": "IR/RESERVE",
+            "current_report": false
           },
           "injury_role_boost": 0.0,
           "effective_role_score": 0.0
@@ -6203,66 +5400,6 @@
       "injuries": {
         "week": 8,
         "offense": [
-          {
-            "id": "00-0039568",
-            "name": "Frank Crum",
-            "position": "OL",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0035686",
-            "name": "Michael Deiter",
-            "position": "OL",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0039438",
-            "name": "Nick Gargiulo",
-            "position": "OL",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0037085",
-            "name": "Tyler Badie",
-            "position": "RB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0040240",
-            "name": "Caleb Lohner",
-            "position": "TE",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0040134",
-            "name": "Pat Bryant",
-            "position": "WR",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
           {
             "id": "00-0040730",
             "name": "RJ Harvey",
@@ -6296,36 +5433,6 @@
         ],
         "defense": [
           {
-            "id": "00-0037303",
-            "name": "Matt Henningsen",
-            "position": "DL",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0039809",
-            "name": "Jonah Elliss",
-            "position": "LB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0039565",
-            "name": "Levelle Bailey",
-            "position": "LB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
             "id": "00-0036564",
             "name": "Talanoa Hufanga",
             "position": "S",
@@ -6356,14 +5463,14 @@
             "availability": 0.9
           }
         ],
-        "offensive_line_penalty": 0.124,
+        "offensive_line_penalty": 0.004,
         "defense_adjustments": {
-          "pass": 0.09,
-          "run": 0.155,
-          "red_zone": 0.088,
+          "pass": 0.025,
+          "run": 0.005,
+          "red_zone": 0.008,
           "wr": 0.026,
-          "te": 0.108,
-          "rb": 0.139
+          "te": 0.008,
+          "rb": 0.003
         }
       }
     },
@@ -6394,20 +5501,20 @@
           }
         },
         "injury_adjustments": {
-          "pass": 0.18,
-          "run": 0.15,
-          "red_zone": 0.142,
-          "wr": 0.18,
-          "te": 0.178,
-          "rb": 0.135
+          "pass": 0.077,
+          "run": 0.0,
+          "red_zone": 0.022,
+          "wr": 0.088,
+          "te": 0.028,
+          "rb": 0.0
         },
         "adjusted_scores": {
-          "pass": 0.896,
-          "run": 0.844,
-          "red_zone": 1.0,
-          "wr": 1.0,
+          "pass": 0.793,
+          "run": 0.694,
+          "red_zone": 0.928,
+          "wr": 0.994,
           "te": 1.0,
-          "rb": 0.416
+          "rb": 0.281
         }
       },
       "players": [
@@ -6482,7 +5589,8 @@
             "secondary_injury": "",
             "roster_status": "ACT",
             "availability": 1.0,
-            "label": "FULL PARTICIPATION IN PRACTICE"
+            "label": "FULL PARTICIPATION IN PRACTICE",
+            "current_report": true
           },
           "injury_role_boost": 0.0,
           "effective_role_score": 0.736
@@ -6523,7 +5631,8 @@
             "secondary_injury": "",
             "roster_status": "ACT",
             "availability": 1.0,
-            "label": "FULL PARTICIPATION IN PRACTICE"
+            "label": "FULL PARTICIPATION IN PRACTICE",
+            "current_report": true
           },
           "injury_role_boost": 0.0,
           "effective_role_score": 0.337
@@ -6671,109 +5780,8 @@
       ],
       "injuries": {
         "week": 8,
-        "offense": [
-          {
-            "id": "00-0036272",
-            "name": "Ben Bartch",
-            "position": "OL",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0039362",
-            "name": "Giovanni Manu",
-            "position": "OL",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0037197",
-            "name": "Isiah Pacheco",
-            "position": "RB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0041446",
-            "name": "Kendrick Law",
-            "position": "WR",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0035544",
-            "name": "Tom Kennedy",
-            "position": "WR",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          }
-        ],
+        "offense": [],
         "defense": [
-          {
-            "id": "00-0034377",
-            "name": "Avonte Maddox",
-            "position": "DB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0039660",
-            "name": "Thomas Harper",
-            "position": "DB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0036926",
-            "name": "Payton Turner",
-            "position": "DL",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0037281",
-            "name": "Damone Clark",
-            "position": "LB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0035707",
-            "name": "Devin White",
-            "position": "LB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
           {
             "id": "00-0037667",
             "name": "Kerby Joseph",
@@ -6795,14 +5803,14 @@
             "availability": 0.9
           }
         ],
-        "offensive_line_penalty": 0.08,
+        "offensive_line_penalty": 0.0,
         "defense_adjustments": {
-          "pass": 0.18,
-          "run": 0.15,
-          "red_zone": 0.142,
-          "wr": 0.18,
-          "te": 0.178,
-          "rb": 0.135
+          "pass": 0.077,
+          "run": 0.0,
+          "red_zone": 0.022,
+          "wr": 0.088,
+          "te": 0.028,
+          "rb": 0.0
         }
       }
     },
@@ -6833,20 +5841,20 @@
           }
         },
         "injury_adjustments": {
-          "pass": 0.18,
-          "run": 0.18,
-          "red_zone": 0.18,
-          "wr": 0.08,
-          "te": 0.18,
-          "rb": 0.18
+          "pass": 0.041,
+          "run": 0.095,
+          "red_zone": 0.051,
+          "wr": 0.0,
+          "te": 0.065,
+          "rb": 0.086
         },
         "adjusted_scores": {
-          "pass": 0.341,
-          "run": 0.535,
-          "red_zone": 0.649,
-          "wr": 0.83,
-          "te": 0.242,
-          "rb": 0.992
+          "pass": 0.202,
+          "run": 0.45,
+          "red_zone": 0.52,
+          "wr": 0.75,
+          "te": 0.127,
+          "rb": 0.898
         }
       },
       "players": [
@@ -6921,7 +5929,8 @@
             "secondary_injury": "Foot",
             "roster_status": "ACT",
             "availability": 0.7,
-            "label": "QUESTIONABLE"
+            "label": "QUESTIONABLE",
+            "current_report": true
           },
           "injury_role_boost": 0.048,
           "effective_role_score": 0.254
@@ -7172,7 +6181,8 @@
             "secondary_injury": "",
             "roster_status": "RES",
             "availability": 0.0,
-            "label": "IR/RESERVE"
+            "label": "IR/RESERVE",
+            "current_report": false
           },
           "injury_role_boost": 0.0,
           "effective_role_score": 0.0
@@ -7213,7 +6223,8 @@
             "secondary_injury": "",
             "roster_status": "RES",
             "availability": 0.0,
-            "label": "IR/RESERVE"
+            "label": "IR/RESERVE",
+            "current_report": false
           },
           "injury_role_boost": 0.0,
           "effective_role_score": 0.0
@@ -7313,86 +6324,6 @@
             "availability": 0.0
           },
           {
-            "id": "00-0039817",
-            "name": "Jacob Monk",
-            "position": "OL",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0037817",
-            "name": "Zach Bako-Bewele",
-            "position": "OL",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0038685",
-            "name": "Chris Brooks",
-            "position": "RB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0039144",
-            "name": "Luke Musgrave",
-            "position": "TE",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0039263",
-            "name": "McCallan Castles",
-            "position": "TE",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0039936",
-            "name": "Thomas Yassmin",
-            "position": "TE",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0039146",
-            "name": "Jayden Reed",
-            "position": "WR",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0038090",
-            "name": "Skyy Moore",
-            "position": "WR",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
             "id": "00-0040667",
             "name": "Matthew Golden",
             "position": "WR",
@@ -7404,76 +6335,6 @@
           }
         ],
         "defense": [
-          {
-            "id": "00-0040033",
-            "name": "Johnathan Baldwin",
-            "position": "DB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0033109",
-            "name": "Javon Hargrave",
-            "position": "DL",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0037094",
-            "name": "Jonathan Ford",
-            "position": "DL",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0040016",
-            "name": "Warren Brinson",
-            "position": "DL",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0040012",
-            "name": "Collin Oliver",
-            "position": "LB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0039850",
-            "name": "Edgerrin Cooper",
-            "position": "LB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0036932",
-            "name": "Micah Parsons",
-            "position": "LB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
           {
             "id": "00-0034431",
             "name": "Zaire Franklin",
@@ -7515,14 +6376,14 @@
             "availability": 0.7
           }
         ],
-        "offensive_line_penalty": 0.14,
+        "offensive_line_penalty": 0.08,
         "defense_adjustments": {
-          "pass": 0.18,
-          "run": 0.18,
-          "red_zone": 0.18,
-          "wr": 0.08,
-          "te": 0.18,
-          "rb": 0.18
+          "pass": 0.041,
+          "run": 0.095,
+          "red_zone": 0.051,
+          "wr": 0.0,
+          "te": 0.065,
+          "rb": 0.086
         }
       }
     },
@@ -7553,20 +6414,20 @@
           }
         },
         "injury_adjustments": {
-          "pass": 0.18,
-          "run": 0.18,
-          "red_zone": 0.18,
-          "wr": 0.08,
-          "te": 0.175,
-          "rb": 0.18
+          "pass": 0.0,
+          "run": 0.0,
+          "red_zone": 0.0,
+          "wr": 0.0,
+          "te": 0.0,
+          "rb": 0.0
         },
         "adjusted_scores": {
-          "pass": 0.792,
-          "run": 0.691,
-          "red_zone": 0.836,
-          "wr": 1.0,
-          "te": 0.331,
-          "rb": 0.836
+          "pass": 0.612,
+          "run": 0.511,
+          "red_zone": 0.656,
+          "wr": 0.969,
+          "te": 0.156,
+          "rb": 0.656
         }
       },
       "players": [
@@ -7991,7 +6852,8 @@
             "secondary_injury": "",
             "roster_status": "ACT",
             "availability": 0.9,
-            "label": "LIMITED PARTICIPATION IN PRACTICE"
+            "label": "LIMITED PARTICIPATION IN PRACTICE",
+            "current_report": true
           },
           "injury_role_boost": 0.0,
           "effective_role_score": 0.028
@@ -7999,138 +6861,16 @@
       ],
       "injuries": {
         "week": 8,
-        "offense": [
-          {
-            "id": "00-0041303",
-            "name": "Sam Hagen",
-            "position": "OL",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0040211",
-            "name": "Graham Mertz",
-            "position": "QB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0039603",
-            "name": "British Brooks",
-            "position": "RB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0040130",
-            "name": "Jayden Higgins",
-            "position": "WR",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          }
-        ],
-        "defense": [
-          {
-            "id": "00-0040149",
-            "name": "Jaylin Smith",
-            "position": "DB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0038724",
-            "name": "Ali Gaye",
-            "position": "DL",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0039009",
-            "name": "Dylan Horton",
-            "position": "DL",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0032265",
-            "name": "Mario Edwards",
-            "position": "DL",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0039427",
-            "name": "Solomon Byrd",
-            "position": "DL",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0034987",
-            "name": "E.J. Speed",
-            "position": "LB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0037633",
-            "name": "Jacob Hummel",
-            "position": "LB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0040413",
-            "name": "K.C. Ossai",
-            "position": "LB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          }
-        ],
-        "offensive_line_penalty": 0.04,
+        "offense": [],
+        "defense": [],
+        "offensive_line_penalty": 0.0,
         "defense_adjustments": {
-          "pass": 0.18,
-          "run": 0.18,
-          "red_zone": 0.18,
-          "wr": 0.08,
-          "te": 0.175,
-          "rb": 0.18
+          "pass": 0.0,
+          "run": 0.0,
+          "red_zone": 0.0,
+          "wr": 0.0,
+          "te": 0.0,
+          "rb": 0.0
         }
       }
     },
@@ -8161,20 +6901,20 @@
           }
         },
         "injury_adjustments": {
-          "pass": 0.18,
-          "run": 0.111,
-          "red_zone": 0.091,
-          "wr": 0.178,
-          "te": 0.067,
-          "rb": 0.081
+          "pass": 0.02,
+          "run": 0.011,
+          "red_zone": 0.011,
+          "wr": 0.018,
+          "te": 0.017,
+          "rb": 0.011
         },
         "adjusted_scores": {
-          "pass": 0.794,
-          "run": 0.892,
-          "red_zone": 0.872,
-          "wr": 0.397,
-          "te": 0.629,
-          "rb": 0.612
+          "pass": 0.634,
+          "run": 0.792,
+          "red_zone": 0.792,
+          "wr": 0.237,
+          "te": 0.579,
+          "rb": 0.542
         }
       },
       "players": [
@@ -8354,7 +7094,8 @@
             "secondary_injury": "",
             "roster_status": "ACT",
             "availability": 0.9,
-            "label": "LIMITED PARTICIPATION IN PRACTICE"
+            "label": "LIMITED PARTICIPATION IN PRACTICE",
+            "current_report": true
           },
           "injury_role_boost": 0.006,
           "effective_role_score": 0.135
@@ -8539,36 +7280,6 @@
         "week": 8,
         "offense": [
           {
-            "id": "00-0040853",
-            "name": "Carson Towt",
-            "position": "TE",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0037664",
-            "name": "Alec Pierce",
-            "position": "WR",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0035045",
-            "name": "D.J. Montgomery",
-            "position": "WR",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
             "id": "00-0037292",
             "name": "Andrew Ogletree",
             "position": "TE",
@@ -8590,46 +7301,6 @@
           }
         ],
         "defense": [
-          {
-            "id": "00-0037753",
-            "name": "Cam Taylor-Britt",
-            "position": "DB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0038585",
-            "name": "Cameron Mitchell",
-            "position": "DB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0034825",
-            "name": "Arden Key",
-            "position": "DL",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0038107",
-            "name": "Micheal Clemons",
-            "position": "DL",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
           {
             "id": "00-0040139",
             "name": "Justin Walley",
@@ -8653,12 +7324,12 @@
         ],
         "offensive_line_penalty": 0.0,
         "defense_adjustments": {
-          "pass": 0.18,
-          "run": 0.111,
-          "red_zone": 0.091,
-          "wr": 0.178,
-          "te": 0.067,
-          "rb": 0.081
+          "pass": 0.02,
+          "run": 0.011,
+          "red_zone": 0.011,
+          "wr": 0.018,
+          "te": 0.017,
+          "rb": 0.011
         }
       }
     },
@@ -8689,20 +7360,20 @@
           }
         },
         "injury_adjustments": {
-          "pass": 0.18,
-          "run": 0.18,
-          "red_zone": 0.129,
-          "wr": 0.098,
-          "te": 0.136,
-          "rb": 0.178
+          "pass": 0.02,
+          "run": 0.01,
+          "red_zone": 0.009,
+          "wr": 0.018,
+          "te": 0.01,
+          "rb": 0.008
         },
         "adjusted_scores": {
-          "pass": 0.816,
-          "run": 0.28,
-          "red_zone": 0.285,
-          "wr": 0.973,
-          "te": 0.48,
-          "rb": 0.24
+          "pass": 0.656,
+          "run": 0.11,
+          "red_zone": 0.165,
+          "wr": 0.893,
+          "te": 0.354,
+          "rb": 0.07
         }
       },
       "players": [
@@ -8882,7 +7553,8 @@
             "secondary_injury": "",
             "roster_status": "ACT",
             "availability": 0.9,
-            "label": "LIMITED PARTICIPATION IN PRACTICE"
+            "label": "LIMITED PARTICIPATION IN PRACTICE",
+            "current_report": true
           },
           "injury_role_boost": 0.003,
           "effective_role_score": 0.15
@@ -8923,7 +7595,8 @@
             "secondary_injury": "",
             "roster_status": "ACT",
             "availability": 1.0,
-            "label": "FULL PARTICIPATION IN PRACTICE"
+            "label": "FULL PARTICIPATION IN PRACTICE",
+            "current_report": true
           },
           "injury_role_boost": 0.0,
           "effective_role_score": 0.162
@@ -9108,56 +7781,6 @@
         "week": 8,
         "offense": [
           {
-            "id": "00-0038934",
-            "name": "Anton Harrison",
-            "position": "OL",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0041208",
-            "name": "Garrett DiGiorgio",
-            "position": "OL",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0035112",
-            "name": "Patrick Mekari",
-            "position": "OL",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0035062",
-            "name": "Sam Mustipher",
-            "position": "OL",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0039534",
-            "name": "Carter Bradley",
-            "position": "QB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
             "id": "00-0040238",
             "name": "LeQuint Allen Jr.",
             "position": "RB",
@@ -9179,56 +7802,6 @@
           }
         ],
         "defense": [
-          {
-            "id": "00-0040145",
-            "name": "Caleb Ransaw",
-            "position": "DB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0040329",
-            "name": "BJ Green II",
-            "position": "DL",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0041122",
-            "name": "Zach Durfee",
-            "position": "DL",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0040395",
-            "name": "Jared Bartlett",
-            "position": "LB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0041127",
-            "name": "Parker Hughes",
-            "position": "LB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
           {
             "id": "00-0038596",
             "name": "Antonio Johnson",
@@ -9260,14 +7833,14 @@
             "availability": 0.9
           }
         ],
-        "offensive_line_penalty": 0.14,
+        "offensive_line_penalty": 0.0,
         "defense_adjustments": {
-          "pass": 0.18,
-          "run": 0.18,
-          "red_zone": 0.129,
-          "wr": 0.098,
-          "te": 0.136,
-          "rb": 0.178
+          "pass": 0.02,
+          "run": 0.01,
+          "red_zone": 0.009,
+          "wr": 0.018,
+          "te": 0.01,
+          "rb": 0.008
         }
       }
     },
@@ -9298,20 +7871,20 @@
           }
         },
         "injury_adjustments": {
-          "pass": 0.067,
-          "run": 0.1,
-          "red_zone": 0.056,
+          "pass": 0.047,
+          "run": 0.05,
+          "red_zone": 0.026,
           "wr": 0.026,
-          "te": 0.058,
-          "rb": 0.085
+          "te": 0.008,
+          "rb": 0.035
         },
         "adjusted_scores": {
-          "pass": 0.422,
-          "run": 0.284,
-          "red_zone": 0.118,
+          "pass": 0.402,
+          "run": 0.234,
+          "red_zone": 0.088,
           "wr": 0.088,
-          "te": 0.933,
-          "rb": 0.304
+          "te": 0.883,
+          "rb": 0.254
         }
       },
       "players": [
@@ -9351,7 +7924,8 @@
             "secondary_injury": "",
             "roster_status": "ACT",
             "availability": 1.0,
-            "label": "FULL PARTICIPATION IN PRACTICE"
+            "label": "FULL PARTICIPATION IN PRACTICE",
+            "current_report": true
           },
           "injury_role_boost": 0.0,
           "effective_role_score": 1.0
@@ -9462,7 +8036,8 @@
             "secondary_injury": "",
             "roster_status": "ACT",
             "availability": 0.9,
-            "label": "LIMITED PARTICIPATION IN PRACTICE"
+            "label": "LIMITED PARTICIPATION IN PRACTICE",
+            "current_report": true
           },
           "injury_role_boost": 0.008,
           "effective_role_score": 0.169
@@ -9573,7 +8148,8 @@
             "secondary_injury": "Knee",
             "roster_status": "ACT",
             "availability": 0.9,
-            "label": "LIMITED PARTICIPATION IN PRACTICE"
+            "label": "LIMITED PARTICIPATION IN PRACTICE",
+            "current_report": true
           },
           "injury_role_boost": 0.009,
           "effective_role_score": 0.081
@@ -9649,7 +8225,8 @@
             "secondary_injury": "",
             "roster_status": "RES",
             "availability": 0.0,
-            "label": "IR/RESERVE"
+            "label": "IR/RESERVE",
+            "current_report": false
           },
           "injury_role_boost": 0.0,
           "effective_role_score": 0.0
@@ -9694,106 +8271,6 @@
         "week": 8,
         "offense": [
           {
-            "id": "00-0039833",
-            "name": "C.J. Hanson",
-            "position": "OL",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0040116",
-            "name": "Josh Simmons",
-            "position": "OL",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0037266",
-            "name": "Matt Waletzko",
-            "position": "OL",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0037324",
-            "name": "Chris Oladokun",
-            "position": "QB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0040078",
-            "name": "Brashard Smith",
-            "position": "RB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0040964",
-            "name": "EJ Smith",
-            "position": "RB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0040955",
-            "name": "John Michael Gyllenborg",
-            "position": "TE",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0040953",
-            "name": "Jeff Caldwell",
-            "position": "WR",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0040120",
-            "name": "Jimmy Holiday",
-            "position": "WR",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0038104",
-            "name": "Tyquan Thornton",
-            "position": "WR",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
             "id": "00-0030506",
             "name": "Travis Kelce",
             "position": "TE",
@@ -9826,16 +8303,6 @@
             "availability": 0.0
           },
           {
-            "id": "00-0040328",
-            "name": "Ethan Downs",
-            "position": "LB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
             "id": "00-0041543",
             "name": "Mansoor Delane",
             "position": "CB",
@@ -9856,14 +8323,14 @@
             "availability": 0.9
           }
         ],
-        "offensive_line_penalty": 0.12,
+        "offensive_line_penalty": 0.0,
         "defense_adjustments": {
-          "pass": 0.067,
-          "run": 0.1,
-          "red_zone": 0.056,
+          "pass": 0.047,
+          "run": 0.05,
+          "red_zone": 0.026,
           "wr": 0.026,
-          "te": 0.058,
-          "rb": 0.085
+          "te": 0.008,
+          "rb": 0.035
         }
       }
     },
@@ -9894,20 +8361,20 @@
           }
         },
         "injury_adjustments": {
-          "pass": 0.18,
-          "run": 0.18,
-          "red_zone": 0.152,
-          "wr": 0.088,
-          "te": 0.177,
-          "rb": 0.18
+          "pass": 0.007,
+          "run": 0.0,
+          "red_zone": 0.002,
+          "wr": 0.008,
+          "te": 0.002,
+          "rb": 0.0
         },
         "adjusted_scores": {
-          "pass": 0.449,
-          "run": 0.632,
-          "red_zone": 0.371,
-          "wr": 0.244,
-          "te": 0.302,
-          "rb": 0.649
+          "pass": 0.276,
+          "run": 0.452,
+          "red_zone": 0.221,
+          "wr": 0.164,
+          "te": 0.127,
+          "rb": 0.469
         }
       },
       "players": [
@@ -10087,7 +8554,8 @@
             "secondary_injury": "",
             "roster_status": "RES",
             "availability": 0.0,
-            "label": "IR/RESERVE"
+            "label": "IR/RESERVE",
+            "current_report": false
           },
           "injury_role_boost": 0.0,
           "effective_role_score": 0.0
@@ -10128,7 +8596,8 @@
             "secondary_injury": "",
             "roster_status": "ACT",
             "availability": 0.78,
-            "label": "DID NOT PARTICIPATE IN PRACTICE"
+            "label": "DID NOT PARTICIPATE IN PRACTICE",
+            "current_report": true
           },
           "injury_role_boost": 0.012,
           "effective_role_score": 0.093
@@ -10274,7 +8743,8 @@
             "secondary_injury": "",
             "roster_status": "RES",
             "availability": 0.0,
-            "label": "IR/RESERVE"
+            "label": "IR/RESERVE",
+            "current_report": false
           },
           "injury_role_boost": 0.0,
           "effective_role_score": 0.0
@@ -10283,56 +8753,6 @@
       "injuries": {
         "week": 8,
         "offense": [
-          {
-            "id": "00-0039784",
-            "name": "Justin Dedich",
-            "position": "OL",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0041414",
-            "name": "Matthew Caldwell",
-            "position": "QB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0037557",
-            "name": "Ronnie Rivers",
-            "position": "RB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0040737",
-            "name": "Terrance Ferguson",
-            "position": "TE",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0031381",
-            "name": "Davante Adams",
-            "position": "WR",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
           {
             "id": "00-0034114",
             "name": "Coleman Shelton",
@@ -10356,66 +8776,6 @@
         ],
         "defense": [
           {
-            "id": "00-0036917",
-            "name": "Zech McPhearson",
-            "position": "DB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0039138",
-            "name": "Kobie Turner",
-            "position": "DL",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0034234",
-            "name": "Poona Ford",
-            "position": "DL",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0041587",
-            "name": "Daniel Rickert",
-            "position": "LB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0041429",
-            "name": "Eddie Walls III",
-            "position": "LB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0033868",
-            "name": "Myles Garrett",
-            "position": "LB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
             "id": "00-0037191",
             "name": "Trent McDuffie",
             "position": "CB",
@@ -10426,14 +8786,14 @@
             "availability": 0.9
           }
         ],
-        "offensive_line_penalty": 0.049,
+        "offensive_line_penalty": 0.009,
         "defense_adjustments": {
-          "pass": 0.18,
-          "run": 0.18,
-          "red_zone": 0.152,
-          "wr": 0.088,
-          "te": 0.177,
-          "rb": 0.18
+          "pass": 0.007,
+          "run": 0.0,
+          "red_zone": 0.002,
+          "wr": 0.008,
+          "te": 0.002,
+          "rb": 0.0
         }
       }
     },
@@ -10464,20 +8824,20 @@
           }
         },
         "injury_adjustments": {
-          "pass": 0.065,
-          "run": 0.05,
-          "red_zone": 0.043,
+          "pass": 0.045,
+          "run": 0.0,
+          "red_zone": 0.013,
           "wr": 0.051,
-          "te": 0.066,
-          "rb": 0.05
+          "te": 0.016,
+          "rb": 0.0
         },
         "adjusted_scores": {
-          "pass": 0.637,
-          "run": 0.606,
-          "red_zone": 0.481,
+          "pass": 0.617,
+          "run": 0.556,
+          "red_zone": 0.451,
           "wr": 0.301,
-          "te": 0.378,
-          "rb": 0.8
+          "te": 0.328,
+          "rb": 0.75
         }
       },
       "players": [
@@ -10692,7 +9052,8 @@
             "secondary_injury": "",
             "roster_status": "ACT",
             "availability": 0.9,
-            "label": "LIMITED PARTICIPATION IN PRACTICE"
+            "label": "LIMITED PARTICIPATION IN PRACTICE",
+            "current_report": true
           },
           "injury_role_boost": 0.002,
           "effective_role_score": 0.11
@@ -10803,7 +9164,8 @@
             "secondary_injury": "",
             "roster_status": "ACT",
             "availability": 1.0,
-            "label": "FULL PARTICIPATION IN PRACTICE"
+            "label": "FULL PARTICIPATION IN PRACTICE",
+            "current_report": true
           },
           "injury_role_boost": 0.001,
           "effective_role_score": 0.076
@@ -10914,7 +9276,8 @@
             "secondary_injury": "",
             "roster_status": "RES",
             "availability": 0.0,
-            "label": "IR/RESERVE"
+            "label": "IR/RESERVE",
+            "current_report": false
           },
           "injury_role_boost": 0.0,
           "effective_role_score": 0.0
@@ -10923,96 +9286,6 @@
       "injuries": {
         "week": 8,
         "offense": [
-          {
-            "id": "00-0041387",
-            "name": "Isaiah World",
-            "position": "OL",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0037009",
-            "name": "Rashawn Slater",
-            "position": "OL",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0037241",
-            "name": "Trevor Penning",
-            "position": "OL",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0035688",
-            "name": "Trey Pipkins",
-            "position": "OL",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0036376",
-            "name": "Tyler Biadasz",
-            "position": "OL",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0037012",
-            "name": "Trey Lance",
-            "position": "QB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0035125",
-            "name": "Alec Ingold",
-            "position": "RB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0033885",
-            "name": "David Njoku",
-            "position": "TE",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0041374",
-            "name": "Sincere Brown",
-            "position": "WR",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
           {
             "id": "00-0036736",
             "name": "Kayode Awosika",
@@ -11045,16 +9318,6 @@
           }
         ],
         "defense": [
-          {
-            "id": "00-0032103",
-            "name": "Denzel Perryman",
-            "position": "LB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
           {
             "id": "00-0037320",
             "name": "Deane Leonard",
@@ -11096,14 +9359,14 @@
             "availability": 0.9
           }
         ],
-        "offensive_line_penalty": 0.14,
+        "offensive_line_penalty": 0.009,
         "defense_adjustments": {
-          "pass": 0.065,
-          "run": 0.05,
-          "red_zone": 0.043,
+          "pass": 0.045,
+          "run": 0.0,
+          "red_zone": 0.013,
           "wr": 0.051,
-          "te": 0.066,
-          "rb": 0.05
+          "te": 0.016,
+          "rb": 0.0
         }
       }
     },
@@ -11134,20 +9397,20 @@
           }
         },
         "injury_adjustments": {
-          "pass": 0.118,
-          "run": 0.116,
-          "red_zone": 0.086,
-          "wr": 0.08,
-          "te": 0.125,
-          "rb": 0.111
+          "pass": 0.008,
+          "run": 0.016,
+          "red_zone": 0.006,
+          "wr": 0.0,
+          "te": 0.0,
+          "rb": 0.011
         },
         "adjusted_scores": {
-          "pass": 0.818,
-          "run": 0.949,
-          "red_zone": 1.0,
-          "wr": 0.642,
-          "te": 1.0,
-          "rb": 0.955
+          "pass": 0.708,
+          "run": 0.849,
+          "red_zone": 0.944,
+          "wr": 0.562,
+          "te": 0.906,
+          "rb": 0.855
         }
       },
       "players": [
@@ -11292,7 +9555,8 @@
             "secondary_injury": "",
             "roster_status": "ACT",
             "availability": 1.0,
-            "label": "FULL PARTICIPATION IN PRACTICE"
+            "label": "FULL PARTICIPATION IN PRACTICE",
+            "current_report": true
           },
           "injury_role_boost": 0.0,
           "effective_role_score": 0.206
@@ -11547,26 +9811,6 @@
         "week": 8,
         "offense": [
           {
-            "id": "00-0041003",
-            "name": "Justin Pickett",
-            "position": "OL",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0039244",
-            "name": "Chris Collier",
-            "position": "RB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
             "id": "00-0040488",
             "name": "Carter Runyon",
             "position": "TE",
@@ -11574,16 +9818,6 @@
             "game_status": "",
             "practice_status": "Full Participation in Practice",
             "primary_injury": "Foot",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0041004",
-            "name": "Chase Roberts",
-            "position": "WR",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
             "availability": 0.0
           },
           {
@@ -11629,36 +9863,6 @@
         ],
         "defense": [
           {
-            "id": "00-0039676",
-            "name": "Chigozie Anusiem",
-            "position": "DB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0039836",
-            "name": "Brennan Jackson",
-            "position": "LB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0041553",
-            "name": "Keyron Crawford",
-            "position": "LB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
             "id": "00-0036922",
             "name": "Patrick Johnson",
             "position": "DE",
@@ -11679,14 +9883,14 @@
             "availability": 0.9
           }
         ],
-        "offensive_line_penalty": 0.053,
+        "offensive_line_penalty": 0.013,
         "defense_adjustments": {
-          "pass": 0.118,
-          "run": 0.116,
-          "red_zone": 0.086,
-          "wr": 0.08,
-          "te": 0.125,
-          "rb": 0.111
+          "pass": 0.008,
+          "run": 0.016,
+          "red_zone": 0.006,
+          "wr": 0.0,
+          "te": 0.0,
+          "rb": 0.011
         }
       }
     },
@@ -11717,20 +9921,20 @@
           }
         },
         "injury_adjustments": {
-          "pass": 0.163,
-          "run": 0.15,
-          "red_zone": 0.108,
-          "wr": 0.112,
-          "te": 0.135,
-          "rb": 0.135
+          "pass": 0.028,
+          "run": 0.0,
+          "red_zone": 0.008,
+          "wr": 0.032,
+          "te": 0.01,
+          "rb": 0.0
         },
         "adjusted_scores": {
-          "pass": 1.0,
-          "run": 0.62,
-          "red_zone": 0.702,
-          "wr": 0.206,
-          "te": 1.0,
-          "rb": 1.0
+          "pass": 0.956,
+          "run": 0.47,
+          "red_zone": 0.602,
+          "wr": 0.126,
+          "te": 0.948,
+          "rb": 0.969
         }
       },
       "players": [
@@ -11770,7 +9974,8 @@
             "secondary_injury": "",
             "roster_status": "ACT",
             "availability": 1.0,
-            "label": "FULL PARTICIPATION IN PRACTICE"
+            "label": "FULL PARTICIPATION IN PRACTICE",
+            "current_report": true
           },
           "injury_role_boost": 0.0,
           "effective_role_score": 1.0
@@ -11846,7 +10051,8 @@
             "secondary_injury": "",
             "roster_status": "ACT",
             "availability": 0.9,
-            "label": "LIMITED PARTICIPATION IN PRACTICE"
+            "label": "LIMITED PARTICIPATION IN PRACTICE",
+            "current_report": true
           },
           "injury_role_boost": 0.016,
           "effective_role_score": 0.234
@@ -11887,7 +10093,8 @@
             "secondary_injury": "",
             "roster_status": "ACT",
             "availability": 0.9,
-            "label": "LIMITED PARTICIPATION IN PRACTICE"
+            "label": "LIMITED PARTICIPATION IN PRACTICE",
+            "current_report": true
           },
           "injury_role_boost": 0.005,
           "effective_role_score": 0.21
@@ -11963,7 +10170,8 @@
             "secondary_injury": "",
             "roster_status": "RES",
             "availability": 0.0,
-            "label": "IR/RESERVE"
+            "label": "IR/RESERVE",
+            "current_report": false
           },
           "injury_role_boost": 0.0,
           "effective_role_score": 0.0
@@ -12004,7 +10212,8 @@
             "secondary_injury": "Quadricep",
             "roster_status": "ACT",
             "availability": 1.0,
-            "label": "FULL PARTICIPATION IN PRACTICE"
+            "label": "FULL PARTICIPATION IN PRACTICE",
+            "current_report": true
           },
           "injury_role_boost": 0.017,
           "effective_role_score": 0.124
@@ -12119,36 +10328,6 @@
         "week": 8,
         "offense": [
           {
-            "id": "00-0039004",
-            "name": "Carter Warren",
-            "position": "OL",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0039040",
-            "name": "De'Von Achane",
-            "position": "RB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0037078",
-            "name": "Cole Turner",
-            "position": "TE",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
             "id": "00-0041521",
             "name": "Kadyn Proctor",
             "position": "T",
@@ -12201,46 +10380,6 @@
         ],
         "defense": [
           {
-            "id": "00-0037549",
-            "name": "Darrell Baker Jr.",
-            "position": "DB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0041136",
-            "name": "Rene Konga",
-            "position": "DL",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0034779",
-            "name": "Ronnie Harrison",
-            "position": "LB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0041526",
-            "name": "Trey Moore",
-            "position": "LB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
             "id": "00-0039156",
             "name": "Julius Brents",
             "position": "CB",
@@ -12281,14 +10420,14 @@
             "availability": 0.9
           }
         ],
-        "offensive_line_penalty": 0.049,
+        "offensive_line_penalty": 0.009,
         "defense_adjustments": {
-          "pass": 0.163,
-          "run": 0.15,
-          "red_zone": 0.108,
-          "wr": 0.112,
-          "te": 0.135,
-          "rb": 0.135
+          "pass": 0.028,
+          "run": 0.0,
+          "red_zone": 0.008,
+          "wr": 0.032,
+          "te": 0.01,
+          "rb": 0.0
         }
       }
     },
@@ -12319,20 +10458,20 @@
           }
         },
         "injury_adjustments": {
-          "pass": 0.06,
-          "run": 0.15,
-          "red_zone": 0.09,
+          "pass": 0.0,
+          "run": 0.0,
+          "red_zone": 0.0,
           "wr": 0.0,
-          "te": 0.15,
-          "rb": 0.15
+          "te": 0.0,
+          "rb": 0.0
         },
         "adjusted_scores": {
-          "pass": 0.13,
-          "run": 0.416,
-          "red_zone": 0.121,
+          "pass": 0.07,
+          "run": 0.266,
+          "red_zone": 0.031,
           "wr": 0.125,
-          "te": 0.181,
-          "rb": 0.181
+          "te": 0.031,
+          "rb": 0.031
         }
       },
       "players": [
@@ -12407,7 +10546,8 @@
             "secondary_injury": "",
             "roster_status": "ACT",
             "availability": 0.9,
-            "label": "LIMITED PARTICIPATION IN PRACTICE"
+            "label": "LIMITED PARTICIPATION IN PRACTICE",
+            "current_report": true
           },
           "injury_role_boost": 0.024,
           "effective_role_score": 0.489
@@ -12623,7 +10763,8 @@
             "secondary_injury": "",
             "roster_status": "ACT",
             "availability": 0.78,
-            "label": "DID NOT PARTICIPATE IN PRACTICE"
+            "label": "DID NOT PARTICIPATE IN PRACTICE",
+            "current_report": true
           },
           "injury_role_boost": 0.003,
           "effective_role_score": 0.061
@@ -12773,36 +10914,6 @@
         "week": 8,
         "offense": [
           {
-            "id": "00-0040661",
-            "name": "Donovan Jackson",
-            "position": "OL",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0039237",
-            "name": "Nick Samac",
-            "position": "OL",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0035249",
-            "name": "Josh Oliver",
-            "position": "TE",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
             "id": "00-0040215",
             "name": "Gavin Bartholomew",
             "position": "TE",
@@ -12823,46 +10934,15 @@
             "availability": 0.9
           }
         ],
-        "defense": [
-          {
-            "id": "00-0040786",
-            "name": "Jacob Roberts",
-            "position": "LB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0033872",
-            "name": "Jamal Adams",
-            "position": "LB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0040492",
-            "name": "Tyler Batty",
-            "position": "LB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          }
-        ],
-        "offensive_line_penalty": 0.08,
+        "defense": [],
+        "offensive_line_penalty": 0.0,
         "defense_adjustments": {
-          "pass": 0.06,
-          "run": 0.15,
-          "red_zone": 0.09,
+          "pass": 0.0,
+          "run": 0.0,
+          "red_zone": 0.0,
           "wr": 0.0,
-          "te": 0.15,
-          "rb": 0.15
+          "te": 0.0,
+          "rb": 0.0
         }
       }
     },
@@ -12893,20 +10973,20 @@
           }
         },
         "injury_adjustments": {
-          "pass": 0.133,
-          "run": 0.155,
-          "red_zone": 0.112,
-          "wr": 0.08,
-          "te": 0.175,
-          "rb": 0.154
+          "pass": 0.002,
+          "run": 0.005,
+          "red_zone": 0.002,
+          "wr": 0.0,
+          "te": 0.0,
+          "rb": 0.003
         },
         "adjusted_scores": {
-          "pass": 0.731,
-          "run": 0.555,
-          "red_zone": 0.518,
-          "wr": 0.705,
-          "te": 0.675,
-          "rb": 0.56
+          "pass": 0.6,
+          "run": 0.405,
+          "red_zone": 0.408,
+          "wr": 0.625,
+          "te": 0.5,
+          "rb": 0.409
         }
       },
       "players": [
@@ -12946,7 +11026,8 @@
             "secondary_injury": "",
             "roster_status": "ACT",
             "availability": 1.0,
-            "label": "FULL PARTICIPATION IN PRACTICE"
+            "label": "FULL PARTICIPATION IN PRACTICE",
+            "current_report": true
           },
           "injury_role_boost": 0.0,
           "effective_role_score": 0.983
@@ -13057,7 +11138,8 @@
             "secondary_injury": "",
             "roster_status": "ACT",
             "availability": 0.78,
-            "label": "DID NOT PARTICIPATE IN PRACTICE"
+            "label": "DID NOT PARTICIPATE IN PRACTICE",
+            "current_report": true
           },
           "injury_role_boost": 0.006,
           "effective_role_score": 0.139
@@ -13168,7 +11250,8 @@
             "secondary_injury": "Knee",
             "roster_status": "ACT",
             "availability": 0.78,
-            "label": "DID NOT PARTICIPATE IN PRACTICE"
+            "label": "DID NOT PARTICIPATE IN PRACTICE",
+            "current_report": true
           },
           "injury_role_boost": 0.04,
           "effective_role_score": 0.133
@@ -13244,7 +11327,8 @@
             "secondary_injury": "",
             "roster_status": "RES",
             "availability": 0.0,
-            "label": "IR/RESERVE"
+            "label": "IR/RESERVE",
+            "current_report": false
           },
           "injury_role_boost": 0.0,
           "effective_role_score": 0.0
@@ -13285,7 +11369,8 @@
             "secondary_injury": "",
             "roster_status": "RES",
             "availability": 0.0,
-            "label": "IR/RESERVE"
+            "label": "IR/RESERVE",
+            "current_report": false
           },
           "injury_role_boost": 0.0,
           "effective_role_score": 0.0
@@ -13365,56 +11450,6 @@
         "week": 8,
         "offense": [
           {
-            "id": "00-0036979",
-            "name": "Alijah Vera-Tucker",
-            "position": "OL",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0029685",
-            "name": "Greg Van Roten",
-            "position": "OL",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0036198",
-            "name": "Mike Onwenu",
-            "position": "OL",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0041323",
-            "name": "Myles Montgomery",
-            "position": "RB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0036187",
-            "name": "Reggie Gilliam",
-            "position": "RB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
             "id": "00-0040226",
             "name": "Marcus Bryant",
             "position": "T",
@@ -13422,36 +11457,6 @@
             "game_status": "",
             "practice_status": "Full Participation in Practice",
             "primary_injury": "Ankle",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0038720",
-            "name": "Julian Hill",
-            "position": "TE",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0033555",
-            "name": "Mack Hollins",
-            "position": "WR",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0037816",
-            "name": "Romeo Doubs",
-            "position": "WR",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
             "availability": 0.0
           },
           {
@@ -13497,46 +11502,6 @@
         ],
         "defense": [
           {
-            "id": "00-0039692",
-            "name": "Dell Pettus",
-            "position": "DB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0034828",
-            "name": "Harold Landry III",
-            "position": "LB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0041321",
-            "name": "Khalil Jacobs",
-            "position": "LB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0041402",
-            "name": "Quintayvious Hutchins",
-            "position": "LB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
             "id": "00-0031054",
             "name": "DaQuan Jones",
             "position": "DT",
@@ -13547,14 +11512,14 @@
             "availability": 0.9
           }
         ],
-        "offensive_line_penalty": 0.14,
+        "offensive_line_penalty": 0.048,
         "defense_adjustments": {
-          "pass": 0.133,
-          "run": 0.155,
-          "red_zone": 0.112,
-          "wr": 0.08,
-          "te": 0.175,
-          "rb": 0.154
+          "pass": 0.002,
+          "run": 0.005,
+          "red_zone": 0.002,
+          "wr": 0.0,
+          "te": 0.0,
+          "rb": 0.003
         }
       }
     },
@@ -13585,19 +11550,19 @@
           }
         },
         "injury_adjustments": {
-          "pass": 0.165,
-          "run": 0.05,
-          "red_zone": 0.06,
-          "wr": 0.16,
-          "te": 0.05,
-          "rb": 0.035
+          "pass": 0.0,
+          "run": 0.0,
+          "red_zone": 0.0,
+          "wr": 0.0,
+          "te": 0.0,
+          "rb": 0.0
         },
         "adjusted_scores": {
-          "pass": 0.853,
-          "run": 0.998,
-          "red_zone": 0.591,
-          "wr": 0.535,
-          "te": 0.894,
+          "pass": 0.688,
+          "run": 0.948,
+          "red_zone": 0.531,
+          "wr": 0.375,
+          "te": 0.844,
           "rb": 1.0
         }
       },
@@ -13848,7 +11813,8 @@
             "secondary_injury": "",
             "roster_status": "RES",
             "availability": 0.0,
-            "label": "IR/RESERVE"
+            "label": "IR/RESERVE",
+            "current_report": false
           },
           "injury_role_boost": 0.0,
           "effective_role_score": 0.0
@@ -13961,128 +11927,16 @@
       ],
       "injuries": {
         "week": 8,
-        "offense": [
-          {
-            "id": "00-0036619",
-            "name": "Dillon Radunz",
-            "position": "OL",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0040125",
-            "name": "Kelvin Banks Jr.",
-            "position": "OL",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0038566",
-            "name": "Nick Saldiveri",
-            "position": "OL",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0036973",
-            "name": "Travis Etienne",
-            "position": "RB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0037276",
-            "name": "Ty Chandler",
-            "position": "RB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0040244",
-            "name": "Moliki Matavao",
-            "position": "TE",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0041029",
-            "name": "Jordyn Tyson",
-            "position": "WR",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0039623",
-            "name": "Mason Tipton",
-            "position": "WR",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          }
-        ],
-        "defense": [
-          {
-            "id": "00-0035665",
-            "name": "David Long",
-            "position": "DB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0038781",
-            "name": "Rejzohn Wright",
-            "position": "DB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0038995",
-            "name": "Bryan Bresee",
-            "position": "DL",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          }
-        ],
-        "offensive_line_penalty": 0.12,
+        "offense": [],
+        "defense": [],
+        "offensive_line_penalty": 0.0,
         "defense_adjustments": {
-          "pass": 0.165,
-          "run": 0.05,
-          "red_zone": 0.06,
-          "wr": 0.16,
-          "te": 0.05,
-          "rb": 0.035
+          "pass": 0.0,
+          "run": 0.0,
+          "red_zone": 0.0,
+          "wr": 0.0,
+          "te": 0.0,
+          "rb": 0.0
         }
       }
     },
@@ -14113,20 +11967,20 @@
           }
         },
         "injury_adjustments": {
-          "pass": 0.18,
-          "run": 0.18,
-          "red_zone": 0.18,
-          "wr": 0.18,
-          "te": 0.18,
-          "rb": 0.17
+          "pass": 0.0,
+          "run": 0.0,
+          "red_zone": 0.0,
+          "wr": 0.0,
+          "te": 0.0,
+          "rb": 0.0
         },
         "adjusted_scores": {
-          "pass": 0.596,
-          "run": 0.978,
-          "red_zone": 1.0,
-          "wr": 0.711,
-          "te": 0.555,
-          "rb": 0.514
+          "pass": 0.416,
+          "run": 0.798,
+          "red_zone": 0.875,
+          "wr": 0.531,
+          "te": 0.375,
+          "rb": 0.344
         }
       },
       "players": [
@@ -14446,7 +12300,8 @@
             "secondary_injury": "",
             "roster_status": "RES",
             "availability": 0.0,
-            "label": "IR/RESERVE"
+            "label": "IR/RESERVE",
+            "current_report": false
           },
           "injury_role_boost": 0.0,
           "effective_role_score": 0.0
@@ -14559,138 +12414,16 @@
       ],
       "injuries": {
         "week": 8,
-        "offense": [
-          {
-            "id": "00-0040691",
-            "name": "Jaxson Dart",
-            "position": "QB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0034419",
-            "name": "Braxton Berrios",
-            "position": "WR",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0037837",
-            "name": "Calvin Austin III",
-            "position": "WR",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0035645",
-            "name": "Gunner Olszewski",
-            "position": "WR",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          }
-        ],
-        "defense": [
-          {
-            "id": "00-0038401",
-            "name": "Jarrick Bernard-Converse",
-            "position": "DB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0040243",
-            "name": "Korie Black",
-            "position": "DB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0039620",
-            "name": "Rico Payton",
-            "position": "DB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0041142",
-            "name": "Thaddeus Dixon",
-            "position": "DB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0036982",
-            "name": "Chauncey Golston",
-            "position": "DL",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0032667",
-            "name": "Roy Robertson-Harris",
-            "position": "DL",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0035713",
-            "name": "Brian Burns",
-            "position": "LB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0034673",
-            "name": "Tremaine Edmunds",
-            "position": "LB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          }
-        ],
+        "offense": [],
+        "defense": [],
         "offensive_line_penalty": 0.0,
         "defense_adjustments": {
-          "pass": 0.18,
-          "run": 0.18,
-          "red_zone": 0.18,
-          "wr": 0.18,
-          "te": 0.18,
-          "rb": 0.17
+          "pass": 0.0,
+          "run": 0.0,
+          "red_zone": 0.0,
+          "wr": 0.0,
+          "te": 0.0,
+          "rb": 0.0
         }
       }
     },
@@ -14721,20 +12454,20 @@
           }
         },
         "injury_adjustments": {
-          "pass": 0.18,
-          "run": 0.18,
-          "red_zone": 0.18,
-          "wr": 0.16,
-          "te": 0.18,
-          "rb": 0.18
+          "pass": 0.017,
+          "run": 0.033,
+          "red_zone": 0.013,
+          "wr": 0.0,
+          "te": 0.0,
+          "rb": 0.023
         },
         "adjusted_scores": {
-          "pass": 0.597,
-          "run": 0.625,
-          "red_zone": 0.555,
-          "wr": 0.66,
-          "te": 0.43,
-          "rb": 0.742
+          "pass": 0.434,
+          "run": 0.478,
+          "red_zone": 0.388,
+          "wr": 0.5,
+          "te": 0.25,
+          "rb": 0.585
         }
       },
       "players": [
@@ -14809,7 +12542,8 @@
             "secondary_injury": "",
             "roster_status": "ACT",
             "availability": 1.0,
-            "label": "FULL PARTICIPATION IN PRACTICE"
+            "label": "FULL PARTICIPATION IN PRACTICE",
+            "current_report": true
           },
           "injury_role_boost": 0.008,
           "effective_role_score": 0.495
@@ -14885,7 +12619,8 @@
             "secondary_injury": "",
             "roster_status": "ACT",
             "availability": 0.9,
-            "label": "LIMITED PARTICIPATION IN PRACTICE"
+            "label": "LIMITED PARTICIPATION IN PRACTICE",
+            "current_report": true
           },
           "injury_role_boost": 0.003,
           "effective_role_score": 0.171
@@ -15140,56 +12875,6 @@
         "week": 8,
         "offense": [
           {
-            "id": "00-0041097",
-            "name": "Anez Cooper",
-            "position": "OL",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0041239",
-            "name": "Chip Trayanum",
-            "position": "RB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0040937",
-            "name": "Dominic Richardson",
-            "position": "RB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0041577",
-            "name": "Connor Hulstein",
-            "position": "TE",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0040582",
-            "name": "Arian Smith",
-            "position": "WR",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
             "id": "00-0038114",
             "name": "Max Mitchell",
             "position": "T",
@@ -15222,96 +12907,6 @@
         ],
         "defense": [
           {
-            "id": "00-0036885",
-            "name": "Tre Brown",
-            "position": "DB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0041120",
-            "name": "VJ Payne",
-            "position": "DB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0033051",
-            "name": "David Onyemata",
-            "position": "DL",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0037431",
-            "name": "Kingsley Jonathan",
-            "position": "DL",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0039284",
-            "name": "Braiden McGregor",
-            "position": "LB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0040186",
-            "name": "Francisco Mauigoa",
-            "position": "LB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0037526",
-            "name": "Marcelino McCrary-Ball",
-            "position": "LB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0036300",
-            "name": "Mykal Walker",
-            "position": "LB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0040196",
-            "name": "Tyler Baron",
-            "position": "LB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
             "id": "00-0041026",
             "name": "David Bailey",
             "position": "DE",
@@ -15342,14 +12937,14 @@
             "availability": 0.78
           }
         ],
-        "offensive_line_penalty": 0.053,
+        "offensive_line_penalty": 0.013,
         "defense_adjustments": {
-          "pass": 0.18,
-          "run": 0.18,
-          "red_zone": 0.18,
-          "wr": 0.16,
-          "te": 0.18,
-          "rb": 0.18
+          "pass": 0.017,
+          "run": 0.033,
+          "red_zone": 0.013,
+          "wr": 0.0,
+          "te": 0.0,
+          "rb": 0.023
         }
       }
     },
@@ -15380,19 +12975,19 @@
           }
         },
         "injury_adjustments": {
-          "pass": 0.18,
+          "pass": 0.112,
           "run": 0.031,
-          "red_zone": 0.086,
-          "wr": 0.18,
-          "te": 0.111,
+          "red_zone": 0.046,
+          "wr": 0.114,
+          "te": 0.061,
           "rb": 0.029
         },
         "adjusted_scores": {
-          "pass": 0.919,
+          "pass": 0.851,
           "run": 0.703,
-          "red_zone": 0.367,
+          "red_zone": 0.327,
           "wr": 1.0,
-          "te": 0.392,
+          "te": 0.342,
           "rb": 0.529
         }
       },
@@ -15433,7 +13028,8 @@
             "secondary_injury": "",
             "roster_status": "RES",
             "availability": 0.0,
-            "label": "IR/RESERVE"
+            "label": "IR/RESERVE",
+            "current_report": false
           },
           "injury_role_boost": 0.0,
           "effective_role_score": 0.0
@@ -15509,7 +13105,8 @@
             "secondary_injury": "",
             "roster_status": "RES",
             "availability": 0.0,
-            "label": "IR/RESERVE"
+            "label": "IR/RESERVE",
+            "current_report": false
           },
           "injury_role_boost": 0.0,
           "effective_role_score": 0.0
@@ -15550,7 +13147,8 @@
             "secondary_injury": "Back",
             "roster_status": "ACT",
             "availability": 0.78,
-            "label": "DID NOT PARTICIPATE IN PRACTICE"
+            "label": "DID NOT PARTICIPATE IN PRACTICE",
+            "current_report": true
           },
           "injury_role_boost": 0.18,
           "effective_role_score": 0.325
@@ -15591,7 +13189,8 @@
             "secondary_injury": "",
             "roster_status": "ACT",
             "availability": 1.0,
-            "label": "FULL PARTICIPATION IN PRACTICE"
+            "label": "FULL PARTICIPATION IN PRACTICE",
+            "current_report": true
           },
           "injury_role_boost": 0.0,
           "effective_role_score": 0.171
@@ -15632,7 +13231,8 @@
             "secondary_injury": "",
             "roster_status": "ACT",
             "availability": 0.78,
-            "label": "DID NOT PARTICIPATE IN PRACTICE"
+            "label": "DID NOT PARTICIPATE IN PRACTICE",
+            "current_report": true
           },
           "injury_role_boost": 0.013,
           "effective_role_score": 0.142
@@ -15673,7 +13273,8 @@
             "secondary_injury": "",
             "roster_status": "ACT",
             "availability": 0.78,
-            "label": "DID NOT PARTICIPATE IN PRACTICE"
+            "label": "DID NOT PARTICIPATE IN PRACTICE",
+            "current_report": true
           },
           "injury_role_boost": 0.012,
           "effective_role_score": 0.134
@@ -15749,7 +13350,8 @@
             "secondary_injury": "",
             "roster_status": "RES",
             "availability": 0.0,
-            "label": "IR/RESERVE"
+            "label": "IR/RESERVE",
+            "current_report": false
           },
           "injury_role_boost": 0.0,
           "effective_role_score": 0.0
@@ -15825,7 +13427,8 @@
             "secondary_injury": "",
             "roster_status": "RES",
             "availability": 0.0,
-            "label": "IR/RESERVE"
+            "label": "IR/RESERVE",
+            "current_report": false
           },
           "injury_role_boost": 0.0,
           "effective_role_score": 0.0
@@ -15869,56 +13472,6 @@
       "injuries": {
         "week": 8,
         "offense": [
-          {
-            "id": "00-0036389",
-            "name": "Jalen Hurts",
-            "position": "QB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0037258",
-            "name": "Dameon Pierce",
-            "position": "RB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0038555",
-            "name": "Tank Bigsby",
-            "position": "RB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0039746",
-            "name": "Will Shipley",
-            "position": "RB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0039236",
-            "name": "Johnny Wilson",
-            "position": "WR",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
           {
             "id": "00-0034844",
             "name": "Saquon Barkley",
@@ -15969,26 +13522,6 @@
             "game_status": "",
             "practice_status": "Full Participation in Practice",
             "primary_injury": "Knee",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0039267",
-            "name": "Andre' Sam",
-            "position": "DB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0040929",
-            "name": "Tucker Large",
-            "position": "DB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
             "availability": 0.0
           },
           {
@@ -16074,11 +13607,11 @@
         ],
         "offensive_line_penalty": 0.0,
         "defense_adjustments": {
-          "pass": 0.18,
+          "pass": 0.112,
           "run": 0.031,
-          "red_zone": 0.086,
-          "wr": 0.18,
-          "te": 0.111,
+          "red_zone": 0.046,
+          "wr": 0.114,
+          "te": 0.061,
           "rb": 0.029
         }
       }
@@ -16110,20 +13643,20 @@
           }
         },
         "injury_adjustments": {
-          "pass": 0.18,
-          "run": 0.155,
-          "red_zone": 0.112,
-          "wr": 0.18,
-          "te": 0.066,
-          "rb": 0.11
+          "pass": 0.033,
+          "run": 0.005,
+          "red_zone": 0.012,
+          "wr": 0.035,
+          "te": 0.016,
+          "rb": 0.005
         },
         "adjusted_scores": {
-          "pass": 0.532,
-          "run": 0.487,
-          "red_zone": 0.237,
-          "wr": 0.649,
-          "te": 0.254,
-          "rb": 0.485
+          "pass": 0.385,
+          "run": 0.337,
+          "red_zone": 0.137,
+          "wr": 0.504,
+          "te": 0.204,
+          "rb": 0.38
         }
       },
       "players": [
@@ -16373,7 +13906,8 @@
             "secondary_injury": "",
             "roster_status": "ACT",
             "availability": 1.0,
-            "label": "FULL PARTICIPATION IN PRACTICE"
+            "label": "FULL PARTICIPATION IN PRACTICE",
+            "current_report": true
           },
           "injury_role_boost": 0.0,
           "effective_role_score": 0.12
@@ -16414,7 +13948,8 @@
             "secondary_injury": "",
             "roster_status": "RES",
             "availability": 0.0,
-            "label": "IR/RESERVE"
+            "label": "IR/RESERVE",
+            "current_report": false
           },
           "injury_role_boost": 0.0,
           "effective_role_score": 0.0
@@ -16490,7 +14025,8 @@
             "secondary_injury": "",
             "roster_status": "RES",
             "availability": 0.0,
-            "label": "IR/RESERVE"
+            "label": "IR/RESERVE",
+            "current_report": false
           },
           "injury_role_boost": 0.0,
           "effective_role_score": 0.0
@@ -16499,56 +14035,6 @@
       "injuries": {
         "week": 8,
         "offense": [
-          {
-            "id": "00-0041396",
-            "name": "Gennings Dunker",
-            "position": "OL",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0036396",
-            "name": "Jack Driscoll",
-            "position": "OL",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0039626",
-            "name": "Cole Burgess",
-            "position": "WR",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0036252",
-            "name": "Michael Pittman",
-            "position": "WR",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0039739",
-            "name": "Roman Wilson",
-            "position": "WR",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
           {
             "id": "00-0036862",
             "name": "Ben Skowronek",
@@ -16561,56 +14047,6 @@
           }
         ],
         "defense": [
-          {
-            "id": "00-0039883",
-            "name": "Daequan Hardy",
-            "position": "DB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0040232",
-            "name": "Donte Kent",
-            "position": "DB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0040678",
-            "name": "Derrick Harmon",
-            "position": "DL",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0039389",
-            "name": "Logan Lee",
-            "position": "DL",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0034810",
-            "name": "Sebastian Joseph-Day",
-            "position": "DL",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
           {
             "id": "00-0036504",
             "name": "Brandin Echols",
@@ -16642,14 +14078,14 @@
             "availability": 0.9
           }
         ],
-        "offensive_line_penalty": 0.08,
+        "offensive_line_penalty": 0.0,
         "defense_adjustments": {
-          "pass": 0.18,
-          "run": 0.155,
-          "red_zone": 0.112,
-          "wr": 0.18,
-          "te": 0.066,
-          "rb": 0.11
+          "pass": 0.033,
+          "run": 0.005,
+          "red_zone": 0.012,
+          "wr": 0.035,
+          "te": 0.016,
+          "rb": 0.005
         }
       }
     },
@@ -16680,19 +14116,19 @@
           }
         },
         "injury_adjustments": {
-          "pass": 0.14,
+          "pass": 0.0,
           "run": 0.0,
-          "red_zone": 0.04,
-          "wr": 0.16,
-          "te": 0.05,
+          "red_zone": 0.0,
+          "wr": 0.0,
+          "te": 0.0,
           "rb": 0.0
         },
         "adjusted_scores": {
-          "pass": 0.232,
+          "pass": 0.092,
           "run": 0.117,
           "red_zone": 1.0,
-          "wr": 0.191,
-          "te": 0.144,
+          "wr": 0.031,
+          "te": 0.094,
           "rb": 0.438
         }
       },
@@ -17013,7 +14449,8 @@
             "secondary_injury": "",
             "roster_status": "RES",
             "availability": 0.0,
-            "label": "IR/RESERVE"
+            "label": "IR/RESERVE",
+            "current_report": false
           },
           "injury_role_boost": 0.0,
           "effective_role_score": 0.0
@@ -17091,87 +14528,15 @@
       ],
       "injuries": {
         "week": 8,
-        "offense": [
-          {
-            "id": "00-0040652",
-            "name": "Mason Richman",
-            "position": "OL",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0041512",
-            "name": "Jadarian Price",
-            "position": "RB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0040649",
-            "name": "Robbie Ouzts",
-            "position": "RB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0040739",
-            "name": "Elijah Arroyo",
-            "position": "TE",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0038752",
-            "name": "Jake Bobo",
-            "position": "WR",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          }
-        ],
-        "defense": [
-          {
-            "id": "00-0041463",
-            "name": "Bud Clark",
-            "position": "DB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0040873",
-            "name": "Julian Neal",
-            "position": "DB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          }
-        ],
-        "offensive_line_penalty": 0.04,
+        "offense": [],
+        "defense": [],
+        "offensive_line_penalty": 0.0,
         "defense_adjustments": {
-          "pass": 0.14,
+          "pass": 0.0,
           "run": 0.0,
-          "red_zone": 0.04,
-          "wr": 0.16,
-          "te": 0.05,
+          "red_zone": 0.0,
+          "wr": 0.0,
+          "te": 0.0,
           "rb": 0.0
         }
       }
@@ -17203,20 +14568,20 @@
           }
         },
         "injury_adjustments": {
-          "pass": 0.18,
-          "run": 0.18,
-          "red_zone": 0.18,
-          "wr": 0.16,
-          "te": 0.15,
-          "rb": 0.18
+          "pass": 0.0,
+          "run": 0.0,
+          "red_zone": 0.0,
+          "wr": 0.0,
+          "te": 0.0,
+          "rb": 0.0
         },
         "adjusted_scores": {
-          "pass": 0.574,
-          "run": 0.221,
-          "red_zone": 0.492,
-          "wr": 0.441,
-          "te": 0.556,
-          "rb": 0.868
+          "pass": 0.394,
+          "run": 0.041,
+          "red_zone": 0.312,
+          "wr": 0.281,
+          "te": 0.406,
+          "rb": 0.688
         }
       },
       "players": [
@@ -17573,188 +14938,16 @@
       ],
       "injuries": {
         "week": 8,
-        "offense": [
-          {
-            "id": "00-0035829",
-            "name": "Austen Pleasants",
-            "position": "OL",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0035743",
-            "name": "Brett Toth",
-            "position": "OL",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0037831",
-            "name": "Nick Zakelj",
-            "position": "OL",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0039363",
-            "name": "Isaac Guerendo",
-            "position": "RB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0037112",
-            "name": "Jake Tonges",
-            "position": "TE",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0041035",
-            "name": "De'Zhaun Stribling",
-            "position": "WR",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0032775",
-            "name": "Demarcus Robinson",
-            "position": "WR",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0039916",
-            "name": "Ricky Pearsall",
-            "position": "WR",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          }
-        ],
-        "defense": [
-          {
-            "id": "00-0036638",
-            "name": "Darrick Forrest",
-            "position": "DB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0036871",
-            "name": "Nate Hobbs",
-            "position": "DB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0040721",
-            "name": "Alfred Collins",
-            "position": "DL",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0040711",
-            "name": "C.J. West",
-            "position": "DL",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0041360",
-            "name": "Mikail Kamara",
-            "position": "DL",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0037602",
-            "name": "Sam Okuayinonu",
-            "position": "DL",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0036896",
-            "name": "Victor Dimukeje",
-            "position": "DL",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0038865",
-            "name": "Andrew Farmer II",
-            "position": "LB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0040135",
-            "name": "Nick Martin",
-            "position": "LB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          }
-        ],
-        "offensive_line_penalty": 0.12,
+        "offense": [],
+        "defense": [],
+        "offensive_line_penalty": 0.0,
         "defense_adjustments": {
-          "pass": 0.18,
-          "run": 0.18,
-          "red_zone": 0.18,
-          "wr": 0.16,
-          "te": 0.15,
-          "rb": 0.18
+          "pass": 0.0,
+          "run": 0.0,
+          "red_zone": 0.0,
+          "wr": 0.0,
+          "te": 0.0,
+          "rb": 0.0
         }
       }
     },
@@ -17785,20 +14978,20 @@
           }
         },
         "injury_adjustments": {
-          "pass": 0.18,
-          "run": 0.105,
-          "red_zone": 0.102,
-          "wr": 0.16,
-          "te": 0.15,
-          "rb": 0.104
+          "pass": 0.002,
+          "run": 0.005,
+          "red_zone": 0.002,
+          "wr": 0.0,
+          "te": 0.0,
+          "rb": 0.003
         },
         "adjusted_scores": {
-          "pass": 0.457,
-          "run": 0.317,
-          "red_zone": 0.446,
-          "wr": 0.472,
-          "te": 0.931,
-          "rb": 0.198
+          "pass": 0.279,
+          "run": 0.217,
+          "red_zone": 0.346,
+          "wr": 0.312,
+          "te": 0.781,
+          "rb": 0.097
         }
       },
       "players": [
@@ -17873,7 +15066,8 @@
             "secondary_injury": "",
             "roster_status": "ACT",
             "availability": 0.78,
-            "label": "DID NOT PARTICIPATE IN PRACTICE"
+            "label": "DID NOT PARTICIPATE IN PRACTICE",
+            "current_report": true
           },
           "injury_role_boost": 0.055,
           "effective_role_score": 0.44
@@ -17914,7 +15108,8 @@
             "secondary_injury": "",
             "roster_status": "ACT",
             "availability": 1.0,
-            "label": "FULL PARTICIPATION IN PRACTICE"
+            "label": "FULL PARTICIPATION IN PRACTICE",
+            "current_report": true
           },
           "injury_role_boost": 0.0,
           "effective_role_score": 0.389
@@ -17955,7 +15150,8 @@
             "secondary_injury": "Foot",
             "roster_status": "ACT",
             "availability": 0.9,
-            "label": "LIMITED PARTICIPATION IN PRACTICE"
+            "label": "LIMITED PARTICIPATION IN PRACTICE",
+            "current_report": true
           },
           "injury_role_boost": 0.017,
           "effective_role_score": 0.253
@@ -17996,7 +15192,8 @@
             "secondary_injury": "",
             "roster_status": "ACT",
             "availability": 0.78,
-            "label": "DID NOT PARTICIPATE IN PRACTICE"
+            "label": "DID NOT PARTICIPATE IN PRACTICE",
+            "current_report": true
           },
           "injury_role_boost": 0.011,
           "effective_role_score": 0.14
@@ -18037,7 +15234,8 @@
             "secondary_injury": "",
             "roster_status": "ACT",
             "availability": 0.9,
-            "label": "LIMITED PARTICIPATION IN PRACTICE"
+            "label": "LIMITED PARTICIPATION IN PRACTICE",
+            "current_report": true
           },
           "injury_role_boost": 0.016,
           "effective_role_score": 0.141
@@ -18187,16 +15385,6 @@
         "week": 8,
         "offense": [
           {
-            "id": "00-0039855",
-            "name": "Jalen McMillan",
-            "position": "WR",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
             "id": "00-0039361",
             "name": "Bucky Irving",
             "position": "RB",
@@ -18249,46 +15437,6 @@
         ],
         "defense": [
           {
-            "id": "00-0039051",
-            "name": "Josh Hayes",
-            "position": "DB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0041592",
-            "name": "Xavier Williams",
-            "position": "DB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0035942",
-            "name": "Christian Rozeboom",
-            "position": "LB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0039877",
-            "name": "Mohamed Kamara",
-            "position": "LB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
             "id": "00-0032889",
             "name": "A'Shawn Robinson",
             "position": "DT",
@@ -18301,12 +15449,12 @@
         ],
         "offensive_line_penalty": 0.009,
         "defense_adjustments": {
-          "pass": 0.18,
-          "run": 0.105,
-          "red_zone": 0.102,
-          "wr": 0.16,
-          "te": 0.15,
-          "rb": 0.104
+          "pass": 0.002,
+          "run": 0.005,
+          "red_zone": 0.002,
+          "wr": 0.0,
+          "te": 0.0,
+          "rb": 0.003
         }
       }
     },
@@ -18337,20 +15485,20 @@
           }
         },
         "injury_adjustments": {
-          "pass": 0.177,
-          "run": 0.18,
-          "red_zone": 0.162,
-          "wr": 0.08,
-          "te": 0.18,
-          "rb": 0.18
+          "pass": 0.022,
+          "run": 0.055,
+          "red_zone": 0.032,
+          "wr": 0.0,
+          "te": 0.05,
+          "rb": 0.054
         },
         "adjusted_scores": {
-          "pass": 0.88,
-          "run": 0.807,
-          "red_zone": 0.912,
-          "wr": 0.892,
-          "te": 0.399,
-          "rb": 0.774
+          "pass": 0.725,
+          "run": 0.682,
+          "red_zone": 0.782,
+          "wr": 0.812,
+          "te": 0.269,
+          "rb": 0.648
         }
       },
       "players": [
@@ -18425,7 +15573,8 @@
             "secondary_injury": "",
             "roster_status": "ACT",
             "availability": 0.78,
-            "label": "DID NOT PARTICIPATE IN PRACTICE"
+            "label": "DID NOT PARTICIPATE IN PRACTICE",
+            "current_report": true
           },
           "injury_role_boost": 0.088,
           "effective_role_score": 0.57
@@ -18501,7 +15650,8 @@
             "secondary_injury": "",
             "roster_status": "ACT",
             "availability": 0.78,
-            "label": "DID NOT PARTICIPATE IN PRACTICE"
+            "label": "DID NOT PARTICIPATE IN PRACTICE",
+            "current_report": true
           },
           "injury_role_boost": 0.01,
           "effective_role_score": 0.174
@@ -18612,7 +15762,8 @@
             "secondary_injury": "",
             "roster_status": "ACT",
             "availability": 0.78,
-            "label": "DID NOT PARTICIPATE IN PRACTICE"
+            "label": "DID NOT PARTICIPATE IN PRACTICE",
+            "current_report": true
           },
           "injury_role_boost": 0.011,
           "effective_role_score": 0.074
@@ -18688,7 +15839,8 @@
             "secondary_injury": "",
             "roster_status": "ACT",
             "availability": 0.9,
-            "label": "LIMITED PARTICIPATION IN PRACTICE"
+            "label": "LIMITED PARTICIPATION IN PRACTICE",
+            "current_report": true
           },
           "injury_role_boost": 0.002,
           "effective_role_score": 0.047
@@ -18697,36 +15849,6 @@
       "injuries": {
         "week": 8,
         "offense": [
-          {
-            "id": "00-0040881",
-            "name": "Fernando Carmona",
-            "position": "OL",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0040190",
-            "name": "Jackson Slater",
-            "position": "OL",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0040901",
-            "name": "Jaren Kanak",
-            "position": "TE",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
           {
             "id": "00-0035261",
             "name": "Tony Pollard",
@@ -18770,36 +15892,6 @@
         ],
         "defense": [
           {
-            "id": "00-0038703",
-            "name": "Kendell Brooks",
-            "position": "DB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0033902",
-            "name": "Tanoh Kpassagnon",
-            "position": "DL",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0039381",
-            "name": "Dominique Hampton",
-            "position": "LB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
             "id": "00-0040503",
             "name": "Dorian Mausi",
             "position": "LB",
@@ -18807,26 +15899,6 @@
             "game_status": "",
             "practice_status": "Full Participation in Practice",
             "primary_injury": "Foot",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0039436",
-            "name": "Jaylen Harrell",
-            "position": "LB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0036511",
-            "name": "Milo Eifler",
-            "position": "LB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
             "availability": 0.0
           },
           {
@@ -18840,14 +15912,14 @@
             "availability": 0.9
           }
         ],
-        "offensive_line_penalty": 0.08,
+        "offensive_line_penalty": 0.0,
         "defense_adjustments": {
-          "pass": 0.177,
-          "run": 0.18,
-          "red_zone": 0.162,
-          "wr": 0.08,
-          "te": 0.18,
-          "rb": 0.18
+          "pass": 0.022,
+          "run": 0.055,
+          "red_zone": 0.032,
+          "wr": 0.0,
+          "te": 0.05,
+          "rb": 0.054
         }
       }
     },
@@ -18878,20 +15950,20 @@
           }
         },
         "injury_adjustments": {
-          "pass": 0.143,
-          "run": 0.166,
-          "red_zone": 0.106,
-          "wr": 0.08,
-          "te": 0.125,
-          "rb": 0.146
+          "pass": 0.033,
+          "run": 0.066,
+          "red_zone": 0.026,
+          "wr": 0.0,
+          "te": 0.0,
+          "rb": 0.046
         },
         "adjusted_scores": {
-          "pass": 0.826,
-          "run": 0.728,
-          "red_zone": 1.0,
-          "wr": 0.924,
-          "te": 1.0,
-          "rb": 0.458
+          "pass": 0.716,
+          "run": 0.628,
+          "red_zone": 0.995,
+          "wr": 0.844,
+          "te": 0.969,
+          "rb": 0.358
         }
       },
       "players": [
@@ -18931,7 +16003,8 @@
             "secondary_injury": "",
             "roster_status": "ACT",
             "availability": 1.0,
-            "label": "FULL PARTICIPATION IN PRACTICE"
+            "label": "FULL PARTICIPATION IN PRACTICE",
+            "current_report": true
           },
           "injury_role_boost": 0.0,
           "effective_role_score": 0.729
@@ -18972,7 +16045,8 @@
             "secondary_injury": "",
             "roster_status": "RES",
             "availability": 0.0,
-            "label": "IR/RESERVE"
+            "label": "IR/RESERVE",
+            "current_report": false
           },
           "injury_role_boost": 0.0,
           "effective_role_score": 0.0
@@ -19048,7 +16122,8 @@
             "secondary_injury": "Hamstring",
             "roster_status": "ACT",
             "availability": 1.0,
-            "label": "FULL PARTICIPATION IN PRACTICE"
+            "label": "FULL PARTICIPATION IN PRACTICE",
+            "current_report": true
           },
           "injury_role_boost": 0.041,
           "effective_role_score": 0.224
@@ -19089,7 +16164,8 @@
             "secondary_injury": "",
             "roster_status": "ACT",
             "availability": 1.0,
-            "label": "FULL PARTICIPATION IN PRACTICE"
+            "label": "FULL PARTICIPATION IN PRACTICE",
+            "current_report": true
           },
           "injury_role_boost": 0.0,
           "effective_role_score": 0.163
@@ -19130,7 +16206,8 @@
             "secondary_injury": "",
             "roster_status": "RES",
             "availability": 0.0,
-            "label": "IR/RESERVE"
+            "label": "IR/RESERVE",
+            "current_report": false
           },
           "injury_role_boost": 0.0,
           "effective_role_score": 0.0
@@ -19171,7 +16248,8 @@
             "secondary_injury": "",
             "roster_status": "ACT",
             "availability": 0.78,
-            "label": "DID NOT PARTICIPATE IN PRACTICE"
+            "label": "DID NOT PARTICIPATE IN PRACTICE",
+            "current_report": true
           },
           "injury_role_boost": 0.029,
           "effective_role_score": 0.131
@@ -19356,46 +16434,6 @@
         "week": 8,
         "offense": [
           {
-            "id": "00-0032380",
-            "name": "Laremy Tunsil",
-            "position": "OL",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0040242",
-            "name": "Jacory Croskey-Merritt",
-            "position": "RB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0040164",
-            "name": "Jaylin Lane",
-            "position": "WR",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0035659",
-            "name": "Terry McLaurin",
-            "position": "WR",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
             "id": "00-0035149",
             "name": "Nick Allegretti",
             "position": "G",
@@ -19428,16 +16466,6 @@
         ],
         "defense": [
           {
-            "id": "00-0041181",
-            "name": "Malik Spencer",
-            "position": "DB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
             "id": "00-0039906",
             "name": "Jer'Zhan Newton",
             "position": "DT",
@@ -19445,26 +16473,6 @@
             "game_status": "",
             "practice_status": "Limited Participation in Practice",
             "primary_injury": "Pectoral",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0039412",
-            "name": "Javontae Jean-Baptiste",
-            "position": "LB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
-            "availability": 0.0
-          },
-          {
-            "id": "00-0037819",
-            "name": "Leo Chenal",
-            "position": "LB",
-            "label": "IR/RESERVE",
-            "game_status": "",
-            "practice_status": "",
-            "primary_injury": "",
             "availability": 0.0
           },
           {
@@ -19488,14 +16496,14 @@
             "availability": 0.9
           }
         ],
-        "offensive_line_penalty": 0.049,
+        "offensive_line_penalty": 0.009,
         "defense_adjustments": {
-          "pass": 0.143,
-          "run": 0.166,
-          "red_zone": 0.106,
-          "wr": 0.08,
-          "te": 0.125,
-          "rb": 0.146
+          "pass": 0.033,
+          "run": 0.066,
+          "red_zone": 0.026,
+          "wr": 0.0,
+          "te": 0.0,
+          "rb": 0.046
         }
       }
     }
