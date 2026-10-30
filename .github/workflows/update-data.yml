@@ -8,10 +8,19 @@ on:
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: nfl-data-refresh
+  cancel-in-progress: true
 
 jobs:
   update:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -39,3 +48,15 @@ jobs:
             git commit -m "chore: refresh NFL matchup data"
             git push
           fi
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload refreshed site
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+
+      - name: Deploy refreshed site
+        id: deployment
+        uses: actions/deploy-pages@v4
