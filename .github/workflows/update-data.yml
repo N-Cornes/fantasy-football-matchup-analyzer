@@ -1,0 +1,41 @@
+name: Update NFL Data
+
+on:
+  workflow_dispatch:
+  schedule:
+    # nflverse current-season PBP updates around 09:00 UTC. This runs afterward.
+    - cron: "30 10 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Build current matchup data
+        run: python scripts/build_matchups.py
+
+      - name: Commit data changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/data/matchups.json
+          if git diff --cached --quiet; then
+            echo "No data changes to commit."
+          else
+            git commit -m "chore: refresh NFL matchup data"
+            git push
+          fi
