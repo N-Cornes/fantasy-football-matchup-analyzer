@@ -9,13 +9,14 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="injury.css" />
 </head>
 <body>
   <main class="shell">
     <header class="hero">
       <div class="eyebrow">FANTASY FOOTBALL MATCHUP INTELLIGENCE</div>
       <h1>Find the <span>weakness.</span><br>Find the player.</h1>
-      <p class="lede">Choose two NFL teams. Matchup Edge analyzes current-season play-by-play data, identifies defensive vulnerabilities, and shows which offensive players are best positioned to attack them.</p>
+      <p class="lede">Choose two NFL teams. Matchup Edge analyzes current-season play-by-play, usage, roster, and injury-report data to identify defensive vulnerabilities and the healthy offensive players best positioned to attack them.</p>
       <div id="freshness" class="freshness">Loading current NFL data…</div>
     </header>
 
@@ -36,9 +37,9 @@
     <section id="results" class="results hidden" aria-live="polite"></section>
 
     <footer>
-      <p>Model-based matchup analysis using nflverse play-by-play data. Recommendations are probabilities, not guarantees.</p>
+      <p>Model-based matchup analysis using nflverse play-by-play, roster, and injury/practice-report data. Injury designations can change quickly; recommendations are probabilities, not guarantees.</p>
     </footer>
   </main>
-  <script src="app.js"></script>
+  <script src="app-v2.js"></script>
 </body>
 </html>
