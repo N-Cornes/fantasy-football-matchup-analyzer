@@ -3,7 +3,7 @@
     "season": 2026,
     "through_week": 8,
     "injury_week": 8,
-    "generated_at": "2026-10-31T15:50:39.343656+00:00",
+    "generated_at": "2026-11-01T16:53:59.390967+00:00",
     "source": "nflverse / nflfastR play-by-play, weekly rosters, and injury/practice reports",
     "model_version": "1.1.1",
     "injury_note": "Current-week injury reports adjust matchup strength; reserve status prevents unavailable players from being recommended without double-counting long-term absences."
@@ -1137,19 +1137,19 @@
           }
         },
         "injury_adjustments": {
-          "pass": 0.146,
+          "pass": 0.097,
           "run": 0.011,
-          "red_zone": 0.044,
-          "wr": 0.16,
-          "te": 0.05,
+          "red_zone": 0.03,
+          "wr": 0.104,
+          "te": 0.033,
           "rb": 0.008
         },
         "adjusted_scores": {
-          "pass": 0.712,
+          "pass": 0.663,
           "run": 0.288,
-          "red_zone": 0.669,
-          "wr": 0.941,
-          "te": 0.488,
+          "red_zone": 0.655,
+          "wr": 0.885,
+          "te": 0.471,
           "rb": 0.164
         }
       },
@@ -1555,16 +1555,6 @@
         ],
         "defense": [
           {
-            "id": "00-0039234",
-            "name": "T.J. Tampa",
-            "position": "CB",
-            "label": "IR/RESERVE",
-            "game_status": "Questionable",
-            "practice_status": "Full Participation in Practice",
-            "primary_injury": "Knee",
-            "availability": 0.0
-          },
-          {
             "id": "00-0036302",
             "name": "Jaylinn Hawkins",
             "position": "S",
@@ -1573,6 +1563,16 @@
             "practice_status": "Did Not Participate In Practice",
             "primary_injury": "Knee",
             "availability": 0.0
+          },
+          {
+            "id": "00-0039234",
+            "name": "T.J. Tampa",
+            "position": "CB",
+            "label": "QUESTIONABLE",
+            "game_status": "Questionable",
+            "practice_status": "Full Participation in Practice",
+            "primary_injury": "Knee",
+            "availability": 0.7
           },
           {
             "id": "00-0026190",
@@ -1587,11 +1587,11 @@
         ],
         "offensive_line_penalty": 0.049,
         "defense_adjustments": {
-          "pass": 0.146,
+          "pass": 0.097,
           "run": 0.011,
-          "red_zone": 0.044,
-          "wr": 0.16,
-          "te": 0.05,
+          "red_zone": 0.03,
+          "wr": 0.104,
+          "te": 0.033,
           "rb": 0.008
         }
       }
@@ -2714,20 +2714,20 @@
           }
         },
         "injury_adjustments": {
-          "pass": 0.011,
-          "run": 0.011,
-          "red_zone": 0.009,
-          "wr": 0.008,
-          "te": 0.013,
-          "rb": 0.011
+          "pass": 0.027,
+          "run": 0.015,
+          "red_zone": 0.015,
+          "wr": 0.024,
+          "te": 0.023,
+          "rb": 0.015
         },
         "adjusted_scores": {
-          "pass": 0.653,
-          "run": 0.688,
-          "red_zone": 0.728,
-          "wr": 0.352,
-          "te": 0.544,
-          "rb": 0.199
+          "pass": 0.669,
+          "run": 0.692,
+          "red_zone": 0.734,
+          "wr": 0.368,
+          "te": 0.554,
+          "rb": 0.203
         }
       },
       "players": [
@@ -2798,8 +2798,8 @@
             "practice_status": "",
             "primary_injury": ""
           },
-          "injury_role_boost": 0.013,
-          "effective_role_score": 0.442
+          "injury_role_boost": 0.072,
+          "effective_role_score": 0.501
         },
         {
           "id": "00-0038416",
@@ -2867,16 +2867,16 @@
             "position": "TE",
             "name": "Colston Loveland",
             "game_status": "",
-            "practice_status": "Limited Participation in Practice",
+            "practice_status": "Full Participation in Practice",
             "primary_injury": "Neck",
             "secondary_injury": "",
             "roster_status": "ACT",
-            "availability": 0.9,
-            "label": "LIMITED PARTICIPATION IN PRACTICE",
+            "availability": 1.0,
+            "label": "FULL PARTICIPATION IN PRACTICE",
             "current_report": true
           },
-          "injury_role_boost": 0.05,
-          "effective_role_score": 0.252
+          "injury_role_boost": 0.036,
+          "effective_role_score": 0.26
         },
         {
           "id": "00-0040735",
@@ -3013,17 +3013,17 @@
             "team": "CHI",
             "position": "RB",
             "name": "Kyle Monangai",
-            "game_status": "",
+            "game_status": "Out",
             "practice_status": "Did Not Participate In Practice",
             "primary_injury": "Thumb",
             "secondary_injury": "Toe",
             "roster_status": "ACT",
-            "availability": 0.78,
-            "label": "DID NOT PARTICIPATE IN PRACTICE",
+            "availability": 0.0,
+            "label": "OUT",
             "current_report": true
           },
-          "injury_role_boost": 0.004,
-          "effective_role_score": 0.116
+          "injury_role_boost": 0.0,
+          "effective_role_score": 0.0
         },
         {
           "id": "00-0039021",
@@ -3057,8 +3057,8 @@
             "practice_status": "",
             "primary_injury": ""
           },
-          "injury_role_boost": 0.004,
-          "effective_role_score": 0.13
+          "injury_role_boost": 0.021,
+          "effective_role_score": 0.147
         },
         {
           "id": "00-0032464",
@@ -3145,53 +3145,43 @@
             "id": "00-0040236",
             "name": "Kyle Monangai",
             "position": "RB",
-            "label": "DID NOT PARTICIPATE IN PRACTICE",
-            "game_status": "",
+            "label": "OUT",
+            "game_status": "Out",
             "practice_status": "Did Not Participate In Practice",
             "primary_injury": "Thumb",
-            "availability": 0.78
-          },
-          {
-            "id": "00-0040126",
-            "name": "Colston Loveland",
-            "position": "TE",
-            "label": "LIMITED PARTICIPATION IN PRACTICE",
-            "game_status": "",
-            "practice_status": "Limited Participation in Practice",
-            "primary_injury": "Neck",
-            "availability": 0.9
+            "availability": 0.0
           }
         ],
         "defense": [
           {
-            "id": "00-0037271",
-            "name": "D'Marco Jackson",
-            "position": "LB",
-            "label": "DID NOT PARTICIPATE IN PRACTICE",
-            "game_status": "",
-            "practice_status": "Did Not Participate In Practice",
-            "primary_injury": "Ankle",
-            "availability": 0.78
-          },
-          {
             "id": "00-0041060",
             "name": "Malik Muhammad",
             "position": "CB",
-            "label": "LIMITED PARTICIPATION IN PRACTICE",
-            "game_status": "",
+            "label": "QUESTIONABLE",
+            "game_status": "Questionable",
             "practice_status": "Limited Participation in Practice",
             "primary_injury": "Toe",
-            "availability": 0.9
+            "availability": 0.7
+          },
+          {
+            "id": "00-0037271",
+            "name": "D'Marco Jackson",
+            "position": "LB",
+            "label": "QUESTIONABLE",
+            "game_status": "Questionable",
+            "practice_status": "Full Participation in Practice",
+            "primary_injury": "Ankle",
+            "availability": 0.7
           }
         ],
         "offensive_line_penalty": 0.0,
         "defense_adjustments": {
-          "pass": 0.011,
-          "run": 0.011,
-          "red_zone": 0.009,
-          "wr": 0.008,
-          "te": 0.013,
-          "rb": 0.011
+          "pass": 0.027,
+          "run": 0.015,
+          "red_zone": 0.015,
+          "wr": 0.024,
+          "te": 0.023,
+          "rb": 0.015
         }
       }
     },
@@ -4250,19 +4240,19 @@
           }
         },
         "injury_adjustments": {
-          "pass": 0.143,
+          "pass": 0.094,
           "run": 0.165,
-          "red_zone": 0.106,
-          "wr": 0.08,
-          "te": 0.125,
+          "red_zone": 0.092,
+          "wr": 0.024,
+          "te": 0.108,
           "rb": 0.146
         },
         "adjusted_scores": {
-          "pass": 1.0,
+          "pass": 0.989,
           "run": 0.924,
-          "red_zone": 0.95,
-          "wr": 0.768,
-          "te": 0.594,
+          "red_zone": 0.936,
+          "wr": 0.712,
+          "te": 0.577,
           "rb": 0.927
         }
       },
@@ -4733,16 +4723,6 @@
             "availability": 0.0
           },
           {
-            "id": "00-0035227",
-            "name": "P.J. Locke",
-            "position": "S",
-            "label": "IR/RESERVE",
-            "game_status": "Questionable",
-            "practice_status": "Full Participation in Practice",
-            "primary_injury": "Foot",
-            "availability": 0.0
-          },
-          {
             "id": "00-0033120",
             "name": "Kenny Clark",
             "position": "DT",
@@ -4751,15 +4731,25 @@
             "practice_status": "Limited Participation in Practice",
             "primary_injury": "Back",
             "availability": 0.7
+          },
+          {
+            "id": "00-0035227",
+            "name": "P.J. Locke",
+            "position": "S",
+            "label": "QUESTIONABLE",
+            "game_status": "Questionable",
+            "practice_status": "Full Participation in Practice",
+            "primary_injury": "Foot",
+            "availability": 0.7
           }
         ],
         "offensive_line_penalty": 0.0,
         "defense_adjustments": {
-          "pass": 0.143,
+          "pass": 0.094,
           "run": 0.165,
-          "red_zone": 0.106,
-          "wr": 0.08,
-          "te": 0.125,
+          "red_zone": 0.092,
+          "wr": 0.024,
+          "te": 0.108,
           "rb": 0.146
         }
       }
@@ -4989,9 +4979,9 @@
             "practice_status": "Did Not Participate In Practice",
             "primary_injury": "Knee",
             "secondary_injury": "",
-            "roster_status": "ACT",
+            "roster_status": "RES",
             "availability": 0.0,
-            "label": "OUT",
+            "label": "IR/RESERVE",
             "current_report": true
           },
           "injury_role_boost": 0.0,
@@ -5271,7 +5261,7 @@
             "id": "00-0040730",
             "name": "RJ Harvey",
             "position": "RB",
-            "label": "OUT",
+            "label": "IR/RESERVE",
             "game_status": "Out",
             "practice_status": "Did Not Participate In Practice",
             "primary_injury": "Knee",
@@ -7738,19 +7728,19 @@
           }
         },
         "injury_adjustments": {
-          "pass": 0.075,
+          "pass": 0.124,
           "run": 0.065,
-          "red_zone": 0.038,
-          "wr": 0.048,
-          "te": 0.015,
+          "red_zone": 0.052,
+          "wr": 0.104,
+          "te": 0.033,
           "rb": 0.046
         },
         "adjusted_scores": {
-          "pass": 0.43,
+          "pass": 0.479,
           "run": 0.249,
-          "red_zone": 0.1,
-          "wr": 0.11,
-          "te": 0.89,
+          "red_zone": 0.114,
+          "wr": 0.166,
+          "te": 0.908,
           "rb": 0.265
         }
       },
@@ -8139,6 +8129,16 @@
         "offense": [],
         "defense": [
           {
+            "id": "00-0036374",
+            "name": "L'Jarius Sneed",
+            "position": "CB",
+            "label": "IR/RESERVE",
+            "game_status": "Questionable",
+            "practice_status": "Limited Participation in Practice",
+            "primary_injury": "Knee",
+            "availability": 0.0
+          },
+          {
             "id": "00-0040748",
             "name": "Omarr Norman-Lott",
             "position": "DT",
@@ -8147,16 +8147,6 @@
             "practice_status": "Limited Participation in Practice",
             "primary_injury": "Knee",
             "availability": 0.0
-          },
-          {
-            "id": "00-0036374",
-            "name": "L'Jarius Sneed",
-            "position": "CB",
-            "label": "QUESTIONABLE",
-            "game_status": "Questionable",
-            "practice_status": "Limited Participation in Practice",
-            "primary_injury": "Knee",
-            "availability": 0.7
           },
           {
             "id": "00-0041543",
@@ -8181,11 +8171,11 @@
         ],
         "offensive_line_penalty": 0.0,
         "defense_adjustments": {
-          "pass": 0.075,
+          "pass": 0.124,
           "run": 0.065,
-          "red_zone": 0.038,
-          "wr": 0.048,
-          "te": 0.015,
+          "red_zone": 0.052,
+          "wr": 0.104,
+          "te": 0.033,
           "rb": 0.046
         }
       }
@@ -9235,7 +9225,7 @@
             "id": "00-0034790",
             "name": "Derwin James",
             "position": "S",
-            "label": "OUT",
+            "label": "IR/RESERVE",
             "game_status": "Out",
             "practice_status": "Did Not Participate In Practice",
             "primary_injury": "Hamstring",
@@ -9724,16 +9714,6 @@
             "availability": 0.0
           },
           {
-            "id": "00-0040729",
-            "name": "Jack Bech",
-            "position": "WR",
-            "label": "IR/RESERVE",
-            "game_status": "Questionable",
-            "practice_status": "Full Participation in Practice",
-            "primary_injury": "Forearm",
-            "availability": 0.0
-          },
-          {
             "id": "00-0039735",
             "name": "Jackson Powers-Johnson",
             "position": "G",
@@ -9742,6 +9722,16 @@
             "practice_status": "Limited Participation in Practice",
             "primary_injury": "Back",
             "availability": 0.7
+          },
+          {
+            "id": "00-0040729",
+            "name": "Jack Bech",
+            "position": "WR",
+            "label": "QUESTIONABLE",
+            "game_status": "Questionable",
+            "practice_status": "Full Participation in Practice",
+            "primary_injury": "Forearm",
+            "availability": 0.7
           }
         ],
         "defense": [
@@ -9749,7 +9739,7 @@
             "id": "00-0036922",
             "name": "Patrick Johnson",
             "position": "DE",
-            "label": "OUT",
+            "label": "IR/RESERVE",
             "game_status": "Out",
             "practice_status": "Did Not Participate In Practice",
             "primary_injury": "Stinger",
@@ -12744,7 +12734,7 @@
             "id": "00-0039886",
             "name": "T'Vondre Sweat",
             "position": "DT",
-            "label": "OUT",
+            "label": "IR/RESERVE",
             "game_status": "Out",
             "practice_status": "Did Not Participate In Practice",
             "primary_injury": "Knee",
@@ -13890,20 +13880,20 @@
           }
         },
         "injury_adjustments": {
-          "pass": 0.019,
-          "run": 0.043,
-          "red_zone": 0.023,
+          "pass": 0.03,
+          "run": 0.07,
+          "red_zone": 0.039,
           "wr": 0.0,
-          "te": 0.027,
-          "rb": 0.038
+          "te": 0.055,
+          "rb": 0.066
         },
         "adjusted_scores": {
-          "pass": 0.111,
-          "run": 0.16,
+          "pass": 0.122,
+          "run": 0.187,
           "red_zone": 1.0,
           "wr": 0.031,
-          "te": 0.121,
-          "rb": 0.476
+          "te": 0.149,
+          "rb": 0.504
         }
       },
       "players": [
@@ -13939,8 +13929,8 @@
             "practice_status": "",
             "primary_injury": ""
           },
-          "injury_role_boost": 0.008,
-          "effective_role_score": 0.87
+          "injury_role_boost": 0.023,
+          "effective_role_score": 0.885
         },
         {
           "id": "00-0038797",
@@ -13974,8 +13964,8 @@
             "practice_status": "",
             "primary_injury": ""
           },
-          "injury_role_boost": 0.039,
-          "effective_role_score": 0.504
+          "injury_role_boost": 0.062,
+          "effective_role_score": 0.527
         },
         {
           "id": "00-0038543",
@@ -14016,8 +14006,8 @@
             "label": "FULL PARTICIPATION IN PRACTICE",
             "current_report": true
           },
-          "injury_role_boost": 0.011,
-          "effective_role_score": 0.38
+          "injury_role_boost": 0.062,
+          "effective_role_score": 0.431
         },
         {
           "id": "00-0039299",
@@ -14051,8 +14041,8 @@
             "practice_status": "",
             "primary_injury": ""
           },
-          "injury_role_boost": 0.014,
-          "effective_role_score": 0.178
+          "injury_role_boost": 0.022,
+          "effective_role_score": 0.186
         },
         {
           "id": "00-0039793",
@@ -14119,17 +14109,17 @@
             "team": "SEA",
             "position": "WR",
             "name": "Rashid Shaheed",
-            "game_status": "",
+            "game_status": "Out",
             "practice_status": "Did Not Participate In Practice",
             "primary_injury": "Knee",
             "secondary_injury": "",
             "roster_status": "ACT",
-            "availability": 0.78,
-            "label": "DID NOT PARTICIPATE IN PRACTICE",
+            "availability": 0.0,
+            "label": "OUT",
             "current_report": true
           },
-          "injury_role_boost": 0.004,
-          "effective_role_score": 0.111
+          "injury_role_boost": 0.0,
+          "effective_role_score": 0.0
         },
         {
           "id": "00-0035704",
@@ -14161,17 +14151,17 @@
             "team": "SEA",
             "position": "QB",
             "name": "Drew Lock",
-            "game_status": "",
+            "game_status": "Questionable",
             "practice_status": "Limited Participation in Practice",
             "primary_injury": "Elbow",
             "secondary_injury": "",
             "roster_status": "ACT",
-            "availability": 0.9,
-            "label": "LIMITED PARTICIPATION IN PRACTICE",
+            "availability": 0.7,
+            "label": "QUESTIONABLE",
             "current_report": true
           },
-          "injury_role_boost": 0.001,
-          "effective_role_score": 0.123
+          "injury_role_boost": 0.004,
+          "effective_role_score": 0.098
         },
         {
           "id": "00-0033908",
@@ -14205,8 +14195,8 @@
             "practice_status": "",
             "primary_injury": ""
           },
-          "injury_role_boost": 0.003,
-          "effective_role_score": 0.12
+          "injury_role_boost": 0.02,
+          "effective_role_score": 0.137
         },
         {
           "id": "00-0041512",
@@ -14280,17 +14270,17 @@
             "team": "SEA",
             "position": "RB",
             "name": "Velus Jones Jr.",
-            "game_status": "",
+            "game_status": "Out",
             "practice_status": "Did Not Participate In Practice",
             "primary_injury": "Hamstring",
             "secondary_injury": "",
             "roster_status": "ACT",
-            "availability": 0.78,
-            "label": "DID NOT PARTICIPATE IN PRACTICE",
+            "availability": 0.0,
+            "label": "OUT",
             "current_report": true
           },
-          "injury_role_boost": 0.004,
-          "effective_role_score": 0.045
+          "injury_role_boost": 0.0,
+          "effective_role_score": 0.0
         },
         {
           "id": "00-0040648",
@@ -14324,8 +14314,8 @@
             "practice_status": "",
             "primary_injury": ""
           },
-          "injury_role_boost": 0.001,
-          "effective_role_score": 0.048
+          "injury_role_boost": 0.008,
+          "effective_role_score": 0.055
         }
       ],
       "injuries": {
@@ -14342,126 +14332,96 @@
             "availability": 0.0
           },
           {
-            "id": "00-0039020",
-            "name": "Anthony Bradford",
-            "position": "G",
-            "label": "DID NOT PARTICIPATE IN PRACTICE",
-            "game_status": "",
-            "practice_status": "Did Not Participate In Practice",
-            "primary_injury": "Knee",
-            "availability": 0.78
-          },
-          {
             "id": "00-0037745",
             "name": "Velus Jones Jr.",
             "position": "RB",
-            "label": "DID NOT PARTICIPATE IN PRACTICE",
-            "game_status": "",
+            "label": "OUT",
+            "game_status": "Out",
             "practice_status": "Did Not Participate In Practice",
             "primary_injury": "Hamstring",
-            "availability": 0.78
+            "availability": 0.0
           },
           {
             "id": "00-0037821",
             "name": "Charles Cross",
             "position": "T",
-            "label": "DID NOT PARTICIPATE IN PRACTICE",
-            "game_status": "",
+            "label": "OUT",
+            "game_status": "Out",
             "practice_status": "Did Not Participate In Practice",
             "primary_injury": "Ankle",
-            "availability": 0.78
+            "availability": 0.0
           },
           {
             "id": "00-0037545",
             "name": "Rashid Shaheed",
             "position": "WR",
-            "label": "DID NOT PARTICIPATE IN PRACTICE",
-            "game_status": "",
+            "label": "OUT",
+            "game_status": "Out",
             "practice_status": "Did Not Participate In Practice",
             "primary_injury": "Knee",
-            "availability": 0.78
+            "availability": 0.0
+          },
+          {
+            "id": "00-0039020",
+            "name": "Anthony Bradford",
+            "position": "G",
+            "label": "QUESTIONABLE",
+            "game_status": "Questionable",
+            "practice_status": "Limited Participation in Practice",
+            "primary_injury": "Knee",
+            "availability": 0.7
           },
           {
             "id": "00-0035704",
             "name": "Drew Lock",
             "position": "QB",
-            "label": "LIMITED PARTICIPATION IN PRACTICE",
-            "game_status": "",
+            "label": "QUESTIONABLE",
+            "game_status": "Questionable",
             "practice_status": "Limited Participation in Practice",
             "primary_injury": "Elbow",
-            "availability": 0.9
-          },
-          {
-            "id": "00-0039165",
-            "name": "Zach Charbonnet",
-            "position": "RB",
-            "label": "LIMITED PARTICIPATION IN PRACTICE",
-            "game_status": "",
-            "practice_status": "Limited Participation in Practice",
-            "primary_injury": "Knee",
-            "availability": 0.9
+            "availability": 0.7
           }
         ],
         "defense": [
           {
+            "id": "00-0034350",
+            "name": "Uchenna Nwosu",
+            "position": "LB",
+            "label": "DOUBTFUL",
+            "game_status": "Doubtful",
+            "practice_status": "Did Not Participate In Practice",
+            "primary_injury": "Ankle",
+            "availability": 0.2
+          },
+          {
             "id": "00-0038694",
             "name": "Brandon Pili",
             "position": "DT",
-            "label": "DID NOT PARTICIPATE IN PRACTICE",
-            "game_status": "",
+            "label": "QUESTIONABLE",
+            "game_status": "Questionable",
             "practice_status": "Did Not Participate In Practice",
             "primary_injury": "Back",
-            "availability": 0.78
+            "availability": 0.7
           },
           {
             "id": "00-0038764",
             "name": "Patrick O'Connell",
             "position": "LB",
-            "label": "DID NOT PARTICIPATE IN PRACTICE",
-            "game_status": "",
+            "label": "QUESTIONABLE",
+            "game_status": "Questionable",
             "practice_status": "Did Not Participate In Practice",
             "primary_injury": "Toe",
-            "availability": 0.78
-          },
-          {
-            "id": "00-0034350",
-            "name": "Uchenna Nwosu",
-            "position": "LB",
-            "label": "DID NOT PARTICIPATE IN PRACTICE",
-            "game_status": "",
-            "practice_status": "Did Not Participate In Practice",
-            "primary_injury": "Ankle",
-            "availability": 0.78
-          },
-          {
-            "id": "00-0039309",
-            "name": "Byron Murphy II",
-            "position": "DT",
-            "label": "LIMITED PARTICIPATION IN PRACTICE",
-            "game_status": "",
-            "practice_status": "Limited Participation in Practice",
-            "primary_injury": "Back",
-            "availability": 0.9
-          },
-          {
-            "id": "00-0039815",
-            "name": "Tyrice Knight",
-            "position": "LB",
-            "label": "LIMITED PARTICIPATION IN PRACTICE",
-            "game_status": "",
-            "practice_status": "Limited Participation in Practice",
-            "primary_injury": "Hip",
-            "availability": 0.9
+            "availability": 0.7
           }
         ],
-        "offensive_line_penalty": 0.018,
+        "offensive_line_penalty": 0.052,
         "defense_adjustments": {
-          "pass": 0.019,
-          "run": 0.043,
-          "red_zone": 0.023,
+          "pass": 0.03,
+          "run": 0.07,
+          "red_zone": 0.039,
           "wr": 0.0,
-          "te": 0.027,
-          "rb": 0.038
+          "te": 0.055,
+          "rb": 0.066
         }
       }
     },
