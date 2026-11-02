@@ -51,16 +51,23 @@ jobs:
           SPORTSGAMEODDS_API_KEY: ${{ secrets.SPORTSGAMEODDS_API_KEY }}
         run: python scripts/enrich_props.py
 
-      - name: Commit data changes
+      - name: Publish generated data on latest main
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          # matchups.json is a generated artifact. Preserve the completed build,
+          # move to the newest main branch, then replace the generated file instead
+          # of trying to merge two independently generated JSON snapshots.
+          cp docs/data/matchups.json /tmp/matchups.json
+          git fetch origin main
+          git reset --hard origin/main
+          cp /tmp/matchups.json docs/data/matchups.json
           git add docs/data/matchups.json
+
           if git diff --cached --quiet; then
             echo "No data changes to commit."
           else
             git commit -m "chore: refresh NFL matchup data"
-            git fetch origin main
-            git rebase origin/main
             git push origin main
           fi
