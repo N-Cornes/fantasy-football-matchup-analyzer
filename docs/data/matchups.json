@@ -3,10 +3,12 @@
     "season": 2026,
     "through_week": 8,
     "injury_week": 8,
-    "generated_at": "2026-11-02T19:24:14.375593+00:00",
-    "source": "nflverse / nflfastR play-by-play, weekly rosters, and injury/practice reports",
-    "model_version": "1.1.1",
-    "injury_note": "Current-week injury reports adjust matchup strength; reserve status prevents unavailable players from being recommended without double-counting long-term absences."
+    "generated_at": "2026-11-02T19:31:23.080843+00:00",
+    "source": "nflverse / nflfastR play-by-play, rosters, injuries, schedules/odds; Open-Meteo forecast weather",
+    "model_version": "1.2.0",
+    "injury_note": "Current-week injury reports adjust matchup strength; reserve status prevents unavailable players from being recommended without double-counting long-term absences.",
+    "weather_note": "Weather adjustments use the forecast nearest kickoff for outdoor/open-roof games and are intentionally conservative.",
+    "market_note": "Current spread, total, implied points, and game script can adjust player fit. Historical ATS results are displayed as context and are not treated as a guaranteed predictive edge."
   },
   "teams": {
     "ARI": {
@@ -551,6 +553,93 @@
           "wr": 0.048,
           "te": 0.015,
           "rb": 0.035
+        }
+      },
+      "week_context": {
+        "game_id": "2026_09_ARI_SEA",
+        "week": 9,
+        "gameday": "2026-11-08",
+        "gametime_et": "16:25",
+        "home": false,
+        "opponent": "SEA",
+        "opponent_name": "Seattle Seahawks",
+        "stadium": "Lumen Field",
+        "roof": "outdoors",
+        "weather": {
+          "available": true,
+          "protected": false,
+          "roof": "outdoors",
+          "kickoff_utc": "2026-11-08T21:25:00+00:00",
+          "temperature_f": 56.2,
+          "precip_probability": 36.0,
+          "precipitation_in": 0.0,
+          "wind_mph": 4.8,
+          "wind_gust_mph": 7.6,
+          "label": "Low weather impact",
+          "multipliers": {
+            "QB": 1.0,
+            "WR": 1.0,
+            "TE": 1.0,
+            "RB": 1.0
+          },
+          "source": "Open-Meteo"
+        },
+        "market": {
+          "available": true,
+          "team_spread": 11.5,
+          "game_total": 44.5,
+          "implied_team_total": 16.5,
+          "implied_opponent_total": 28.0,
+          "line_quality": "Blowout-risk game script",
+          "history": {
+            "role": "underdog",
+            "recent_8": {
+              "covers": 4,
+              "losses": 4,
+              "pushes": 0,
+              "games": 8,
+              "cover_rate": 0.5,
+              "outright_win_rate": 0.375,
+              "summary": "4-4-0 ATS"
+            },
+            "recent_16": {
+              "covers": 5,
+              "losses": 11,
+              "pushes": 0,
+              "games": 16,
+              "cover_rate": 0.312,
+              "outright_win_rate": 0.188,
+              "summary": "5-11-0 ATS"
+            },
+            "same_role": {
+              "covers": 5,
+              "losses": 11,
+              "pushes": 0,
+              "games": 16,
+              "cover_rate": 0.312,
+              "outright_win_rate": 0.188,
+              "summary": "5-11-0 ATS"
+            },
+            "similar_line": {
+              "covers": 1,
+              "losses": 2,
+              "pushes": 0,
+              "games": 3,
+              "cover_rate": 0.333,
+              "outright_win_rate": 0.333,
+              "summary": "1-2-0 ATS"
+            },
+            "recent_totals": {
+              "overs": 5,
+              "unders": 3,
+              "pushes": 0,
+              "games": 8,
+              "over_rate": 0.625,
+              "summary": "5-3-0 O/U"
+            },
+            "trend_label": "Weak ATS trend as underdog"
+          },
+          "source": "nflverse schedules"
         }
       }
     },
@@ -1178,6 +1267,93 @@
           "te": 0.03,
           "rb": 0.04
         }
+      },
+      "week_context": {
+        "game_id": "2026_09_CIN_ATL",
+        "week": 9,
+        "gameday": "2026-11-08",
+        "gametime_et": "09:30",
+        "home": true,
+        "opponent": "CIN",
+        "opponent_name": "Cincinnati Bengals",
+        "stadium": "Bernabeu",
+        "roof": "",
+        "weather": {
+          "available": true,
+          "protected": false,
+          "roof": "outdoors/unknown",
+          "kickoff_utc": "2026-11-08T14:30:00+00:00",
+          "temperature_f": 58.5,
+          "precip_probability": 6.0,
+          "precipitation_in": 0.0,
+          "wind_mph": 6.7,
+          "wind_gust_mph": 13.4,
+          "label": "Low weather impact",
+          "multipliers": {
+            "QB": 1.0,
+            "WR": 1.0,
+            "TE": 1.0,
+            "RB": 1.0
+          },
+          "source": "Open-Meteo"
+        },
+        "market": {
+          "available": true,
+          "team_spread": 3.0,
+          "game_total": 51.5,
+          "implied_team_total": 24.2,
+          "implied_opponent_total": 27.2,
+          "line_quality": "High-total, competitive fantasy line",
+          "history": {
+            "role": "underdog",
+            "recent_8": {
+              "covers": 3,
+              "losses": 5,
+              "pushes": 0,
+              "games": 8,
+              "cover_rate": 0.375,
+              "outright_win_rate": 0.375,
+              "summary": "3-5-0 ATS"
+            },
+            "recent_16": {
+              "covers": 7,
+              "losses": 9,
+              "pushes": 0,
+              "games": 16,
+              "cover_rate": 0.438,
+              "outright_win_rate": 0.5,
+              "summary": "7-9-0 ATS"
+            },
+            "same_role": {
+              "covers": 10,
+              "losses": 6,
+              "pushes": 0,
+              "games": 16,
+              "cover_rate": 0.625,
+              "outright_win_rate": 0.5,
+              "summary": "10-6-0 ATS"
+            },
+            "similar_line": {
+              "covers": 6,
+              "losses": 6,
+              "pushes": 0,
+              "games": 12,
+              "cover_rate": 0.5,
+              "outright_win_rate": 0.5,
+              "summary": "6-6-0 ATS"
+            },
+            "recent_totals": {
+              "overs": 4,
+              "unders": 4,
+              "pushes": 0,
+              "games": 8,
+              "over_rate": 0.5,
+              "summary": "4-4-0 O/U"
+            },
+            "trend_label": "Recent market-underperformance"
+          },
+          "source": "nflverse schedules"
+        }
       }
     },
     "BAL": {
@@ -1699,6 +1875,93 @@
           "te": 0.033,
           "rb": 0.008
         }
+      },
+      "week_context": {
+        "game_id": "2026_09_JAX_BAL",
+        "week": 9,
+        "gameday": "2026-11-05",
+        "gametime_et": "20:15",
+        "home": true,
+        "opponent": "JAX",
+        "opponent_name": "Jacksonville Jaguars",
+        "stadium": "M&T Bank Stadium",
+        "roof": "outdoors",
+        "weather": {
+          "available": true,
+          "protected": false,
+          "roof": "outdoors",
+          "kickoff_utc": "2026-11-06T01:15:00+00:00",
+          "temperature_f": 68.2,
+          "precip_probability": 41.0,
+          "precipitation_in": 0.01,
+          "wind_mph": 3.3,
+          "wind_gust_mph": 8.5,
+          "label": "Low weather impact",
+          "multipliers": {
+            "QB": 1.0,
+            "WR": 1.0,
+            "TE": 1.0,
+            "RB": 1.0
+          },
+          "source": "Open-Meteo"
+        },
+        "market": {
+          "available": true,
+          "team_spread": 8.5,
+          "game_total": 43.5,
+          "implied_team_total": 17.5,
+          "implied_opponent_total": 26.0,
+          "line_quality": "Neutral fantasy line",
+          "history": {
+            "role": "underdog",
+            "recent_8": {
+              "covers": 2,
+              "losses": 5,
+              "pushes": 1,
+              "games": 8,
+              "cover_rate": 0.286,
+              "outright_win_rate": 0.5,
+              "summary": "2-5-1 ATS"
+            },
+            "recent_16": {
+              "covers": 4,
+              "losses": 11,
+              "pushes": 1,
+              "games": 16,
+              "cover_rate": 0.267,
+              "outright_win_rate": 0.5,
+              "summary": "4-11-1 ATS"
+            },
+            "same_role": {
+              "covers": 2,
+              "losses": 4,
+              "pushes": 0,
+              "games": 6,
+              "cover_rate": 0.333,
+              "outright_win_rate": 0.333,
+              "summary": "2-4-0 ATS"
+            },
+            "similar_line": {
+              "covers": 0,
+              "losses": 1,
+              "pushes": 0,
+              "games": 1,
+              "cover_rate": 0.0,
+              "outright_win_rate": 0.0,
+              "summary": "0-1-0 ATS"
+            },
+            "recent_totals": {
+              "overs": 4,
+              "unders": 4,
+              "pushes": 0,
+              "games": 8,
+              "over_rate": 0.5,
+              "summary": "4-4-0 O/U"
+            },
+            "trend_label": "Recent market-underperformance"
+          },
+          "source": "nflverse schedules"
+        }
       }
     },
     "BUF": {
@@ -2201,6 +2464,87 @@
           "wr": 0.024,
           "te": 0.023,
           "rb": 0.026
+        }
+      },
+      "week_context": {
+        "game_id": "2026_09_BUF_MIN",
+        "week": 9,
+        "gameday": "2026-11-09",
+        "gametime_et": "20:15",
+        "home": false,
+        "opponent": "MIN",
+        "opponent_name": "Minnesota Vikings",
+        "stadium": "U.S. Bank Stadium",
+        "roof": "dome",
+        "weather": {
+          "available": true,
+          "protected": true,
+          "roof": "dome",
+          "label": "Indoor/roof-protected \u2014 no weather adjustment",
+          "multipliers": {
+            "QB": 1.0,
+            "RB": 1.0,
+            "WR": 1.0,
+            "TE": 1.0
+          },
+          "source": "Open-Meteo"
+        },
+        "market": {
+          "available": true,
+          "team_spread": -2.5,
+          "game_total": 46.5,
+          "implied_team_total": 24.5,
+          "implied_opponent_total": 22.0,
+          "line_quality": "Strong team scoring line",
+          "history": {
+            "role": "favorite",
+            "recent_8": {
+              "covers": 5,
+              "losses": 3,
+              "pushes": 0,
+              "games": 8,
+              "cover_rate": 0.625,
+              "outright_win_rate": 0.75,
+              "summary": "5-3-0 ATS"
+            },
+            "recent_16": {
+              "covers": 9,
+              "losses": 7,
+              "pushes": 0,
+              "games": 16,
+              "cover_rate": 0.562,
+              "outright_win_rate": 0.75,
+              "summary": "9-7-0 ATS"
+            },
+            "same_role": {
+              "covers": 9,
+              "losses": 7,
+              "pushes": 0,
+              "games": 16,
+              "cover_rate": 0.562,
+              "outright_win_rate": 0.75,
+              "summary": "9-7-0 ATS"
+            },
+            "similar_line": {
+              "covers": 4,
+              "losses": 3,
+              "pushes": 0,
+              "games": 7,
+              "cover_rate": 0.571,
+              "outright_win_rate": 0.571,
+              "summary": "4-3-0 ATS"
+            },
+            "recent_totals": {
+              "overs": 6,
+              "unders": 2,
+              "pushes": 0,
+              "games": 8,
+              "over_rate": 0.75,
+              "summary": "6-2-0 O/U"
+            },
+            "trend_label": "Recent market-beating trend"
+          },
+          "source": "nflverse schedules"
         }
       }
     },
@@ -2755,6 +3099,93 @@
           "te": 0.075,
           "rb": 0.061
         }
+      },
+      "week_context": {
+        "game_id": "2026_09_DEN_CAR",
+        "week": 9,
+        "gameday": "2026-11-08",
+        "gametime_et": "13:00",
+        "home": true,
+        "opponent": "DEN",
+        "opponent_name": "Denver Broncos",
+        "stadium": "Bank of America Stadium",
+        "roof": "outdoors",
+        "weather": {
+          "available": true,
+          "protected": false,
+          "roof": "outdoors",
+          "kickoff_utc": "2026-11-08T18:00:00+00:00",
+          "temperature_f": 70.9,
+          "precip_probability": 6.0,
+          "precipitation_in": 0.0,
+          "wind_mph": 6.6,
+          "wind_gust_mph": 11.9,
+          "label": "Low weather impact",
+          "multipliers": {
+            "QB": 1.0,
+            "WR": 1.0,
+            "TE": 1.0,
+            "RB": 1.0
+          },
+          "source": "Open-Meteo"
+        },
+        "market": {
+          "available": true,
+          "team_spread": 3.0,
+          "game_total": 43.5,
+          "implied_team_total": 20.2,
+          "implied_opponent_total": 23.2,
+          "line_quality": "Neutral fantasy line",
+          "history": {
+            "role": "underdog",
+            "recent_8": {
+              "covers": 4,
+              "losses": 4,
+              "pushes": 0,
+              "games": 8,
+              "cover_rate": 0.5,
+              "outright_win_rate": 0.375,
+              "summary": "4-4-0 ATS"
+            },
+            "recent_16": {
+              "covers": 8,
+              "losses": 8,
+              "pushes": 0,
+              "games": 16,
+              "cover_rate": 0.5,
+              "outright_win_rate": 0.375,
+              "summary": "8-8-0 ATS"
+            },
+            "same_role": {
+              "covers": 10,
+              "losses": 6,
+              "pushes": 0,
+              "games": 16,
+              "cover_rate": 0.625,
+              "outright_win_rate": 0.5,
+              "summary": "10-6-0 ATS"
+            },
+            "similar_line": {
+              "covers": 7,
+              "losses": 3,
+              "pushes": 0,
+              "games": 10,
+              "cover_rate": 0.7,
+              "outright_win_rate": 0.6,
+              "summary": "7-3-0 ATS"
+            },
+            "recent_totals": {
+              "overs": 4,
+              "unders": 4,
+              "pushes": 0,
+              "games": 8,
+              "over_rate": 0.5,
+              "summary": "4-4-0 O/U"
+            },
+            "trend_label": "Strong ATS trend as underdog"
+          },
+          "source": "nflverse schedules"
+        }
       }
     },
     "CHI": {
@@ -3252,6 +3683,93 @@
           "wr": 0.024,
           "te": 0.023,
           "rb": 0.015
+        }
+      },
+      "week_context": {
+        "game_id": "2026_08_CHI_SEA",
+        "week": 8,
+        "gameday": "2026-11-02",
+        "gametime_et": "20:15",
+        "home": false,
+        "opponent": "SEA",
+        "opponent_name": "Seattle Seahawks",
+        "stadium": "Lumen Field",
+        "roof": "outdoors",
+        "weather": {
+          "available": true,
+          "protected": false,
+          "roof": "outdoors",
+          "kickoff_utc": "2026-11-03T01:15:00+00:00",
+          "temperature_f": 46.2,
+          "precip_probability": 1.0,
+          "precipitation_in": 0.0,
+          "wind_mph": 1.8,
+          "wind_gust_mph": 2.7,
+          "label": "Low weather impact",
+          "multipliers": {
+            "QB": 1.0,
+            "WR": 1.0,
+            "TE": 1.0,
+            "RB": 1.0
+          },
+          "source": "Open-Meteo"
+        },
+        "market": {
+          "available": true,
+          "team_spread": 3.0,
+          "game_total": 46.5,
+          "implied_team_total": 21.8,
+          "implied_opponent_total": 24.8,
+          "line_quality": "Neutral fantasy line",
+          "history": {
+            "role": "underdog",
+            "recent_8": {
+              "covers": 6,
+              "losses": 2,
+              "pushes": 0,
+              "games": 8,
+              "cover_rate": 0.75,
+              "outright_win_rate": 0.625,
+              "summary": "6-2-0 ATS"
+            },
+            "recent_16": {
+              "covers": 10,
+              "losses": 5,
+              "pushes": 1,
+              "games": 16,
+              "cover_rate": 0.667,
+              "outright_win_rate": 0.625,
+              "summary": "10-5-1 ATS"
+            },
+            "same_role": {
+              "covers": 10,
+              "losses": 6,
+              "pushes": 0,
+              "games": 16,
+              "cover_rate": 0.625,
+              "outright_win_rate": 0.5,
+              "summary": "10-6-0 ATS"
+            },
+            "similar_line": {
+              "covers": 7,
+              "losses": 4,
+              "pushes": 0,
+              "games": 11,
+              "cover_rate": 0.636,
+              "outright_win_rate": 0.455,
+              "summary": "7-4-0 ATS"
+            },
+            "recent_totals": {
+              "overs": 3,
+              "unders": 5,
+              "pushes": 0,
+              "games": 8,
+              "over_rate": 0.375,
+              "summary": "3-5-0 O/U"
+            },
+            "trend_label": "Recent market-beating trend"
+          },
+          "source": "nflverse schedules"
         }
       }
     },
@@ -3780,6 +4298,93 @@
           "te": 0.043,
           "rb": 0.038
         }
+      },
+      "week_context": {
+        "game_id": "2026_09_CIN_ATL",
+        "week": 9,
+        "gameday": "2026-11-08",
+        "gametime_et": "09:30",
+        "home": false,
+        "opponent": "ATL",
+        "opponent_name": "Atlanta Falcons",
+        "stadium": "Bernabeu",
+        "roof": "",
+        "weather": {
+          "available": true,
+          "protected": false,
+          "roof": "outdoors/unknown",
+          "kickoff_utc": "2026-11-08T14:30:00+00:00",
+          "temperature_f": 58.5,
+          "precip_probability": 6.0,
+          "precipitation_in": 0.0,
+          "wind_mph": 6.7,
+          "wind_gust_mph": 13.4,
+          "label": "Low weather impact",
+          "multipliers": {
+            "QB": 1.0,
+            "WR": 1.0,
+            "TE": 1.0,
+            "RB": 1.0
+          },
+          "source": "Open-Meteo"
+        },
+        "market": {
+          "available": true,
+          "team_spread": -3.0,
+          "game_total": 51.5,
+          "implied_team_total": 27.2,
+          "implied_opponent_total": 24.2,
+          "line_quality": "Excellent team scoring environment",
+          "history": {
+            "role": "favorite",
+            "recent_8": {
+              "covers": 3,
+              "losses": 4,
+              "pushes": 1,
+              "games": 8,
+              "cover_rate": 0.429,
+              "outright_win_rate": 0.625,
+              "summary": "3-4-1 ATS"
+            },
+            "recent_16": {
+              "covers": 8,
+              "losses": 7,
+              "pushes": 1,
+              "games": 16,
+              "cover_rate": 0.533,
+              "outright_win_rate": 0.5,
+              "summary": "8-7-1 ATS"
+            },
+            "same_role": {
+              "covers": 8,
+              "losses": 7,
+              "pushes": 1,
+              "games": 16,
+              "cover_rate": 0.533,
+              "outright_win_rate": 0.75,
+              "summary": "8-7-1 ATS"
+            },
+            "similar_line": {
+              "covers": 6,
+              "losses": 4,
+              "pushes": 0,
+              "games": 10,
+              "cover_rate": 0.6,
+              "outright_win_rate": 0.7,
+              "summary": "6-4-0 ATS"
+            },
+            "recent_totals": {
+              "overs": 5,
+              "unders": 3,
+              "pushes": 0,
+              "games": 8,
+              "over_rate": 0.625,
+              "summary": "5-3-0 O/U"
+            },
+            "trend_label": "No strong ATS trend"
+          },
+          "source": "nflverse schedules"
+        }
       }
     },
     "CLE": {
@@ -4280,6 +4885,87 @@
           "wr": 0.048,
           "te": 0.015,
           "rb": 0.003
+        }
+      },
+      "week_context": {
+        "game_id": "2026_09_CLE_NO",
+        "week": 9,
+        "gameday": "2026-11-08",
+        "gametime_et": "13:00",
+        "home": false,
+        "opponent": "NO",
+        "opponent_name": "New Orleans Saints",
+        "stadium": "Caesars Superdome",
+        "roof": "dome",
+        "weather": {
+          "available": true,
+          "protected": true,
+          "roof": "dome",
+          "label": "Indoor/roof-protected \u2014 no weather adjustment",
+          "multipliers": {
+            "QB": 1.0,
+            "RB": 1.0,
+            "WR": 1.0,
+            "TE": 1.0
+          },
+          "source": "Open-Meteo"
+        },
+        "market": {
+          "available": true,
+          "team_spread": 2.5,
+          "game_total": 43.5,
+          "implied_team_total": 20.5,
+          "implied_opponent_total": 23.0,
+          "line_quality": "Neutral fantasy line",
+          "history": {
+            "role": "underdog",
+            "recent_8": {
+              "covers": 5,
+              "losses": 3,
+              "pushes": 0,
+              "games": 8,
+              "cover_rate": 0.625,
+              "outright_win_rate": 0.625,
+              "summary": "5-3-0 ATS"
+            },
+            "recent_16": {
+              "covers": 10,
+              "losses": 6,
+              "pushes": 0,
+              "games": 16,
+              "cover_rate": 0.625,
+              "outright_win_rate": 0.5,
+              "summary": "10-6-0 ATS"
+            },
+            "same_role": {
+              "covers": 9,
+              "losses": 7,
+              "pushes": 0,
+              "games": 16,
+              "cover_rate": 0.562,
+              "outright_win_rate": 0.438,
+              "summary": "9-7-0 ATS"
+            },
+            "similar_line": {
+              "covers": 6,
+              "losses": 5,
+              "pushes": 0,
+              "games": 11,
+              "cover_rate": 0.545,
+              "outright_win_rate": 0.545,
+              "summary": "6-5-0 ATS"
+            },
+            "recent_totals": {
+              "overs": 4,
+              "unders": 4,
+              "pushes": 0,
+              "games": 8,
+              "over_rate": 0.5,
+              "summary": "4-4-0 O/U"
+            },
+            "trend_label": "Recent market-beating trend"
+          },
+          "source": "nflverse schedules"
         }
       }
     },
@@ -4821,6 +5507,93 @@
           "wr": 0.024,
           "te": 0.108,
           "rb": 0.146
+        }
+      },
+      "week_context": {
+        "game_id": "2026_09_DAL_IND",
+        "week": 9,
+        "gameday": "2026-11-08",
+        "gametime_et": "13:00",
+        "home": false,
+        "opponent": "IND",
+        "opponent_name": "Indianapolis Colts",
+        "stadium": "Lucas Oil Stadium",
+        "roof": "",
+        "weather": {
+          "available": true,
+          "protected": false,
+          "roof": "outdoors/unknown",
+          "kickoff_utc": "2026-11-08T18:00:00+00:00",
+          "temperature_f": 52.6,
+          "precip_probability": 13.0,
+          "precipitation_in": 0.0,
+          "wind_mph": 12.7,
+          "wind_gust_mph": 21.9,
+          "label": "Low weather impact",
+          "multipliers": {
+            "QB": 0.95,
+            "WR": 0.95,
+            "TE": 0.975,
+            "RB": 1.01
+          },
+          "source": "Open-Meteo"
+        },
+        "market": {
+          "available": true,
+          "team_spread": -6.0,
+          "game_total": 51.5,
+          "implied_team_total": 28.8,
+          "implied_opponent_total": 22.8,
+          "line_quality": "Excellent team scoring environment",
+          "history": {
+            "role": "favorite",
+            "recent_8": {
+              "covers": 3,
+              "losses": 4,
+              "pushes": 1,
+              "games": 8,
+              "cover_rate": 0.429,
+              "outright_win_rate": 0.375,
+              "summary": "3-4-1 ATS"
+            },
+            "recent_16": {
+              "covers": 6,
+              "losses": 9,
+              "pushes": 1,
+              "games": 16,
+              "cover_rate": 0.4,
+              "outright_win_rate": 0.438,
+              "summary": "6-9-1 ATS"
+            },
+            "same_role": {
+              "covers": 4,
+              "losses": 12,
+              "pushes": 0,
+              "games": 16,
+              "cover_rate": 0.25,
+              "outright_win_rate": 0.375,
+              "summary": "4-12-0 ATS"
+            },
+            "similar_line": {
+              "covers": 2,
+              "losses": 3,
+              "pushes": 0,
+              "games": 5,
+              "cover_rate": 0.4,
+              "outright_win_rate": 0.6,
+              "summary": "2-3-0 ATS"
+            },
+            "recent_totals": {
+              "overs": 6,
+              "unders": 2,
+              "pushes": 0,
+              "games": 8,
+              "over_rate": 0.75,
+              "summary": "6-2-0 O/U"
+            },
+            "trend_label": "Weak ATS trend as favorite"
+          },
+          "source": "nflverse schedules"
         }
       }
     },
@@ -5399,6 +6172,93 @@
           "te": 0.033,
           "rb": 0.011
         }
+      },
+      "week_context": {
+        "game_id": "2026_09_DEN_CAR",
+        "week": 9,
+        "gameday": "2026-11-08",
+        "gametime_et": "13:00",
+        "home": false,
+        "opponent": "CAR",
+        "opponent_name": "Carolina Panthers",
+        "stadium": "Bank of America Stadium",
+        "roof": "outdoors",
+        "weather": {
+          "available": true,
+          "protected": false,
+          "roof": "outdoors",
+          "kickoff_utc": "2026-11-08T18:00:00+00:00",
+          "temperature_f": 70.9,
+          "precip_probability": 6.0,
+          "precipitation_in": 0.0,
+          "wind_mph": 6.6,
+          "wind_gust_mph": 11.9,
+          "label": "Low weather impact",
+          "multipliers": {
+            "QB": 1.0,
+            "WR": 1.0,
+            "TE": 1.0,
+            "RB": 1.0
+          },
+          "source": "Open-Meteo"
+        },
+        "market": {
+          "available": true,
+          "team_spread": -3.0,
+          "game_total": 43.5,
+          "implied_team_total": 23.2,
+          "implied_opponent_total": 20.2,
+          "line_quality": "Neutral fantasy line",
+          "history": {
+            "role": "favorite",
+            "recent_8": {
+              "covers": 6,
+              "losses": 2,
+              "pushes": 0,
+              "games": 8,
+              "cover_rate": 0.75,
+              "outright_win_rate": 0.75,
+              "summary": "6-2-0 ATS"
+            },
+            "recent_16": {
+              "covers": 10,
+              "losses": 6,
+              "pushes": 0,
+              "games": 16,
+              "cover_rate": 0.625,
+              "outright_win_rate": 0.75,
+              "summary": "10-6-0 ATS"
+            },
+            "same_role": {
+              "covers": 9,
+              "losses": 7,
+              "pushes": 0,
+              "games": 16,
+              "cover_rate": 0.562,
+              "outright_win_rate": 0.938,
+              "summary": "9-7-0 ATS"
+            },
+            "similar_line": {
+              "covers": 8,
+              "losses": 2,
+              "pushes": 0,
+              "games": 10,
+              "cover_rate": 0.8,
+              "outright_win_rate": 0.8,
+              "summary": "8-2-0 ATS"
+            },
+            "recent_totals": {
+              "overs": 3,
+              "unders": 5,
+              "pushes": 0,
+              "games": 8,
+              "over_rate": 0.375,
+              "summary": "3-5-0 O/U"
+            },
+            "trend_label": "Recent market-beating trend"
+          },
+          "source": "nflverse schedules"
+        }
       }
     },
     "DET": {
@@ -5738,6 +6598,93 @@
           "wr": 0.104,
           "te": 0.033,
           "rb": 0.0
+        }
+      },
+      "week_context": {
+        "game_id": "2026_09_DET_MIA",
+        "week": 9,
+        "gameday": "2026-11-08",
+        "gametime_et": "13:00",
+        "home": false,
+        "opponent": "MIA",
+        "opponent_name": "Miami Dolphins",
+        "stadium": "Hard Rock Stadium",
+        "roof": "outdoors",
+        "weather": {
+          "available": true,
+          "protected": false,
+          "roof": "outdoors",
+          "kickoff_utc": "2026-11-08T18:00:00+00:00",
+          "temperature_f": 87.4,
+          "precip_probability": 3.0,
+          "precipitation_in": 0.0,
+          "wind_mph": 8.6,
+          "wind_gust_mph": 7.8,
+          "label": "Low weather impact",
+          "multipliers": {
+            "QB": 1.0,
+            "WR": 1.0,
+            "TE": 1.0,
+            "RB": 1.0
+          },
+          "source": "Open-Meteo"
+        },
+        "market": {
+          "available": true,
+          "team_spread": -7.0,
+          "game_total": 50.5,
+          "implied_team_total": 28.8,
+          "implied_opponent_total": 21.8,
+          "line_quality": "Excellent team scoring environment",
+          "history": {
+            "role": "favorite",
+            "recent_8": {
+              "covers": 3,
+              "losses": 4,
+              "pushes": 1,
+              "games": 8,
+              "cover_rate": 0.429,
+              "outright_win_rate": 0.75,
+              "summary": "3-4-1 ATS"
+            },
+            "recent_16": {
+              "covers": 5,
+              "losses": 10,
+              "pushes": 1,
+              "games": 16,
+              "cover_rate": 0.333,
+              "outright_win_rate": 0.562,
+              "summary": "5-10-1 ATS"
+            },
+            "same_role": {
+              "covers": 7,
+              "losses": 8,
+              "pushes": 1,
+              "games": 16,
+              "cover_rate": 0.467,
+              "outright_win_rate": 0.688,
+              "summary": "7-8-1 ATS"
+            },
+            "similar_line": {
+              "covers": 6,
+              "losses": 4,
+              "pushes": 1,
+              "games": 11,
+              "cover_rate": 0.6,
+              "outright_win_rate": 0.727,
+              "summary": "6-4-1 ATS"
+            },
+            "recent_totals": {
+              "overs": 5,
+              "unders": 3,
+              "pushes": 0,
+              "games": 8,
+              "over_rate": 0.625,
+              "summary": "5-3-0 O/U"
+            },
+            "trend_label": "No strong ATS trend"
+          },
+          "source": "nflverse schedules"
         }
       }
     },
@@ -6312,6 +7259,93 @@
           "te": 0.065,
           "rb": 0.086
         }
+      },
+      "week_context": {
+        "game_id": "2026_09_GB_NE",
+        "week": 9,
+        "gameday": "2026-11-08",
+        "gametime_et": "16:25",
+        "home": false,
+        "opponent": "NE",
+        "opponent_name": "New England Patriots",
+        "stadium": "Gillette Stadium",
+        "roof": "outdoors",
+        "weather": {
+          "available": true,
+          "protected": false,
+          "roof": "outdoors",
+          "kickoff_utc": "2026-11-08T21:25:00+00:00",
+          "temperature_f": 51.9,
+          "precip_probability": 11.0,
+          "precipitation_in": 0.0,
+          "wind_mph": 2.9,
+          "wind_gust_mph": 2.7,
+          "label": "Low weather impact",
+          "multipliers": {
+            "QB": 1.0,
+            "WR": 1.0,
+            "TE": 1.0,
+            "RB": 1.0
+          },
+          "source": "Open-Meteo"
+        },
+        "market": {
+          "available": true,
+          "team_spread": 3.0,
+          "game_total": 47.5,
+          "implied_team_total": 22.2,
+          "implied_opponent_total": 25.2,
+          "line_quality": "Neutral fantasy line",
+          "history": {
+            "role": "underdog",
+            "recent_8": {
+              "covers": 4,
+              "losses": 3,
+              "pushes": 1,
+              "games": 8,
+              "cover_rate": 0.571,
+              "outright_win_rate": 0.625,
+              "summary": "4-3-1 ATS"
+            },
+            "recent_16": {
+              "covers": 7,
+              "losses": 8,
+              "pushes": 1,
+              "games": 16,
+              "cover_rate": 0.467,
+              "outright_win_rate": 0.5,
+              "summary": "7-8-1 ATS"
+            },
+            "same_role": {
+              "covers": 4,
+              "losses": 4,
+              "pushes": 1,
+              "games": 9,
+              "cover_rate": 0.5,
+              "outright_win_rate": 0.333,
+              "summary": "4-4-1 ATS"
+            },
+            "similar_line": {
+              "covers": 4,
+              "losses": 2,
+              "pushes": 1,
+              "games": 7,
+              "cover_rate": 0.667,
+              "outright_win_rate": 0.429,
+              "summary": "4-2-1 ATS"
+            },
+            "recent_totals": {
+              "overs": 2,
+              "unders": 6,
+              "pushes": 0,
+              "games": 8,
+              "over_rate": 0.25,
+              "summary": "2-6-0 O/U"
+            },
+            "trend_label": "No strong ATS trend"
+          },
+          "source": "nflverse schedules"
+        }
       }
     },
     "HOU": {
@@ -6799,6 +7833,87 @@
           "te": 0.0,
           "rb": 0.0
         }
+      },
+      "week_context": {
+        "game_id": "2026_09_HOU_LAC",
+        "week": 9,
+        "gameday": "2026-11-08",
+        "gametime_et": "16:05",
+        "home": false,
+        "opponent": "LAC",
+        "opponent_name": "Los Angeles Chargers",
+        "stadium": "SoFi Stadium",
+        "roof": "dome",
+        "weather": {
+          "available": true,
+          "protected": true,
+          "roof": "dome",
+          "label": "Indoor/roof-protected \u2014 no weather adjustment",
+          "multipliers": {
+            "QB": 1.0,
+            "RB": 1.0,
+            "WR": 1.0,
+            "TE": 1.0
+          },
+          "source": "Open-Meteo"
+        },
+        "market": {
+          "available": true,
+          "team_spread": -4.5,
+          "game_total": 40.5,
+          "implied_team_total": 22.5,
+          "implied_opponent_total": 18.0,
+          "line_quality": "Low-scoring line",
+          "history": {
+            "role": "favorite",
+            "recent_8": {
+              "covers": 2,
+              "losses": 6,
+              "pushes": 0,
+              "games": 8,
+              "cover_rate": 0.25,
+              "outright_win_rate": 0.25,
+              "summary": "2-6-0 ATS"
+            },
+            "recent_16": {
+              "covers": 8,
+              "losses": 8,
+              "pushes": 0,
+              "games": 16,
+              "cover_rate": 0.5,
+              "outright_win_rate": 0.625,
+              "summary": "8-8-0 ATS"
+            },
+            "same_role": {
+              "covers": 7,
+              "losses": 9,
+              "pushes": 0,
+              "games": 16,
+              "cover_rate": 0.438,
+              "outright_win_rate": 0.625,
+              "summary": "7-9-0 ATS"
+            },
+            "similar_line": {
+              "covers": 5,
+              "losses": 4,
+              "pushes": 0,
+              "games": 9,
+              "cover_rate": 0.556,
+              "outright_win_rate": 0.667,
+              "summary": "5-4-0 ATS"
+            },
+            "recent_totals": {
+              "overs": 5,
+              "unders": 3,
+              "pushes": 0,
+              "games": 8,
+              "over_rate": 0.625,
+              "summary": "5-3-0 O/U"
+            },
+            "trend_label": "Recent market-underperformance"
+          },
+          "source": "nflverse schedules"
+        }
       }
     },
     "IND": {
@@ -7257,6 +8372,93 @@
           "wr": 0.08,
           "te": 0.04,
           "rb": 0.015
+        }
+      },
+      "week_context": {
+        "game_id": "2026_09_DAL_IND",
+        "week": 9,
+        "gameday": "2026-11-08",
+        "gametime_et": "13:00",
+        "home": true,
+        "opponent": "DAL",
+        "opponent_name": "Dallas Cowboys",
+        "stadium": "Lucas Oil Stadium",
+        "roof": "",
+        "weather": {
+          "available": true,
+          "protected": false,
+          "roof": "outdoors/unknown",
+          "kickoff_utc": "2026-11-08T18:00:00+00:00",
+          "temperature_f": 52.6,
+          "precip_probability": 13.0,
+          "precipitation_in": 0.0,
+          "wind_mph": 12.7,
+          "wind_gust_mph": 21.9,
+          "label": "Low weather impact",
+          "multipliers": {
+            "QB": 0.95,
+            "WR": 0.95,
+            "TE": 0.975,
+            "RB": 1.01
+          },
+          "source": "Open-Meteo"
+        },
+        "market": {
+          "available": true,
+          "team_spread": 6.0,
+          "game_total": 51.5,
+          "implied_team_total": 22.8,
+          "implied_opponent_total": 28.8,
+          "line_quality": "Neutral fantasy line",
+          "history": {
+            "role": "underdog",
+            "recent_8": {
+              "covers": 4,
+              "losses": 4,
+              "pushes": 0,
+              "games": 8,
+              "cover_rate": 0.5,
+              "outright_win_rate": 0.25,
+              "summary": "4-4-0 ATS"
+            },
+            "recent_16": {
+              "covers": 7,
+              "losses": 9,
+              "pushes": 0,
+              "games": 16,
+              "cover_rate": 0.438,
+              "outright_win_rate": 0.188,
+              "summary": "7-9-0 ATS"
+            },
+            "same_role": {
+              "covers": 8,
+              "losses": 8,
+              "pushes": 0,
+              "games": 16,
+              "cover_rate": 0.5,
+              "outright_win_rate": 0.188,
+              "summary": "8-8-0 ATS"
+            },
+            "similar_line": {
+              "covers": 3,
+              "losses": 3,
+              "pushes": 0,
+              "games": 6,
+              "cover_rate": 0.5,
+              "outright_win_rate": 0.167,
+              "summary": "3-3-0 ATS"
+            },
+            "recent_totals": {
+              "overs": 5,
+              "unders": 3,
+              "pushes": 0,
+              "games": 8,
+              "over_rate": 0.625,
+              "summary": "5-3-0 O/U"
+            },
+            "trend_label": "No strong ATS trend"
+          },
+          "source": "nflverse schedules"
         }
       }
     },
@@ -7769,6 +8971,93 @@
           "te": 0.03,
           "rb": 0.008
         }
+      },
+      "week_context": {
+        "game_id": "2026_09_JAX_BAL",
+        "week": 9,
+        "gameday": "2026-11-05",
+        "gametime_et": "20:15",
+        "home": false,
+        "opponent": "BAL",
+        "opponent_name": "Baltimore Ravens",
+        "stadium": "M&T Bank Stadium",
+        "roof": "outdoors",
+        "weather": {
+          "available": true,
+          "protected": false,
+          "roof": "outdoors",
+          "kickoff_utc": "2026-11-06T01:15:00+00:00",
+          "temperature_f": 68.2,
+          "precip_probability": 41.0,
+          "precipitation_in": 0.01,
+          "wind_mph": 3.3,
+          "wind_gust_mph": 8.5,
+          "label": "Low weather impact",
+          "multipliers": {
+            "QB": 1.0,
+            "WR": 1.0,
+            "TE": 1.0,
+            "RB": 1.0
+          },
+          "source": "Open-Meteo"
+        },
+        "market": {
+          "available": true,
+          "team_spread": -8.5,
+          "game_total": 43.5,
+          "implied_team_total": 26.0,
+          "implied_opponent_total": 17.5,
+          "line_quality": "Excellent team scoring environment",
+          "history": {
+            "role": "favorite",
+            "recent_8": {
+              "covers": 4,
+              "losses": 4,
+              "pushes": 0,
+              "games": 8,
+              "cover_rate": 0.5,
+              "outright_win_rate": 0.625,
+              "summary": "4-4-0 ATS"
+            },
+            "recent_16": {
+              "covers": 12,
+              "losses": 4,
+              "pushes": 0,
+              "games": 16,
+              "cover_rate": 0.75,
+              "outright_win_rate": 0.812,
+              "summary": "12-4-0 ATS"
+            },
+            "same_role": {
+              "covers": 10,
+              "losses": 5,
+              "pushes": 0,
+              "games": 15,
+              "cover_rate": 0.667,
+              "outright_win_rate": 0.8,
+              "summary": "10-5-0 ATS"
+            },
+            "similar_line": {
+              "covers": 2,
+              "losses": 1,
+              "pushes": 0,
+              "games": 3,
+              "cover_rate": 0.667,
+              "outright_win_rate": 1.0,
+              "summary": "2-1-0 ATS"
+            },
+            "recent_totals": {
+              "overs": 3,
+              "unders": 5,
+              "pushes": 0,
+              "games": 8,
+              "over_rate": 0.375,
+              "summary": "3-5-0 O/U"
+            },
+            "trend_label": "Strong ATS trend as favorite"
+          },
+          "source": "nflverse schedules"
+        }
       }
     },
     "KC": {
@@ -8247,6 +9536,93 @@
           "wr": 0.104,
           "te": 0.033,
           "rb": 0.046
+        }
+      },
+      "week_context": {
+        "game_id": "2026_09_NYJ_KC",
+        "week": 9,
+        "gameday": "2026-11-08",
+        "gametime_et": "13:00",
+        "home": true,
+        "opponent": "NYJ",
+        "opponent_name": "New York Jets",
+        "stadium": "GEHA Field at Arrowhead Stadium",
+        "roof": "outdoors",
+        "weather": {
+          "available": true,
+          "protected": false,
+          "roof": "outdoors",
+          "kickoff_utc": "2026-11-08T18:00:00+00:00",
+          "temperature_f": 49.7,
+          "precip_probability": 7.0,
+          "precipitation_in": 0.0,
+          "wind_mph": 16.6,
+          "wind_gust_mph": 27.5,
+          "label": "Low weather impact",
+          "multipliers": {
+            "QB": 0.95,
+            "WR": 0.95,
+            "TE": 0.975,
+            "RB": 1.01
+          },
+          "source": "Open-Meteo"
+        },
+        "market": {
+          "available": true,
+          "team_spread": -10.0,
+          "game_total": 46.5,
+          "implied_team_total": 28.2,
+          "implied_opponent_total": 18.2,
+          "line_quality": "Excellent team scoring environment",
+          "history": {
+            "role": "favorite",
+            "recent_8": {
+              "covers": 3,
+              "losses": 5,
+              "pushes": 0,
+              "games": 8,
+              "cover_rate": 0.375,
+              "outright_win_rate": 0.625,
+              "summary": "3-5-0 ATS"
+            },
+            "recent_16": {
+              "covers": 4,
+              "losses": 12,
+              "pushes": 0,
+              "games": 16,
+              "cover_rate": 0.25,
+              "outright_win_rate": 0.375,
+              "summary": "4-12-0 ATS"
+            },
+            "same_role": {
+              "covers": 6,
+              "losses": 10,
+              "pushes": 0,
+              "games": 16,
+              "cover_rate": 0.375,
+              "outright_win_rate": 0.562,
+              "summary": "6-10-0 ATS"
+            },
+            "similar_line": {
+              "covers": 2,
+              "losses": 1,
+              "pushes": 0,
+              "games": 3,
+              "cover_rate": 0.667,
+              "outright_win_rate": 1.0,
+              "summary": "2-1-0 ATS"
+            },
+            "recent_totals": {
+              "overs": 3,
+              "unders": 5,
+              "pushes": 0,
+              "games": 8,
+              "over_rate": 0.375,
+              "summary": "3-5-0 O/U"
+            },
+            "trend_label": "Recent market-underperformance"
+          },
+          "source": "nflverse schedules"
         }
       }
     },
@@ -8803,6 +10179,93 @@
           "te": 0.019,
           "rb": 0.019
         }
+      },
+      "week_context": {
+        "game_id": "2026_09_LA_WAS",
+        "week": 9,
+        "gameday": "2026-11-08",
+        "gametime_et": "13:00",
+        "home": false,
+        "opponent": "WAS",
+        "opponent_name": "Washington Commanders",
+        "stadium": "Northwest Stadium",
+        "roof": "outdoors",
+        "weather": {
+          "available": true,
+          "protected": false,
+          "roof": "outdoors",
+          "kickoff_utc": "2026-11-08T18:00:00+00:00",
+          "temperature_f": 60.2,
+          "precip_probability": 4.0,
+          "precipitation_in": 0.0,
+          "wind_mph": 8.1,
+          "wind_gust_mph": 14.3,
+          "label": "Low weather impact",
+          "multipliers": {
+            "QB": 1.0,
+            "WR": 1.0,
+            "TE": 1.0,
+            "RB": 1.0
+          },
+          "source": "Open-Meteo"
+        },
+        "market": {
+          "available": true,
+          "team_spread": -5.5,
+          "game_total": 47.5,
+          "implied_team_total": 26.5,
+          "implied_opponent_total": 21.0,
+          "line_quality": "Excellent team scoring environment",
+          "history": {
+            "role": "favorite",
+            "recent_8": {
+              "covers": 4,
+              "losses": 4,
+              "pushes": 0,
+              "games": 8,
+              "cover_rate": 0.5,
+              "outright_win_rate": 0.5,
+              "summary": "4-4-0 ATS"
+            },
+            "recent_16": {
+              "covers": 8,
+              "losses": 8,
+              "pushes": 0,
+              "games": 16,
+              "cover_rate": 0.5,
+              "outright_win_rate": 0.562,
+              "summary": "8-8-0 ATS"
+            },
+            "same_role": {
+              "covers": 8,
+              "losses": 8,
+              "pushes": 0,
+              "games": 16,
+              "cover_rate": 0.5,
+              "outright_win_rate": 0.688,
+              "summary": "8-8-0 ATS"
+            },
+            "similar_line": {
+              "covers": 8,
+              "losses": 4,
+              "pushes": 0,
+              "games": 12,
+              "cover_rate": 0.667,
+              "outright_win_rate": 0.75,
+              "summary": "8-4-0 ATS"
+            },
+            "recent_totals": {
+              "overs": 4,
+              "unders": 4,
+              "pushes": 0,
+              "games": 8,
+              "over_rate": 0.5,
+              "summary": "4-4-0 O/U"
+            },
+            "trend_label": "No strong ATS trend"
+          },
+          "source": "nflverse schedules"
+        }
       }
     },
     "LAC": {
@@ -9331,6 +10794,87 @@
           "te": 0.065,
           "rb": 0.0
         }
+      },
+      "week_context": {
+        "game_id": "2026_09_HOU_LAC",
+        "week": 9,
+        "gameday": "2026-11-08",
+        "gametime_et": "16:05",
+        "home": true,
+        "opponent": "HOU",
+        "opponent_name": "Houston Texans",
+        "stadium": "SoFi Stadium",
+        "roof": "dome",
+        "weather": {
+          "available": true,
+          "protected": true,
+          "roof": "dome",
+          "label": "Indoor/roof-protected \u2014 no weather adjustment",
+          "multipliers": {
+            "QB": 1.0,
+            "RB": 1.0,
+            "WR": 1.0,
+            "TE": 1.0
+          },
+          "source": "Open-Meteo"
+        },
+        "market": {
+          "available": true,
+          "team_spread": 4.5,
+          "game_total": 40.5,
+          "implied_team_total": 18.0,
+          "implied_opponent_total": 22.5,
+          "line_quality": "Low-scoring line",
+          "history": {
+            "role": "underdog",
+            "recent_8": {
+              "covers": 0,
+              "losses": 7,
+              "pushes": 1,
+              "games": 8,
+              "cover_rate": 0.0,
+              "outright_win_rate": 0.0,
+              "summary": "0-7-1 ATS"
+            },
+            "recent_16": {
+              "covers": 5,
+              "losses": 10,
+              "pushes": 1,
+              "games": 16,
+              "cover_rate": 0.333,
+              "outright_win_rate": 0.312,
+              "summary": "5-10-1 ATS"
+            },
+            "same_role": {
+              "covers": 5,
+              "losses": 6,
+              "pushes": 1,
+              "games": 12,
+              "cover_rate": 0.455,
+              "outright_win_rate": 0.333,
+              "summary": "5-6-1 ATS"
+            },
+            "similar_line": {
+              "covers": 3,
+              "losses": 3,
+              "pushes": 0,
+              "games": 6,
+              "cover_rate": 0.5,
+              "outright_win_rate": 0.333,
+              "summary": "3-3-0 ATS"
+            },
+            "recent_totals": {
+              "overs": 1,
+              "unders": 7,
+              "pushes": 0,
+              "games": 8,
+              "over_rate": 0.125,
+              "summary": "1-7-0 O/U"
+            },
+            "trend_label": "Recent market-underperformance"
+          },
+          "source": "nflverse schedules"
+        }
       }
     },
     "LV": {
@@ -9834,6 +11378,93 @@
           "wr": 0.008,
           "te": 0.002,
           "rb": 0.035
+        }
+      },
+      "week_context": {
+        "game_id": "2026_09_LV_SF",
+        "week": 9,
+        "gameday": "2026-11-08",
+        "gametime_et": "16:05",
+        "home": false,
+        "opponent": "SF",
+        "opponent_name": "San Francisco 49ers",
+        "stadium": "Levi's Stadium",
+        "roof": "outdoors",
+        "weather": {
+          "available": true,
+          "protected": false,
+          "roof": "outdoors",
+          "kickoff_utc": "2026-11-08T21:05:00+00:00",
+          "temperature_f": 75.4,
+          "precip_probability": 0.0,
+          "precipitation_in": 0.0,
+          "wind_mph": 4.2,
+          "wind_gust_mph": 3.6,
+          "label": "Low weather impact",
+          "multipliers": {
+            "QB": 1.0,
+            "WR": 1.0,
+            "TE": 1.0,
+            "RB": 1.0
+          },
+          "source": "Open-Meteo"
+        },
+        "market": {
+          "available": true,
+          "team_spread": 9.5,
+          "game_total": 51.5,
+          "implied_team_total": 21.0,
+          "implied_opponent_total": 30.5,
+          "line_quality": "Blowout-risk game script",
+          "history": {
+            "role": "underdog",
+            "recent_8": {
+              "covers": 6,
+              "losses": 2,
+              "pushes": 0,
+              "games": 8,
+              "cover_rate": 0.75,
+              "outright_win_rate": 0.5,
+              "summary": "6-2-0 ATS"
+            },
+            "recent_16": {
+              "covers": 9,
+              "losses": 7,
+              "pushes": 0,
+              "games": 16,
+              "cover_rate": 0.562,
+              "outright_win_rate": 0.312,
+              "summary": "9-7-0 ATS"
+            },
+            "same_role": {
+              "covers": 10,
+              "losses": 6,
+              "pushes": 0,
+              "games": 16,
+              "cover_rate": 0.625,
+              "outright_win_rate": 0.25,
+              "summary": "10-6-0 ATS"
+            },
+            "similar_line": {
+              "covers": 2,
+              "losses": 1,
+              "pushes": 0,
+              "games": 3,
+              "cover_rate": 0.667,
+              "outright_win_rate": 0.0,
+              "summary": "2-1-0 ATS"
+            },
+            "recent_totals": {
+              "overs": 6,
+              "unders": 2,
+              "pushes": 0,
+              "games": 8,
+              "over_rate": 0.75,
+              "summary": "6-2-0 O/U"
+            },
+            "trend_label": "Recent market-beating trend"
+          },
+          "source": "nflverse schedules"
         }
       }
     },
@@ -10353,6 +11984,93 @@
           "wr": 0.048,
           "te": 0.015,
           "rb": 0.0
+        }
+      },
+      "week_context": {
+        "game_id": "2026_09_DET_MIA",
+        "week": 9,
+        "gameday": "2026-11-08",
+        "gametime_et": "13:00",
+        "home": true,
+        "opponent": "DET",
+        "opponent_name": "Detroit Lions",
+        "stadium": "Hard Rock Stadium",
+        "roof": "outdoors",
+        "weather": {
+          "available": true,
+          "protected": false,
+          "roof": "outdoors",
+          "kickoff_utc": "2026-11-08T18:00:00+00:00",
+          "temperature_f": 87.4,
+          "precip_probability": 3.0,
+          "precipitation_in": 0.0,
+          "wind_mph": 8.6,
+          "wind_gust_mph": 7.8,
+          "label": "Low weather impact",
+          "multipliers": {
+            "QB": 1.0,
+            "WR": 1.0,
+            "TE": 1.0,
+            "RB": 1.0
+          },
+          "source": "Open-Meteo"
+        },
+        "market": {
+          "available": true,
+          "team_spread": 7.0,
+          "game_total": 50.5,
+          "implied_team_total": 21.8,
+          "implied_opponent_total": 28.8,
+          "line_quality": "Neutral fantasy line",
+          "history": {
+            "role": "underdog",
+            "recent_8": {
+              "covers": 3,
+              "losses": 4,
+              "pushes": 1,
+              "games": 8,
+              "cover_rate": 0.429,
+              "outright_win_rate": 0.125,
+              "summary": "3-4-1 ATS"
+            },
+            "recent_16": {
+              "covers": 7,
+              "losses": 8,
+              "pushes": 1,
+              "games": 16,
+              "cover_rate": 0.467,
+              "outright_win_rate": 0.375,
+              "summary": "7-8-1 ATS"
+            },
+            "same_role": {
+              "covers": 7,
+              "losses": 8,
+              "pushes": 1,
+              "games": 16,
+              "cover_rate": 0.467,
+              "outright_win_rate": 0.25,
+              "summary": "7-8-1 ATS"
+            },
+            "similar_line": {
+              "covers": 4,
+              "losses": 1,
+              "pushes": 1,
+              "games": 6,
+              "cover_rate": 0.8,
+              "outright_win_rate": 0.5,
+              "summary": "4-1-1 ATS"
+            },
+            "recent_totals": {
+              "overs": 5,
+              "unders": 3,
+              "pushes": 0,
+              "games": 8,
+              "over_rate": 0.625,
+              "summary": "5-3-0 O/U"
+            },
+            "trend_label": "No strong ATS trend"
+          },
+          "source": "nflverse schedules"
         }
       }
     },
@@ -10879,6 +12597,87 @@
           "wr": 0.032,
           "te": 0.01,
           "rb": 0.0
+        }
+      },
+      "week_context": {
+        "game_id": "2026_09_BUF_MIN",
+        "week": 9,
+        "gameday": "2026-11-09",
+        "gametime_et": "20:15",
+        "home": true,
+        "opponent": "BUF",
+        "opponent_name": "Buffalo Bills",
+        "stadium": "U.S. Bank Stadium",
+        "roof": "dome",
+        "weather": {
+          "available": true,
+          "protected": true,
+          "roof": "dome",
+          "label": "Indoor/roof-protected \u2014 no weather adjustment",
+          "multipliers": {
+            "QB": 1.0,
+            "RB": 1.0,
+            "WR": 1.0,
+            "TE": 1.0
+          },
+          "source": "Open-Meteo"
+        },
+        "market": {
+          "available": true,
+          "team_spread": 2.5,
+          "game_total": 46.5,
+          "implied_team_total": 22.0,
+          "implied_opponent_total": 24.5,
+          "line_quality": "Neutral fantasy line",
+          "history": {
+            "role": "underdog",
+            "recent_8": {
+              "covers": 5,
+              "losses": 3,
+              "pushes": 0,
+              "games": 8,
+              "cover_rate": 0.625,
+              "outright_win_rate": 0.875,
+              "summary": "5-3-0 ATS"
+            },
+            "recent_16": {
+              "covers": 9,
+              "losses": 7,
+              "pushes": 0,
+              "games": 16,
+              "cover_rate": 0.562,
+              "outright_win_rate": 0.688,
+              "summary": "9-7-0 ATS"
+            },
+            "same_role": {
+              "covers": 6,
+              "losses": 7,
+              "pushes": 0,
+              "games": 13,
+              "cover_rate": 0.462,
+              "outright_win_rate": 0.462,
+              "summary": "6-7-0 ATS"
+            },
+            "similar_line": {
+              "covers": 3,
+              "losses": 5,
+              "pushes": 0,
+              "games": 8,
+              "cover_rate": 0.375,
+              "outright_win_rate": 0.375,
+              "summary": "3-5-0 ATS"
+            },
+            "recent_totals": {
+              "overs": 1,
+              "unders": 7,
+              "pushes": 0,
+              "games": 8,
+              "over_rate": 0.125,
+              "summary": "1-7-0 O/U"
+            },
+            "trend_label": "Recent market-beating trend"
+          },
+          "source": "nflverse schedules"
         }
       }
     },
@@ -11447,6 +13246,93 @@
           "te": 0.023,
           "rb": 0.015
         }
+      },
+      "week_context": {
+        "game_id": "2026_09_GB_NE",
+        "week": 9,
+        "gameday": "2026-11-08",
+        "gametime_et": "16:25",
+        "home": true,
+        "opponent": "GB",
+        "opponent_name": "Green Bay Packers",
+        "stadium": "Gillette Stadium",
+        "roof": "outdoors",
+        "weather": {
+          "available": true,
+          "protected": false,
+          "roof": "outdoors",
+          "kickoff_utc": "2026-11-08T21:25:00+00:00",
+          "temperature_f": 51.9,
+          "precip_probability": 11.0,
+          "precipitation_in": 0.0,
+          "wind_mph": 2.9,
+          "wind_gust_mph": 2.7,
+          "label": "Low weather impact",
+          "multipliers": {
+            "QB": 1.0,
+            "WR": 1.0,
+            "TE": 1.0,
+            "RB": 1.0
+          },
+          "source": "Open-Meteo"
+        },
+        "market": {
+          "available": true,
+          "team_spread": -3.0,
+          "game_total": 47.5,
+          "implied_team_total": 25.2,
+          "implied_opponent_total": 22.2,
+          "line_quality": "Strong team scoring line",
+          "history": {
+            "role": "favorite",
+            "recent_8": {
+              "covers": 3,
+              "losses": 4,
+              "pushes": 1,
+              "games": 8,
+              "cover_rate": 0.429,
+              "outright_win_rate": 0.625,
+              "summary": "3-4-1 ATS"
+            },
+            "recent_16": {
+              "covers": 8,
+              "losses": 7,
+              "pushes": 1,
+              "games": 16,
+              "cover_rate": 0.533,
+              "outright_win_rate": 0.688,
+              "summary": "8-7-1 ATS"
+            },
+            "same_role": {
+              "covers": 11,
+              "losses": 5,
+              "pushes": 0,
+              "games": 16,
+              "cover_rate": 0.688,
+              "outright_win_rate": 1.0,
+              "summary": "11-5-0 ATS"
+            },
+            "similar_line": {
+              "covers": 5,
+              "losses": 2,
+              "pushes": 0,
+              "games": 7,
+              "cover_rate": 0.714,
+              "outright_win_rate": 0.857,
+              "summary": "5-2-0 ATS"
+            },
+            "recent_totals": {
+              "overs": 5,
+              "unders": 3,
+              "pushes": 0,
+              "games": 8,
+              "over_rate": 0.625,
+              "summary": "5-3-0 O/U"
+            },
+            "trend_label": "Strong ATS trend as favorite"
+          },
+          "source": "nflverse schedules"
+        }
       }
     },
     "NO": {
@@ -11863,6 +13749,87 @@
           "wr": 0.0,
           "te": 0.0,
           "rb": 0.0
+        }
+      },
+      "week_context": {
+        "game_id": "2026_09_CLE_NO",
+        "week": 9,
+        "gameday": "2026-11-08",
+        "gametime_et": "13:00",
+        "home": true,
+        "opponent": "CLE",
+        "opponent_name": "Cleveland Browns",
+        "stadium": "Caesars Superdome",
+        "roof": "dome",
+        "weather": {
+          "available": true,
+          "protected": true,
+          "roof": "dome",
+          "label": "Indoor/roof-protected \u2014 no weather adjustment",
+          "multipliers": {
+            "QB": 1.0,
+            "RB": 1.0,
+            "WR": 1.0,
+            "TE": 1.0
+          },
+          "source": "Open-Meteo"
+        },
+        "market": {
+          "available": true,
+          "team_spread": -2.5,
+          "game_total": 43.5,
+          "implied_team_total": 23.0,
+          "implied_opponent_total": 20.5,
+          "line_quality": "Neutral fantasy line",
+          "history": {
+            "role": "favorite",
+            "recent_8": {
+              "covers": 4,
+              "losses": 4,
+              "pushes": 0,
+              "games": 8,
+              "cover_rate": 0.5,
+              "outright_win_rate": 0.25,
+              "summary": "4-4-0 ATS"
+            },
+            "recent_16": {
+              "covers": 10,
+              "losses": 6,
+              "pushes": 0,
+              "games": 16,
+              "cover_rate": 0.625,
+              "outright_win_rate": 0.438,
+              "summary": "10-6-0 ATS"
+            },
+            "same_role": {
+              "covers": 4,
+              "losses": 4,
+              "pushes": 0,
+              "games": 8,
+              "cover_rate": 0.5,
+              "outright_win_rate": 0.625,
+              "summary": "4-4-0 ATS"
+            },
+            "similar_line": {
+              "covers": 3,
+              "losses": 3,
+              "pushes": 0,
+              "games": 6,
+              "cover_rate": 0.5,
+              "outright_win_rate": 0.5,
+              "summary": "3-3-0 ATS"
+            },
+            "recent_totals": {
+              "overs": 4,
+              "unders": 4,
+              "pushes": 0,
+              "games": 8,
+              "over_rate": 0.5,
+              "summary": "4-4-0 O/U"
+            },
+            "trend_label": "No strong ATS trend"
+          },
+          "source": "nflverse schedules"
         }
       }
     },
@@ -12350,6 +14317,93 @@
           "wr": 0.0,
           "te": 0.0,
           "rb": 0.0
+        }
+      },
+      "week_context": {
+        "game_id": "2026_09_NYG_PHI",
+        "week": 9,
+        "gameday": "2026-11-08",
+        "gametime_et": "13:00",
+        "home": false,
+        "opponent": "PHI",
+        "opponent_name": "Philadelphia Eagles",
+        "stadium": "Lincoln Financial Field",
+        "roof": "outdoors",
+        "weather": {
+          "available": true,
+          "protected": false,
+          "roof": "outdoors",
+          "kickoff_utc": "2026-11-08T18:00:00+00:00",
+          "temperature_f": 57.9,
+          "precip_probability": 6.0,
+          "precipitation_in": 0.0,
+          "wind_mph": 4.3,
+          "wind_gust_mph": 9.6,
+          "label": "Low weather impact",
+          "multipliers": {
+            "QB": 1.0,
+            "WR": 1.0,
+            "TE": 1.0,
+            "RB": 1.0
+          },
+          "source": "Open-Meteo"
+        },
+        "market": {
+          "available": true,
+          "team_spread": -3.5,
+          "game_total": 39.5,
+          "implied_team_total": 21.5,
+          "implied_opponent_total": 18.0,
+          "line_quality": "Low-scoring line",
+          "history": {
+            "role": "favorite",
+            "recent_8": {
+              "covers": 6,
+              "losses": 2,
+              "pushes": 0,
+              "games": 8,
+              "cover_rate": 0.75,
+              "outright_win_rate": 0.625,
+              "summary": "6-2-0 ATS"
+            },
+            "recent_16": {
+              "covers": 10,
+              "losses": 6,
+              "pushes": 0,
+              "games": 16,
+              "cover_rate": 0.625,
+              "outright_win_rate": 0.375,
+              "summary": "10-6-0 ATS"
+            },
+            "same_role": {
+              "covers": 2,
+              "losses": 2,
+              "pushes": 0,
+              "games": 4,
+              "cover_rate": 0.5,
+              "outright_win_rate": 0.5,
+              "summary": "2-2-0 ATS"
+            },
+            "similar_line": {
+              "covers": 2,
+              "losses": 1,
+              "pushes": 0,
+              "games": 3,
+              "cover_rate": 0.667,
+              "outright_win_rate": 0.667,
+              "summary": "2-1-0 ATS"
+            },
+            "recent_totals": {
+              "overs": 6,
+              "unders": 2,
+              "pushes": 0,
+              "games": 8,
+              "over_rate": 0.75,
+              "summary": "6-2-0 O/U"
+            },
+            "trend_label": "Recent market-beating trend"
+          },
+          "source": "nflverse schedules"
         }
       }
     },
@@ -12871,6 +14925,93 @@
           "wr": 0.0,
           "te": 0.0,
           "rb": 0.098
+        }
+      },
+      "week_context": {
+        "game_id": "2026_09_NYJ_KC",
+        "week": 9,
+        "gameday": "2026-11-08",
+        "gametime_et": "13:00",
+        "home": false,
+        "opponent": "KC",
+        "opponent_name": "Kansas City Chiefs",
+        "stadium": "GEHA Field at Arrowhead Stadium",
+        "roof": "outdoors",
+        "weather": {
+          "available": true,
+          "protected": false,
+          "roof": "outdoors",
+          "kickoff_utc": "2026-11-08T18:00:00+00:00",
+          "temperature_f": 49.7,
+          "precip_probability": 7.0,
+          "precipitation_in": 0.0,
+          "wind_mph": 16.6,
+          "wind_gust_mph": 27.5,
+          "label": "Low weather impact",
+          "multipliers": {
+            "QB": 0.95,
+            "WR": 0.95,
+            "TE": 0.975,
+            "RB": 1.01
+          },
+          "source": "Open-Meteo"
+        },
+        "market": {
+          "available": true,
+          "team_spread": 10.0,
+          "game_total": 46.5,
+          "implied_team_total": 18.2,
+          "implied_opponent_total": 28.2,
+          "line_quality": "Blowout-risk game script",
+          "history": {
+            "role": "underdog",
+            "recent_8": {
+              "covers": 4,
+              "losses": 3,
+              "pushes": 1,
+              "games": 8,
+              "cover_rate": 0.571,
+              "outright_win_rate": 0.25,
+              "summary": "4-3-1 ATS"
+            },
+            "recent_16": {
+              "covers": 6,
+              "losses": 9,
+              "pushes": 1,
+              "games": 16,
+              "cover_rate": 0.4,
+              "outright_win_rate": 0.188,
+              "summary": "6-9-1 ATS"
+            },
+            "same_role": {
+              "covers": 8,
+              "losses": 7,
+              "pushes": 1,
+              "games": 16,
+              "cover_rate": 0.533,
+              "outright_win_rate": 0.25,
+              "summary": "8-7-1 ATS"
+            },
+            "similar_line": {
+              "covers": 0,
+              "losses": 1,
+              "pushes": 0,
+              "games": 1,
+              "cover_rate": 0.0,
+              "outright_win_rate": 0.0,
+              "summary": "0-1-0 ATS"
+            },
+            "recent_totals": {
+              "overs": 4,
+              "unders": 4,
+              "pushes": 0,
+              "games": 8,
+              "over_rate": 0.5,
+              "summary": "4-4-0 O/U"
+            },
+            "trend_label": "No strong ATS trend"
+          },
+          "source": "nflverse schedules"
         }
       }
     },
@@ -13500,6 +15641,93 @@
           "te": 0.105,
           "rb": 0.059
         }
+      },
+      "week_context": {
+        "game_id": "2026_09_NYG_PHI",
+        "week": 9,
+        "gameday": "2026-11-08",
+        "gametime_et": "13:00",
+        "home": true,
+        "opponent": "NYG",
+        "opponent_name": "New York Giants",
+        "stadium": "Lincoln Financial Field",
+        "roof": "outdoors",
+        "weather": {
+          "available": true,
+          "protected": false,
+          "roof": "outdoors",
+          "kickoff_utc": "2026-11-08T18:00:00+00:00",
+          "temperature_f": 57.9,
+          "precip_probability": 6.0,
+          "precipitation_in": 0.0,
+          "wind_mph": 4.3,
+          "wind_gust_mph": 9.6,
+          "label": "Low weather impact",
+          "multipliers": {
+            "QB": 1.0,
+            "WR": 1.0,
+            "TE": 1.0,
+            "RB": 1.0
+          },
+          "source": "Open-Meteo"
+        },
+        "market": {
+          "available": true,
+          "team_spread": 3.5,
+          "game_total": 39.5,
+          "implied_team_total": 18.0,
+          "implied_opponent_total": 21.5,
+          "line_quality": "Low-scoring line",
+          "history": {
+            "role": "underdog",
+            "recent_8": {
+              "covers": 1,
+              "losses": 7,
+              "pushes": 0,
+              "games": 8,
+              "cover_rate": 0.125,
+              "outright_win_rate": 0.25,
+              "summary": "1-7-0 ATS"
+            },
+            "recent_16": {
+              "covers": 4,
+              "losses": 12,
+              "pushes": 0,
+              "games": 16,
+              "cover_rate": 0.25,
+              "outright_win_rate": 0.312,
+              "summary": "4-12-0 ATS"
+            },
+            "same_role": {
+              "covers": 4,
+              "losses": 4,
+              "pushes": 0,
+              "games": 8,
+              "cover_rate": 0.5,
+              "outright_win_rate": 0.375,
+              "summary": "4-4-0 ATS"
+            },
+            "similar_line": {
+              "covers": 3,
+              "losses": 3,
+              "pushes": 0,
+              "games": 6,
+              "cover_rate": 0.5,
+              "outright_win_rate": 0.5,
+              "summary": "3-3-0 ATS"
+            },
+            "recent_totals": {
+              "overs": 4,
+              "unders": 4,
+              "pushes": 0,
+              "games": 8,
+              "over_rate": 0.5,
+              "summary": "4-4-0 O/U"
+            },
+            "trend_label": "Recent market-underperformance"
+          },
+          "source": "nflverse schedules"
+        }
       }
     },
     "PIT": {
@@ -13927,6 +16155,40 @@
           "wr": 0.16,
           "te": 0.05,
           "rb": 0.0
+        }
+      },
+      "week_context": {
+        "game_id": "2026_10_PIT_CIN",
+        "week": 10,
+        "gameday": "2026-11-15",
+        "gametime_et": "20:20",
+        "home": false,
+        "opponent": "CIN",
+        "opponent_name": "Cincinnati Bengals",
+        "stadium": "Paycor Stadium",
+        "roof": "outdoors",
+        "weather": {
+          "available": true,
+          "protected": false,
+          "roof": "outdoors",
+          "kickoff_utc": "2026-11-16T01:20:00+00:00",
+          "temperature_f": 49.2,
+          "precip_probability": 15.0,
+          "precipitation_in": 0.0,
+          "wind_mph": 6.8,
+          "wind_gust_mph": 20.1,
+          "label": "Low weather impact",
+          "multipliers": {
+            "QB": 1.0,
+            "WR": 1.0,
+            "TE": 1.0,
+            "RB": 1.0
+          },
+          "source": "Open-Meteo"
+        },
+        "market": {
+          "available": false,
+          "label": "Vegas line unavailable"
         }
       }
     },
@@ -14500,6 +16762,93 @@
           "te": 0.055,
           "rb": 0.066
         }
+      },
+      "week_context": {
+        "game_id": "2026_08_CHI_SEA",
+        "week": 8,
+        "gameday": "2026-11-02",
+        "gametime_et": "20:15",
+        "home": true,
+        "opponent": "CHI",
+        "opponent_name": "Chicago Bears",
+        "stadium": "Lumen Field",
+        "roof": "outdoors",
+        "weather": {
+          "available": true,
+          "protected": false,
+          "roof": "outdoors",
+          "kickoff_utc": "2026-11-03T01:15:00+00:00",
+          "temperature_f": 46.2,
+          "precip_probability": 1.0,
+          "precipitation_in": 0.0,
+          "wind_mph": 1.8,
+          "wind_gust_mph": 2.7,
+          "label": "Low weather impact",
+          "multipliers": {
+            "QB": 1.0,
+            "WR": 1.0,
+            "TE": 1.0,
+            "RB": 1.0
+          },
+          "source": "Open-Meteo"
+        },
+        "market": {
+          "available": true,
+          "team_spread": -3.0,
+          "game_total": 46.5,
+          "implied_team_total": 24.8,
+          "implied_opponent_total": 21.8,
+          "line_quality": "Strong team scoring line",
+          "history": {
+            "role": "favorite",
+            "recent_8": {
+              "covers": 3,
+              "losses": 3,
+              "pushes": 2,
+              "games": 8,
+              "cover_rate": 0.5,
+              "outright_win_rate": 0.625,
+              "summary": "3-3-2 ATS"
+            },
+            "recent_16": {
+              "covers": 9,
+              "losses": 5,
+              "pushes": 2,
+              "games": 16,
+              "cover_rate": 0.643,
+              "outright_win_rate": 0.812,
+              "summary": "9-5-2 ATS"
+            },
+            "same_role": {
+              "covers": 9,
+              "losses": 5,
+              "pushes": 2,
+              "games": 16,
+              "cover_rate": 0.643,
+              "outright_win_rate": 0.812,
+              "summary": "9-5-2 ATS"
+            },
+            "similar_line": {
+              "covers": 8,
+              "losses": 3,
+              "pushes": 1,
+              "games": 12,
+              "cover_rate": 0.727,
+              "outright_win_rate": 0.833,
+              "summary": "8-3-1 ATS"
+            },
+            "recent_totals": {
+              "overs": 3,
+              "unders": 5,
+              "pushes": 0,
+              "games": 8,
+              "over_rate": 0.375,
+              "summary": "3-5-0 O/U"
+            },
+            "trend_label": "Strong ATS trend as favorite"
+          },
+          "source": "nflverse schedules"
+        }
       }
     },
     "SF": {
@@ -14909,6 +17258,93 @@
           "wr": 0.0,
           "te": 0.0,
           "rb": 0.0
+        }
+      },
+      "week_context": {
+        "game_id": "2026_09_LV_SF",
+        "week": 9,
+        "gameday": "2026-11-08",
+        "gametime_et": "16:05",
+        "home": true,
+        "opponent": "LV",
+        "opponent_name": "Las Vegas Raiders",
+        "stadium": "Levi's Stadium",
+        "roof": "outdoors",
+        "weather": {
+          "available": true,
+          "protected": false,
+          "roof": "outdoors",
+          "kickoff_utc": "2026-11-08T21:05:00+00:00",
+          "temperature_f": 75.4,
+          "precip_probability": 0.0,
+          "precipitation_in": 0.0,
+          "wind_mph": 4.2,
+          "wind_gust_mph": 3.6,
+          "label": "Low weather impact",
+          "multipliers": {
+            "QB": 1.0,
+            "WR": 1.0,
+            "TE": 1.0,
+            "RB": 1.0
+          },
+          "source": "Open-Meteo"
+        },
+        "market": {
+          "available": true,
+          "team_spread": -9.5,
+          "game_total": 51.5,
+          "implied_team_total": 30.5,
+          "implied_opponent_total": 21.0,
+          "line_quality": "Excellent team scoring environment",
+          "history": {
+            "role": "favorite",
+            "recent_8": {
+              "covers": 4,
+              "losses": 4,
+              "pushes": 0,
+              "games": 8,
+              "cover_rate": 0.5,
+              "outright_win_rate": 0.75,
+              "summary": "4-4-0 ATS"
+            },
+            "recent_16": {
+              "covers": 11,
+              "losses": 5,
+              "pushes": 0,
+              "games": 16,
+              "cover_rate": 0.688,
+              "outright_win_rate": 0.812,
+              "summary": "11-5-0 ATS"
+            },
+            "same_role": {
+              "covers": 11,
+              "losses": 5,
+              "pushes": 0,
+              "games": 16,
+              "cover_rate": 0.688,
+              "outright_win_rate": 0.875,
+              "summary": "11-5-0 ATS"
+            },
+            "similar_line": {
+              "covers": 1,
+              "losses": 2,
+              "pushes": 0,
+              "games": 3,
+              "cover_rate": 0.333,
+              "outright_win_rate": 1.0,
+              "summary": "1-2-0 ATS"
+            },
+            "recent_totals": {
+              "overs": 4,
+              "unders": 4,
+              "pushes": 0,
+              "games": 8,
+              "over_rate": 0.5,
+              "summary": "4-4-0 O/U"
+            },
+            "trend_label": "Strong ATS trend as favorite"
+          },
+          "source": "nflverse schedules"
         }
       }
     },
@@ -15385,6 +17821,93 @@
           "wr": 0.0,
           "te": 0.0,
           "rb": 0.0
+        }
+      },
+      "week_context": {
+        "game_id": "2026_09_TB_CHI",
+        "week": 9,
+        "gameday": "2026-11-08",
+        "gametime_et": "20:20",
+        "home": false,
+        "opponent": "CHI",
+        "opponent_name": "Chicago Bears",
+        "stadium": "Soldier Field",
+        "roof": "outdoors",
+        "weather": {
+          "available": true,
+          "protected": false,
+          "roof": "outdoors",
+          "kickoff_utc": "2026-11-09T01:20:00+00:00",
+          "temperature_f": 45.2,
+          "precip_probability": 10.0,
+          "precipitation_in": 0.01,
+          "wind_mph": 15.3,
+          "wind_gust_mph": 27.7,
+          "label": "Low weather impact",
+          "multipliers": {
+            "QB": 0.95,
+            "WR": 0.95,
+            "TE": 0.975,
+            "RB": 1.01
+          },
+          "source": "Open-Meteo"
+        },
+        "market": {
+          "available": true,
+          "team_spread": 5.5,
+          "game_total": 47.5,
+          "implied_team_total": 21.0,
+          "implied_opponent_total": 26.5,
+          "line_quality": "Neutral fantasy line",
+          "history": {
+            "role": "underdog",
+            "recent_8": {
+              "covers": 3,
+              "losses": 4,
+              "pushes": 1,
+              "games": 8,
+              "cover_rate": 0.429,
+              "outright_win_rate": 0.375,
+              "summary": "3-4-1 ATS"
+            },
+            "recent_16": {
+              "covers": 3,
+              "losses": 12,
+              "pushes": 1,
+              "games": 16,
+              "cover_rate": 0.2,
+              "outright_win_rate": 0.312,
+              "summary": "3-12-1 ATS"
+            },
+            "same_role": {
+              "covers": 5,
+              "losses": 7,
+              "pushes": 1,
+              "games": 13,
+              "cover_rate": 0.417,
+              "outright_win_rate": 0.385,
+              "summary": "5-7-1 ATS"
+            },
+            "similar_line": {
+              "covers": 1,
+              "losses": 5,
+              "pushes": 0,
+              "games": 6,
+              "cover_rate": 0.167,
+              "outright_win_rate": 0.167,
+              "summary": "1-5-0 ATS"
+            },
+            "recent_totals": {
+              "overs": 4,
+              "unders": 4,
+              "pushes": 0,
+              "games": 8,
+              "over_rate": 0.5,
+              "summary": "4-4-0 O/U"
+            },
+            "trend_label": "No strong ATS trend"
+          },
+          "source": "nflverse schedules"
         }
       }
     },
@@ -15885,6 +18408,40 @@
           "wr": 0.024,
           "te": 0.058,
           "rb": 0.061
+        }
+      },
+      "week_context": {
+        "game_id": "2026_10_JAX_TEN",
+        "week": 10,
+        "gameday": "2026-11-15",
+        "gametime_et": "13:00",
+        "home": true,
+        "opponent": "JAX",
+        "opponent_name": "Jacksonville Jaguars",
+        "stadium": "Nissan Stadium",
+        "roof": "outdoors",
+        "weather": {
+          "available": true,
+          "protected": false,
+          "roof": "outdoors",
+          "kickoff_utc": "2026-11-15T18:00:00+00:00",
+          "temperature_f": 60.2,
+          "precip_probability": 19.0,
+          "precipitation_in": 0.0,
+          "wind_mph": 4.8,
+          "wind_gust_mph": 11.2,
+          "label": "Low weather impact",
+          "multipliers": {
+            "QB": 1.0,
+            "WR": 1.0,
+            "TE": 1.0,
+            "RB": 1.0
+          },
+          "source": "Open-Meteo"
+        },
+        "market": {
+          "available": false,
+          "label": "Vegas line unavailable"
         }
       }
     },
@@ -16489,6 +19046,93 @@
           "wr": 0.0,
           "te": 0.0,
           "rb": 0.112
+        }
+      },
+      "week_context": {
+        "game_id": "2026_09_LA_WAS",
+        "week": 9,
+        "gameday": "2026-11-08",
+        "gametime_et": "13:00",
+        "home": true,
+        "opponent": "LA",
+        "opponent_name": "Los Angeles Rams",
+        "stadium": "Northwest Stadium",
+        "roof": "outdoors",
+        "weather": {
+          "available": true,
+          "protected": false,
+          "roof": "outdoors",
+          "kickoff_utc": "2026-11-08T18:00:00+00:00",
+          "temperature_f": 60.2,
+          "precip_probability": 4.0,
+          "precipitation_in": 0.0,
+          "wind_mph": 8.1,
+          "wind_gust_mph": 14.3,
+          "label": "Low weather impact",
+          "multipliers": {
+            "QB": 1.0,
+            "WR": 1.0,
+            "TE": 1.0,
+            "RB": 1.0
+          },
+          "source": "Open-Meteo"
+        },
+        "market": {
+          "available": true,
+          "team_spread": 5.5,
+          "game_total": 47.5,
+          "implied_team_total": 21.0,
+          "implied_opponent_total": 26.5,
+          "line_quality": "Neutral fantasy line",
+          "history": {
+            "role": "underdog",
+            "recent_8": {
+              "covers": 5,
+              "losses": 3,
+              "pushes": 0,
+              "games": 8,
+              "cover_rate": 0.625,
+              "outright_win_rate": 0.375,
+              "summary": "5-3-0 ATS"
+            },
+            "recent_16": {
+              "covers": 8,
+              "losses": 8,
+              "pushes": 0,
+              "games": 16,
+              "cover_rate": 0.5,
+              "outright_win_rate": 0.25,
+              "summary": "8-8-0 ATS"
+            },
+            "same_role": {
+              "covers": 8,
+              "losses": 8,
+              "pushes": 0,
+              "games": 16,
+              "cover_rate": 0.5,
+              "outright_win_rate": 0.25,
+              "summary": "8-8-0 ATS"
+            },
+            "similar_line": {
+              "covers": 4,
+              "losses": 5,
+              "pushes": 0,
+              "games": 9,
+              "cover_rate": 0.444,
+              "outright_win_rate": 0.111,
+              "summary": "4-5-0 ATS"
+            },
+            "recent_totals": {
+              "overs": 5,
+              "unders": 3,
+              "pushes": 0,
+              "games": 8,
+              "over_rate": 0.625,
+              "summary": "5-3-0 O/U"
+            },
+            "trend_label": "Recent market-beating trend"
+          },
+          "source": "nflverse schedules"
         }
       }
     }
