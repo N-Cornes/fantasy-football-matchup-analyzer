@@ -43,6 +43,14 @@ jobs:
       - name: Add moneyline win probabilities
         run: python scripts/enrich_market.py
 
+      - name: Add team and player matchup history
+        run: python scripts/enrich_history.py
+
+      - name: Add current NFL player props
+        env:
+          SPORTSGAMEODDS_API_KEY: ${{ secrets.SPORTSGAMEODDS_API_KEY }}
+        run: python scripts/enrich_props.py
+
       - name: Commit data changes
         run: |
           git config user.name "github-actions[bot]"
