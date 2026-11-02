@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, time, timedelta, timezone
 from zoneinfo import ZoneInfo
 
@@ -279,7 +280,6 @@ def fetch_weather(row: pd.Series) -> dict:
     if not coords or kickoff is None:
         return {"available": False, "protected": False, "roof": roof, "label": "Weather forecast unavailable"}
 
-    # Open-Meteo forecast horizon is sufficient for the next NFL game window.
     params = {
         "latitude": coords[0],
         "longitude": coords[1],
@@ -291,7 +291,7 @@ def fetch_weather(row: pd.Series) -> dict:
         "forecast_days": 16,
     }
     try:
-        response = requests.get("https://api.open-meteo.com/v1/forecast", params=params, timeout=20)
+        response = requests.get("https://api.open-meteo.com/v1/forecast", params=params, timeout=7)
         response.raise_for_status()
         data = response.json()
         hourly = data.get("hourly", {})
@@ -390,18 +390,54 @@ def build_game_contexts(season: int) -> dict[str, dict]:
         & current["game_date"].dt.date.ge(today - timedelta(days=1))
     ].sort_values(["game_date", "gametime", "week"])
 
-    contexts: dict[str, dict] = {}
-    weather_cache: dict[str, dict] = {}
-
+    # Keep only each team's next upcoming game. This also avoids wasting forecast
+    # calls on future weeks that are not relevant to the current Start/Sit decision.
+    selected_rows = []
+    teams_seen = set()
     for _, row in unplayed.iterrows():
         home = base.normalize_team(row.get("home_team"))
         away = base.normalize_team(row.get("away_team"))
         if home not in base.TEAM_NAMES or away not in base.TEAM_NAMES:
             continue
+        if home in teams_seen and away in teams_seen:
+            continue
+        selected_rows.append(row.copy())
+        teams_seen.add(home)
+        teams_seen.add(away)
+        if len(teams_seen) >= len(base.TEAM_NAMES):
+            break
+
+    weather_cache: dict[str, dict] = {}
+    row_by_game: dict[str, pd.Series] = {}
+    for row in selected_rows:
+        home = base.normalize_team(row.get("home_team"))
+        away = base.normalize_team(row.get("away_team"))
         game_id = clean_text(row.get("game_id")) or f"{season}-{row.get('week')}-{away}-{home}"
-        if game_id not in weather_cache:
-            weather_cache[game_id] = fetch_weather(row)
-        weather = weather_cache[game_id]
+        row_by_game[game_id] = row
+
+    # Weather calls are independent. Parallelizing them keeps the scheduled
+    # GitHub Action fast even if one forecast endpoint is slow.
+    with ThreadPoolExecutor(max_workers=6) as pool:
+        future_map = {pool.submit(fetch_weather, row): game_id for game_id, row in row_by_game.items()}
+        for future in as_completed(future_map):
+            game_id = future_map[future]
+            try:
+                weather_cache[game_id] = future.result()
+            except Exception as exc:
+                weather_cache[game_id] = {
+                    "available": False,
+                    "protected": False,
+                    "label": "Weather forecast unavailable",
+                    "error": str(exc)[:140],
+                    "multipliers": {"QB": 1.0, "RB": 1.0, "WR": 1.0, "TE": 1.0},
+                }
+
+    contexts: dict[str, dict] = {}
+    for row in selected_rows:
+        home = base.normalize_team(row.get("home_team"))
+        away = base.normalize_team(row.get("away_team"))
+        game_id = clean_text(row.get("game_id")) or f"{season}-{row.get('week')}-{away}-{home}"
+        weather = weather_cache.get(game_id, {"available": False, "label": "Weather forecast unavailable"})
 
         for team, opponent, is_home in ((home, away, True), (away, home, False)):
             if team in contexts:
