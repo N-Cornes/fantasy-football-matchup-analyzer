@@ -1,8 +1,8 @@
 # Matchup Edge — Fantasy Football Matchup Analyzer
 
-Matchup Edge is a data-driven NFL fantasy football website built to answer one practical question:
+Matchup Edge is a data-driven NFL fantasy football website built to answer two practical questions:
 
-**When two teams play, where is each defense vulnerable and which healthy offensive players are best positioned to exploit those weaknesses?**
+**Where is a defense vulnerable, which healthy offensive players are best positioned to exploit it, and when I am choosing between two players, who has the better start this week?**
 
 ## Live Demo
 
@@ -10,14 +10,29 @@ Matchup Edge is a data-driven NFL fantasy football website built to answer one p
 
 ## What it does
 
-1. The user selects two NFL teams.
+1. The user can select two NFL teams for a matchup breakdown.
 2. Matchup Edge analyzes current-season defensive performance for both sides.
 3. It identifies real defensive vulnerabilities using percentile-based thresholds.
 4. It checks current injury and practice-report information for offensive and defensive players.
-5. It ranks healthy offensive players whose actual usage best matches the opponent's weaknesses.
-6. It explains each recommendation with measurable matchup, usage, and injury context.
+5. For real upcoming games, it adds kickoff weather and the current Vegas scoring environment.
+6. It ranks healthy offensive players whose actual usage best matches the opponent's weaknesses.
+7. The **Player vs. Player** tool compares two fantasy players and returns a weekly Start/Sit recommendation.
+8. It shows market-trend context such as recent ATS performance, favorite/underdog history, and similar-line performance.
 
-The page intentionally shows no matchup recommendations until two different teams are selected.
+## Weekly Start / Sit — Player vs. Player
+
+Enter two QB, RB, WR, or TE options and Matchup Edge compares each player's next scheduled game.
+
+The weekly Start Score combines:
+
+- offensive role and recent usage
+- opponent defensive vulnerability by position
+- current player injury availability
+- offensive-line injury context
+- forecast weather near kickoff
+- current spread, total, implied team points, and expected game script
+
+The result explains the factors behind the recommendation instead of returning only a player name.
 
 ## Weakness model
 
@@ -44,9 +59,41 @@ The model can account for:
 
 Long-term defensive absences are not double-counted on top of season statistics.
 
+## Weather-aware analysis
+
+For outdoor or open-roof upcoming games, the pipeline retrieves forecast conditions near kickoff using Open-Meteo.
+
+Weather factors include:
+
+- temperature
+- sustained wind
+- wind gusts
+- precipitation probability
+- expected precipitation
+- stadium roof protection
+
+The adjustment is intentionally conservative. Strong wind, meaningful precipitation, and extreme cold can reduce passing-game confidence, while bad-weather game scripts can slightly favor rushing volume. Dome and closed-roof games receive no weather penalty.
+
+## Vegas and market context
+
+Matchup Edge uses nflverse schedule/market data when available, including:
+
+- point spread
+- game total
+- implied team points
+- favorite/underdog game script
+- recent ATS record
+- ATS performance in a similar favorite/underdog role
+- ATS results near a similar point spread
+- recent over/under results
+
+The **current line and implied scoring environment** can make a small adjustment to a player's weekly fantasy score. For example, a high implied team total can improve touchdown opportunity, while expected game script can slightly favor rushing or passing volume.
+
+Historical ATS behavior is displayed as a **trend signal only**. A team's history of covering or beating market expectations does not mean Vegas is wrong and is not treated as a guaranteed predictive edge.
+
 ## Data & analytics
 
-The automated pipeline uses current-season data from the [nflverse](https://github.com/nflverse/nflverse-data) ecosystem, including play-by-play, weekly rosters, and injury/practice reports.
+The automated pipeline uses current-season data from the [nflverse](https://github.com/nflverse/nflverse-data) ecosystem, including play-by-play, weekly rosters, injury/practice reports, schedules, and available market lines. Forecast weather comes from Open-Meteo.
 
 Defensive signals include:
 
@@ -68,12 +115,13 @@ Player-role signals include:
 - injury-adjusted availability
 - projected opportunity shifts caused by teammate injuries
 
-Recommendations combine **player role strength, opponent vulnerability, recent usage, and injury context**.
+Recommendations combine **player role strength, opponent vulnerability, recent usage, injuries, weather, and the current scoring environment**.
 
 ## Tech stack
 
 - **Python / pandas / PyArrow** — NFL data pipeline and feature engineering
-- **Vanilla JavaScript** — matchup scoring and recommendation logic in the browser
+- **Requests / Open-Meteo** — automated kickoff-weather context
+- **Vanilla JavaScript** — matchup scoring, Start/Sit comparison, and recommendation logic in the browser
 - **HTML / CSS** — responsive frontend
 - **GitHub Actions** — automated NFL data refresh and site deployment
 - **GitHub Pages** — hosting
@@ -83,11 +131,13 @@ Recommendations combine **player role strength, opponent vulnerability, recent u
 The repository includes automated workflows that:
 
 1. download the latest available current-season nflverse data
-2. rebuild the matchup dataset
-3. commit refreshed matchup data when it changes
-4. deploy the latest site through GitHub Pages
+2. fetch upcoming-game weather when applicable
+3. calculate current market and historical ATS context
+4. rebuild the matchup dataset
+5. commit refreshed matchup data when it changes
+6. deploy the latest site through GitHub Pages
 
-The NFL data refresh workflow is scheduled to run daily during the season and can also be triggered manually from GitHub Actions.
+The data refresh workflow is scheduled to run daily during the season and can also be triggered manually from GitHub Actions.
 
 ## Run locally
 
@@ -110,9 +160,9 @@ Suggested GitHub topics:
 
 ## Data source and disclaimer
 
-All football data analysis is built from the nflverse ecosystem. Matchup Edge is not affiliated with the NFL and does not redistribute official NFL branding assets.
+Football and market analysis is built primarily from the nflverse ecosystem. Forecast weather is supplied by Open-Meteo. Matchup Edge is not affiliated with the NFL and does not redistribute official NFL branding assets.
 
-Matchup Edge provides matchup recommendations based on available data. Recommendations are not guarantees of player performance.
+Matchup Edge provides data-driven fantasy recommendations and market trend context. Recommendations and historical betting trends are not guarantees of player performance or future betting results.
 
 ---
 
