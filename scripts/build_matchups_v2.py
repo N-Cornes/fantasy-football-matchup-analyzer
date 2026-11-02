@@ -5,6 +5,7 @@ import json
 import pandas as pd
 
 import build_matchups as base
+import game_context
 
 UNAVAILABLE_ROSTER_TOKENS = ("RES", "IR", "PUP", "NFI", "SUS", "INACTIVE")
 SECONDARY = {"CB", "DB", "S", "FS", "SS"}
@@ -277,6 +278,13 @@ def main():
     player_state, injury_context, injury_week = build_injury_context(injuries, rosters, positions)
     apply_defense_injuries(defenses, injury_context)
     attach_player_injuries(usage, player_state)
+
+    try:
+        weekly_context = game_context.build_game_contexts(season)
+    except Exception as exc:
+        print(f"Schedule/weather/market context failed: {exc}")
+        weekly_context = {}
+
     through_week = int(pd.to_numeric(pbp.get("week", pd.Series([0])), errors="coerce").max())
 
     teams = {}
@@ -287,6 +295,7 @@ def main():
                 "defense": defenses.get(abbr, {"scores": {}, "adjusted_scores": {}, "stats": {}, "games": 0}),
                 "players": usage.get(abbr, []),
                 "injuries": injury_context.get(abbr, {}),
+                "week_context": weekly_context.get(abbr, {}),
             }
 
     payload = {
@@ -295,15 +304,17 @@ def main():
             "through_week": through_week,
             "injury_week": injury_week,
             "generated_at": datetime.now(timezone.utc).isoformat(),
-            "source": "nflverse / nflfastR play-by-play, weekly rosters, and injury/practice reports",
-            "model_version": "1.1.1",
+            "source": "nflverse / nflfastR play-by-play, rosters, injuries, schedules/odds; Open-Meteo forecast weather",
+            "model_version": "1.2.0",
             "injury_note": "Current-week injury reports adjust matchup strength; reserve status prevents unavailable players from being recommended without double-counting long-term absences.",
+            "weather_note": "Weather adjustments use the forecast nearest kickoff for outdoor/open-roof games and are intentionally conservative.",
+            "market_note": "Current spread, total, implied points, and game script can adjust player fit. Historical ATS results are displayed as context and are not treated as a guaranteed predictive edge.",
         },
         "teams": teams,
     }
     base.OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     base.OUTPUT.write_text(json.dumps(payload, indent=2), encoding="utf-8")
-    print(f"Wrote {base.OUTPUT} with {len(teams)} teams; injury week {injury_week}")
+    print(f"Wrote {base.OUTPUT} with {len(teams)} teams; injury week {injury_week}; weekly contexts {len(weekly_context)}")
 
 
 if __name__ == "__main__":
