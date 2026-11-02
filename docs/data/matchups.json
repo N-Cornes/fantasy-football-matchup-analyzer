@@ -3,12 +3,12 @@
     "season": 2026,
     "through_week": 8,
     "injury_week": 8,
-    "generated_at": "2026-11-02T19:31:23.080843+00:00",
+    "generated_at": "2026-11-02T19:49:32.710935+00:00",
     "source": "nflverse / nflfastR play-by-play, rosters, injuries, schedules/odds; Open-Meteo forecast weather",
-    "model_version": "1.2.0",
+    "model_version": "1.3.0",
     "injury_note": "Current-week injury reports adjust matchup strength; reserve status prevents unavailable players from being recommended without double-counting long-term absences.",
     "weather_note": "Weather adjustments use the forecast nearest kickoff for outdoor/open-roof games and are intentionally conservative.",
-    "market_note": "Current spread, total, implied points, and game script can adjust player fit. Historical ATS results are displayed as context and are not treated as a guaranteed predictive edge."
+    "market_note": "Current spread, total, implied points, moneyline and no-vig moneyline win chance are included when available. Historical ATS results are a small contextual signal, not a guarantee. Player comparison uses team/game market context; player-specific prop hit rates require a separate prop-odds source."
   },
   "teams": {
     "ARI": {
@@ -639,7 +639,13 @@
             },
             "trend_label": "Weak ATS trend as underdog"
           },
-          "source": "nflverse schedules"
+          "source": "nflverse schedules",
+          "moneyline": 500.0,
+          "opponent_moneyline": -700.0,
+          "raw_implied_win_probability": 0.1667,
+          "market_win_probability": 0.16,
+          "chance_label": "Heavy market underdog",
+          "moneyline_source": "nflverse schedules"
         }
       }
     },
@@ -1352,7 +1358,13 @@
             },
             "trend_label": "Recent market-underperformance"
           },
-          "source": "nflverse schedules"
+          "source": "nflverse schedules",
+          "moneyline": 140.0,
+          "opponent_moneyline": -166.0,
+          "raw_implied_win_probability": 0.4167,
+          "market_win_probability": 0.4004,
+          "chance_label": "Live market underdog",
+          "moneyline_source": "nflverse schedules"
         }
       }
     },
@@ -1960,7 +1972,13 @@
             },
             "trend_label": "Recent market-underperformance"
           },
-          "source": "nflverse schedules"
+          "source": "nflverse schedules",
+          "moneyline": 330.0,
+          "opponent_moneyline": -425.0,
+          "raw_implied_win_probability": 0.2326,
+          "market_win_probability": 0.2232,
+          "chance_label": "Heavy market underdog",
+          "moneyline_source": "nflverse schedules"
         }
       }
     },
@@ -2544,7 +2562,13 @@
             },
             "trend_label": "Recent market-beating trend"
           },
-          "source": "nflverse schedules"
+          "source": "nflverse schedules",
+          "moneyline": -155.0,
+          "opponent_moneyline": 130.0,
+          "raw_implied_win_probability": 0.6078,
+          "market_win_probability": 0.583,
+          "chance_label": "Market favorite",
+          "moneyline_source": "nflverse schedules"
         }
       }
     },
@@ -3184,7 +3208,13 @@
             },
             "trend_label": "Strong ATS trend as underdog"
           },
-          "source": "nflverse schedules"
+          "source": "nflverse schedules",
+          "moneyline": 124.0,
+          "opponent_moneyline": -148.0,
+          "raw_implied_win_probability": 0.4464,
+          "market_win_probability": 0.4279,
+          "chance_label": "Live market underdog",
+          "moneyline_source": "nflverse schedules"
         }
       }
     },
@@ -3769,7 +3799,13 @@
             },
             "trend_label": "Recent market-beating trend"
           },
-          "source": "nflverse schedules"
+          "source": "nflverse schedules",
+          "moneyline": 142.0,
+          "opponent_moneyline": -170.0,
+          "raw_implied_win_probability": 0.4132,
+          "market_win_probability": 0.3962,
+          "chance_label": "Live market underdog",
+          "moneyline_source": "nflverse schedules"
         }
       }
     },
@@ -4383,7 +4419,13 @@
             },
             "trend_label": "No strong ATS trend"
           },
-          "source": "nflverse schedules"
+          "source": "nflverse schedules",
+          "moneyline": -166.0,
+          "opponent_moneyline": 140.0,
+          "raw_implied_win_probability": 0.6241,
+          "market_win_probability": 0.5996,
+          "chance_label": "Market favorite",
+          "moneyline_source": "nflverse schedules"
         }
       }
     },
@@ -4965,7 +5007,13 @@
             },
             "trend_label": "Recent market-beating trend"
           },
-          "source": "nflverse schedules"
+          "source": "nflverse schedules",
+          "moneyline": 114.0,
+          "opponent_moneyline": -135.0,
+          "raw_implied_win_probability": 0.4673,
+          "market_win_probability": 0.4486,
+          "chance_label": "Live market underdog",
+          "moneyline_source": "nflverse schedules"
         }
       }
     },
@@ -5593,7 +5641,13 @@
             },
             "trend_label": "Weak ATS trend as favorite"
           },
-          "source": "nflverse schedules"
+          "source": "nflverse schedules",
+          "moneyline": -265.0,
+          "opponent_moneyline": 215.0,
+          "raw_implied_win_probability": 0.726,
+          "market_win_probability": 0.6958,
+          "chance_label": "Strong market favorite",
+          "moneyline_source": "nflverse schedules"
         }
       }
     },
@@ -6257,7 +6311,13 @@
             },
             "trend_label": "Recent market-beating trend"
           },
-          "source": "nflverse schedules"
+          "source": "nflverse schedules",
+          "moneyline": -148.0,
+          "opponent_moneyline": 124.0,
+          "raw_implied_win_probability": 0.5968,
+          "market_win_probability": 0.5721,
+          "chance_label": "Market favorite",
+          "moneyline_source": "nflverse schedules"
         }
       }
     },
@@ -6619,7 +6679,7 @@
           "precip_probability": 3.0,
           "precipitation_in": 0.0,
           "wind_mph": 8.6,
-          "wind_gust_mph": 7.8,
+          "wind_gust_mph": 10.3,
           "label": "Low weather impact",
           "multipliers": {
             "QB": 1.0,
@@ -6684,7 +6744,13 @@
             },
             "trend_label": "No strong ATS trend"
           },
-          "source": "nflverse schedules"
+          "source": "nflverse schedules",
+          "moneyline": -375.0,
+          "opponent_moneyline": 295.0,
+          "raw_implied_win_probability": 0.7895,
+          "market_win_probability": 0.7572,
+          "chance_label": "Strong market favorite",
+          "moneyline_source": "nflverse schedules"
         }
       }
     },
@@ -7279,7 +7345,7 @@
           "precip_probability": 11.0,
           "precipitation_in": 0.0,
           "wind_mph": 2.9,
-          "wind_gust_mph": 2.7,
+          "wind_gust_mph": 8.3,
           "label": "Low weather impact",
           "multipliers": {
             "QB": 1.0,
@@ -7344,7 +7410,13 @@
             },
             "trend_label": "No strong ATS trend"
           },
-          "source": "nflverse schedules"
+          "source": "nflverse schedules",
+          "moneyline": 130.0,
+          "opponent_moneyline": -155.0,
+          "raw_implied_win_probability": 0.4348,
+          "market_win_probability": 0.417,
+          "chance_label": "Live market underdog",
+          "moneyline_source": "nflverse schedules"
         }
       }
     },
@@ -7912,7 +7984,13 @@
             },
             "trend_label": "Recent market-underperformance"
           },
-          "source": "nflverse schedules"
+          "source": "nflverse schedules",
+          "moneyline": -218.0,
+          "opponent_moneyline": 180.0,
+          "raw_implied_win_probability": 0.6855,
+          "market_win_probability": 0.6575,
+          "chance_label": "Strong market favorite",
+          "moneyline_source": "nflverse schedules"
         }
       }
     },
@@ -8458,7 +8536,13 @@
             },
             "trend_label": "No strong ATS trend"
           },
-          "source": "nflverse schedules"
+          "source": "nflverse schedules",
+          "moneyline": 215.0,
+          "opponent_moneyline": -265.0,
+          "raw_implied_win_probability": 0.3175,
+          "market_win_probability": 0.3042,
+          "chance_label": "Heavy market underdog",
+          "moneyline_source": "nflverse schedules"
         }
       }
     },
@@ -9056,7 +9140,13 @@
             },
             "trend_label": "Strong ATS trend as favorite"
           },
-          "source": "nflverse schedules"
+          "source": "nflverse schedules",
+          "moneyline": -425.0,
+          "opponent_moneyline": 330.0,
+          "raw_implied_win_probability": 0.8095,
+          "market_win_probability": 0.7768,
+          "chance_label": "Strong market favorite",
+          "moneyline_source": "nflverse schedules"
         }
       }
     },
@@ -9622,7 +9712,13 @@
             },
             "trend_label": "Recent market-underperformance"
           },
-          "source": "nflverse schedules"
+          "source": "nflverse schedules",
+          "moneyline": -485.0,
+          "opponent_moneyline": 370.0,
+          "raw_implied_win_probability": 0.8291,
+          "market_win_probability": 0.7958,
+          "chance_label": "Strong market favorite",
+          "moneyline_source": "nflverse schedules"
         }
       }
     },
@@ -10199,7 +10295,7 @@
           "precip_probability": 4.0,
           "precipitation_in": 0.0,
           "wind_mph": 8.1,
-          "wind_gust_mph": 14.3,
+          "wind_gust_mph": 11.9,
           "label": "Low weather impact",
           "multipliers": {
             "QB": 1.0,
@@ -10264,7 +10360,13 @@
             },
             "trend_label": "No strong ATS trend"
           },
-          "source": "nflverse schedules"
+          "source": "nflverse schedules",
+          "moneyline": -218.0,
+          "opponent_moneyline": 180.0,
+          "raw_implied_win_probability": 0.6855,
+          "market_win_probability": 0.6575,
+          "chance_label": "Strong market favorite",
+          "moneyline_source": "nflverse schedules"
         }
       }
     },
@@ -10873,7 +10975,13 @@
             },
             "trend_label": "Recent market-underperformance"
           },
-          "source": "nflverse schedules"
+          "source": "nflverse schedules",
+          "moneyline": 180.0,
+          "opponent_moneyline": -218.0,
+          "raw_implied_win_probability": 0.3571,
+          "market_win_probability": 0.3425,
+          "chance_label": "Heavy market underdog",
+          "moneyline_source": "nflverse schedules"
         }
       }
     },
@@ -11464,7 +11572,13 @@
             },
             "trend_label": "Recent market-beating trend"
           },
-          "source": "nflverse schedules"
+          "source": "nflverse schedules",
+          "moneyline": 380.0,
+          "opponent_moneyline": -500.0,
+          "raw_implied_win_probability": 0.2083,
+          "market_win_probability": 0.2,
+          "chance_label": "Heavy market underdog",
+          "moneyline_source": "nflverse schedules"
         }
       }
     },
@@ -12005,7 +12119,7 @@
           "precip_probability": 3.0,
           "precipitation_in": 0.0,
           "wind_mph": 8.6,
-          "wind_gust_mph": 7.8,
+          "wind_gust_mph": 10.3,
           "label": "Low weather impact",
           "multipliers": {
             "QB": 1.0,
@@ -12070,7 +12184,13 @@
             },
             "trend_label": "No strong ATS trend"
           },
-          "source": "nflverse schedules"
+          "source": "nflverse schedules",
+          "moneyline": 295.0,
+          "opponent_moneyline": -375.0,
+          "raw_implied_win_probability": 0.2532,
+          "market_win_probability": 0.2428,
+          "chance_label": "Heavy market underdog",
+          "moneyline_source": "nflverse schedules"
         }
       }
     },
@@ -12677,7 +12797,13 @@
             },
             "trend_label": "Recent market-beating trend"
           },
-          "source": "nflverse schedules"
+          "source": "nflverse schedules",
+          "moneyline": 130.0,
+          "opponent_moneyline": -155.0,
+          "raw_implied_win_probability": 0.4348,
+          "market_win_probability": 0.417,
+          "chance_label": "Live market underdog",
+          "moneyline_source": "nflverse schedules"
         }
       }
     },
@@ -13266,7 +13392,7 @@
           "precip_probability": 11.0,
           "precipitation_in": 0.0,
           "wind_mph": 2.9,
-          "wind_gust_mph": 2.7,
+          "wind_gust_mph": 8.3,
           "label": "Low weather impact",
           "multipliers": {
             "QB": 1.0,
@@ -13331,7 +13457,13 @@
             },
             "trend_label": "Strong ATS trend as favorite"
           },
-          "source": "nflverse schedules"
+          "source": "nflverse schedules",
+          "moneyline": -155.0,
+          "opponent_moneyline": 130.0,
+          "raw_implied_win_probability": 0.6078,
+          "market_win_probability": 0.583,
+          "chance_label": "Market favorite",
+          "moneyline_source": "nflverse schedules"
         }
       }
     },
@@ -13829,7 +13961,13 @@
             },
             "trend_label": "No strong ATS trend"
           },
-          "source": "nflverse schedules"
+          "source": "nflverse schedules",
+          "moneyline": -135.0,
+          "opponent_moneyline": 114.0,
+          "raw_implied_win_probability": 0.5745,
+          "market_win_probability": 0.5514,
+          "chance_label": "Market favorite",
+          "moneyline_source": "nflverse schedules"
         }
       }
     },
@@ -14338,7 +14476,7 @@
           "precip_probability": 6.0,
           "precipitation_in": 0.0,
           "wind_mph": 4.3,
-          "wind_gust_mph": 9.6,
+          "wind_gust_mph": 6.5,
           "label": "Low weather impact",
           "multipliers": {
             "QB": 1.0,
@@ -14403,7 +14541,13 @@
             },
             "trend_label": "Recent market-beating trend"
           },
-          "source": "nflverse schedules"
+          "source": "nflverse schedules",
+          "moneyline": -170.0,
+          "opponent_moneyline": 142.0,
+          "raw_implied_win_probability": 0.6296,
+          "market_win_probability": 0.6038,
+          "chance_label": "Market favorite",
+          "moneyline_source": "nflverse schedules"
         }
       }
     },
@@ -15011,7 +15155,13 @@
             },
             "trend_label": "No strong ATS trend"
           },
-          "source": "nflverse schedules"
+          "source": "nflverse schedules",
+          "moneyline": 370.0,
+          "opponent_moneyline": -485.0,
+          "raw_implied_win_probability": 0.2128,
+          "market_win_probability": 0.2042,
+          "chance_label": "Heavy market underdog",
+          "moneyline_source": "nflverse schedules"
         }
       }
     },
@@ -15661,7 +15811,7 @@
           "precip_probability": 6.0,
           "precipitation_in": 0.0,
           "wind_mph": 4.3,
-          "wind_gust_mph": 9.6,
+          "wind_gust_mph": 6.5,
           "label": "Low weather impact",
           "multipliers": {
             "QB": 1.0,
@@ -15726,7 +15876,13 @@
             },
             "trend_label": "Recent market-underperformance"
           },
-          "source": "nflverse schedules"
+          "source": "nflverse schedules",
+          "moneyline": 142.0,
+          "opponent_moneyline": -170.0,
+          "raw_implied_win_probability": 0.4132,
+          "market_win_probability": 0.3962,
+          "chance_label": "Live market underdog",
+          "moneyline_source": "nflverse schedules"
         }
       }
     },
@@ -16176,7 +16332,7 @@
           "precip_probability": 15.0,
           "precipitation_in": 0.0,
           "wind_mph": 6.8,
-          "wind_gust_mph": 20.1,
+          "wind_gust_mph": 19.5,
           "label": "Low weather impact",
           "multipliers": {
             "QB": 1.0,
@@ -16188,7 +16344,13 @@
         },
         "market": {
           "available": false,
-          "label": "Vegas line unavailable"
+          "label": "Vegas line unavailable",
+          "moneyline": null,
+          "opponent_moneyline": null,
+          "raw_implied_win_probability": null,
+          "market_win_probability": null,
+          "chance_label": "Moneyline chance unavailable",
+          "moneyline_source": "nflverse schedules"
         }
       }
     },
@@ -16847,7 +17009,13 @@
             },
             "trend_label": "Strong ATS trend as favorite"
           },
-          "source": "nflverse schedules"
+          "source": "nflverse schedules",
+          "moneyline": -170.0,
+          "opponent_moneyline": 142.0,
+          "raw_implied_win_probability": 0.6296,
+          "market_win_probability": 0.6038,
+          "chance_label": "Market favorite",
+          "moneyline_source": "nflverse schedules"
         }
       }
     },
@@ -17344,7 +17512,13 @@
             },
             "trend_label": "Strong ATS trend as favorite"
           },
-          "source": "nflverse schedules"
+          "source": "nflverse schedules",
+          "moneyline": -500.0,
+          "opponent_moneyline": 380.0,
+          "raw_implied_win_probability": 0.8333,
+          "market_win_probability": 0.8,
+          "chance_label": "Strong market favorite",
+          "moneyline_source": "nflverse schedules"
         }
       }
     },
@@ -17842,7 +18016,7 @@
           "precip_probability": 10.0,
           "precipitation_in": 0.01,
           "wind_mph": 15.3,
-          "wind_gust_mph": 27.7,
+          "wind_gust_mph": 17.0,
           "label": "Low weather impact",
           "multipliers": {
             "QB": 0.95,
@@ -17907,7 +18081,13 @@
             },
             "trend_label": "No strong ATS trend"
           },
-          "source": "nflverse schedules"
+          "source": "nflverse schedules",
+          "moneyline": 195.0,
+          "opponent_moneyline": -238.0,
+          "raw_implied_win_probability": 0.339,
+          "market_win_probability": 0.325,
+          "chance_label": "Heavy market underdog",
+          "moneyline_source": "nflverse schedules"
         }
       }
     },
@@ -18441,7 +18621,13 @@
         },
         "market": {
           "available": false,
-          "label": "Vegas line unavailable"
+          "label": "Vegas line unavailable",
+          "moneyline": null,
+          "opponent_moneyline": null,
+          "raw_implied_win_probability": null,
+          "market_win_probability": null,
+          "chance_label": "Moneyline chance unavailable",
+          "moneyline_source": "nflverse schedules"
         }
       }
     },
@@ -19067,7 +19253,7 @@
           "precip_probability": 4.0,
           "precipitation_in": 0.0,
           "wind_mph": 8.1,
-          "wind_gust_mph": 14.3,
+          "wind_gust_mph": 11.9,
           "label": "Low weather impact",
           "multipliers": {
             "QB": 1.0,
@@ -19132,7 +19318,13 @@
             },
             "trend_label": "Recent market-beating trend"
           },
-          "source": "nflverse schedules"
+          "source": "nflverse schedules",
+          "moneyline": 180.0,
+          "opponent_moneyline": -218.0,
+          "raw_implied_win_probability": 0.3571,
+          "market_win_probability": 0.3425,
+          "chance_label": "Heavy market underdog",
+          "moneyline_source": "nflverse schedules"
         }
       }
     }
