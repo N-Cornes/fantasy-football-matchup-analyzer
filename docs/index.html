@@ -13,13 +13,14 @@
   <link rel="stylesheet" href="context.css" />
   <link rel="stylesheet" href="v3.css" />
   <link rel="stylesheet" href="v4.css" />
+  <link rel="stylesheet" href="v5.css" />
 </head>
 <body>
   <main class="shell">
     <header class="hero">
       <div class="eyebrow">FANTASY FOOTBALL MATCHUP INTELLIGENCE</div>
       <h1>Find the <span>weakness.</span><br>Find the player.</h1>
-      <p class="lede">Choose two NFL teams, analyze one team's automatic weekly matchup, or compare two fantasy players. Matchup Edge combines current-season performance, injuries, weather, Vegas markets, head-to-head history, and player-prop context.</p>
+      <p class="lede">Choose two NFL teams, analyze one team's automatic weekly matchup, inspect one player's complete weekly outlook, or compare two fantasy players. Matchup Edge combines current-season performance, injuries, weather, Vegas markets, head-to-head history, and player-prop context.</p>
       <div id="freshness" class="freshness">Loading current NFL data…</div>
     </header>
 
@@ -55,6 +56,23 @@
 
     <section id="singleResults" class="single-results hidden" aria-live="polite"></section>
 
+    <section class="compare-panel single-player-panel" aria-label="Analyze one fantasy player's weekly matchup">
+      <div class="compare-intro">
+        <div class="mini-eyebrow">ONE PLAYER • THIS WEEK</div>
+        <h2>Player Weekly Breakdown</h2>
+        <p>Enter one player and Matchup Edge will automatically find this week's opponent and show the complete player outlook: matchup strength, usage, injuries, weather, Vegas context, current player props, recent form, opponent history, and team head-to-head trends.</p>
+      </div>
+      <div class="solo-player-controls">
+        <div class="player-input-wrap">
+          <label for="soloPlayer">Player</label>
+          <input id="soloPlayer" list="playerOptions" autocomplete="off" placeholder="Enter a player" />
+        </div>
+        <button id="analyzeSoloPlayerBtn" disabled>Analyze Player</button>
+        <p id="soloPlayerError" class="form-error" role="alert"></p>
+      </div>
+      <div id="soloPlayerResult" class="solo-player-result hidden" aria-live="polite"></div>
+    </section>
+
     <section class="compare-panel" aria-label="Compare two fantasy players">
       <div class="compare-intro">
         <div class="mini-eyebrow">WEEKLY START / SIT</div>
@@ -88,5 +106,6 @@
   <script src="app-v2.js?v=20261102-2"></script>
   <script src="updates-v3.js?v=20261102-1"></script>
   <script src="updates-v4.js?v=20261102-1"></script>
+  <script src="updates-v5.js?v=20261102-1"></script>
 </body>
 </html>
