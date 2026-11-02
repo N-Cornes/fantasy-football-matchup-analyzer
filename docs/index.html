@@ -11,13 +11,14 @@
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="injury.css" />
   <link rel="stylesheet" href="context.css" />
+  <link rel="stylesheet" href="v3.css" />
 </head>
 <body>
   <main class="shell">
     <header class="hero">
       <div class="eyebrow">FANTASY FOOTBALL MATCHUP INTELLIGENCE</div>
       <h1>Find the <span>weakness.</span><br>Find the player.</h1>
-      <p class="lede">Choose two NFL teams. Matchup Edge analyzes current-season play-by-play, usage, roster, injury, weather, and market data to identify defensive vulnerabilities and the healthy offensive players best positioned to attack them.</p>
+      <p class="lede">Choose two NFL teams, analyze one team's automatic weekly matchup, or compare two fantasy players. Matchup Edge combines current-season play-by-play, usage, roster, injury, weather, and Vegas market data.</p>
       <div id="freshness" class="freshness">Loading current NFL data…</div>
     </header>
 
@@ -35,11 +36,29 @@
       <p id="formError" class="form-error" role="alert"></p>
     </section>
 
+    <section class="compare-panel single-team-panel" aria-label="Analyze one team's weekly matchup">
+      <div class="compare-intro">
+        <div class="mini-eyebrow">ONE TEAM • THIS WEEK</div>
+        <h2>Automatic Weekly Matchup</h2>
+        <p>Have one team in mind? Pick it here and Matchup Edge will automatically find its next opponent and show the same full matchup analysis, including injuries, weather, Vegas odds, market win chance, and ATS trends.</p>
+      </div>
+      <div class="single-team-controls">
+        <div class="team-select-wrap">
+          <label for="singleTeam">Team</label>
+          <select id="singleTeam"><option value="">Select a team</option></select>
+        </div>
+        <button id="analyzeSingleBtn" disabled>Analyze This Week</button>
+        <p id="singleTeamError" class="form-error" role="alert"></p>
+      </div>
+    </section>
+
+    <section id="singleResults" class="single-results hidden" aria-live="polite"></section>
+
     <section class="compare-panel" aria-label="Compare two fantasy players">
       <div class="compare-intro">
         <div class="mini-eyebrow">WEEKLY START / SIT</div>
         <h2>Player vs. Player</h2>
-        <p>Enter two players and Matchup Edge will compare matchup strength, usage, injuries, weather, and the current Vegas scoring environment.</p>
+        <p>Enter two players and Matchup Edge will compare matchup strength, usage, injuries, weather, and each player's team/game Vegas environment and market trend.</p>
       </div>
       <div class="compare-controls">
         <div class="player-input-wrap">
@@ -65,6 +84,7 @@
       <p><strong>Created by Nicholas Cornes</strong></p>
     </footer>
   </main>
-  <script src="app-v2.js?v=20261102-1"></script>
+  <script src="app-v2.js?v=20261102-2"></script>
+  <script src="updates-v3.js?v=20261102-1"></script>
 </body>
 </html>
