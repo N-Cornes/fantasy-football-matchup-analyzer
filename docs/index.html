@@ -10,13 +10,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="injury.css" />
+  <link rel="stylesheet" href="context.css" />
 </head>
 <body>
   <main class="shell">
     <header class="hero">
       <div class="eyebrow">FANTASY FOOTBALL MATCHUP INTELLIGENCE</div>
       <h1>Find the <span>weakness.</span><br>Find the player.</h1>
-      <p class="lede">Choose two NFL teams. Matchup Edge analyzes current-season play-by-play, usage, roster, and injury-report data to identify defensive vulnerabilities and the healthy offensive players best positioned to attack them.</p>
+      <p class="lede">Choose two NFL teams. Matchup Edge analyzes current-season play-by-play, usage, roster, injury, weather, and market data to identify defensive vulnerabilities and the healthy offensive players best positioned to attack them.</p>
       <div id="freshness" class="freshness">Loading current NFL data…</div>
     </header>
 
@@ -34,6 +35,29 @@
       <p id="formError" class="form-error" role="alert"></p>
     </section>
 
+    <section class="compare-panel" aria-label="Compare two fantasy players">
+      <div class="compare-intro">
+        <div class="mini-eyebrow">WEEKLY START / SIT</div>
+        <h2>Player vs. Player</h2>
+        <p>Enter two players and Matchup Edge will compare matchup strength, usage, injuries, weather, and the current Vegas scoring environment.</p>
+      </div>
+      <div class="compare-controls">
+        <div class="player-input-wrap">
+          <label for="playerA">Player 1</label>
+          <input id="playerA" list="playerOptions" autocomplete="off" placeholder="Enter a player" />
+        </div>
+        <div class="versus">VS</div>
+        <div class="player-input-wrap">
+          <label for="playerB">Player 2</label>
+          <input id="playerB" list="playerOptions" autocomplete="off" placeholder="Enter a player" />
+        </div>
+        <button id="compareBtn" disabled>Who Should I Start?</button>
+        <p id="compareError" class="form-error" role="alert"></p>
+      </div>
+      <datalist id="playerOptions"></datalist>
+      <div id="compareResult" class="compare-result hidden" aria-live="polite"></div>
+    </section>
+
     <section id="results" class="results hidden" aria-live="polite"></section>
 
     <footer>
@@ -41,6 +65,6 @@
       <p><strong>Created by Nicholas Cornes</strong></p>
     </footer>
   </main>
-  <script src="app-v2.js?v=20261030-2"></script>
+  <script src="app-v2.js?v=20261102-1"></script>
 </body>
 </html>
